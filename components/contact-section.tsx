@@ -134,12 +134,6 @@ export function ContactSection() {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center text-foreground/60">
           <p>© 2026 Chilca Ovni Festival. Todos los derechos reservados.</p>
-          <p className="mt-2 text-sm">
-            Desarrollado por 
-            <a href="https://x.com/joelangeldev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-              Joel Angel Dev
-            </a>
-          </p>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Chilca Ovni Festival 2027 | Psytrance en Chilca Playa Punta Yaya',
-  description: 'Sumérgete en una experiencia cósmica única. Festival de psytrance Chilca Ovni Fsetival en la playa Punta Yaya Chilca - Lima. Artistas internacionales, arte visionary y psytrance de clase mundial.',
+  description: 'Sumérgete en una experiencia cósmica única. Festival de psytrance Chilca Ovni Festival en la playa Punta Yaya Chilca - Lima. Artistas internacionales, arte visionary y psytrance de clase mundial.',
   keywords: 'psytrance, festival, ovni, Playa Punta Yaya, Chilca, Lima, música electrónica, darkpsy, goa trance',
   authors: [{ name: 'Chilca Ovni Festival' }],
   icons: {
