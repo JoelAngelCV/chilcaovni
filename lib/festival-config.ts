@@ -33,24 +33,24 @@ export const FESTIVAL_INFO = {
   artists: [
     {
       id: 1,
-      name: 'Pepe Jones 🇧🇷',
+      name: 'Pepe Jones',
       genre: 'Full-On',
       image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/replicantboy_3753648540154229483_s2026-3-31-23.15.399_story_fsdlbd.jpg',
-      bio: 'Sus sets fusionan grooves hipnóticos, atmósferas psicodélicas',
+      bio: 'Natural de Poços de Caldas (MG, Brasil), Pepe Jones actúa en la escena psytrance desde 2002 y debutó como DJ en 2006. Desde entonces, ha construido una trayectoria sólida, marcada por la dedicación, la evolución y una presencia constante en la escena nacional e internacional.\n\n Residente de la reconocida fiesta Mandallah, se ha presentado en los festivales más importantes de Brasil, como Universo Paralello (303 Stage), Soulvision, Mundo de Oz, Samsara Festival, Festival Alternativo do Kranti, Puma Punku Festival y Resistência Main Floor, además de diversos eventos independientes por todo el país. En el exterior, llevó su sonido a pistas de España, Portugal, Perú, Chile, Uruguay y Bolivia, destacando festivales como Arkana (Perú), Inchala (Uruguay), MonteMapu (Chile), Amazon Andes Festival (Isla del Sol) y Amazon Festival (Rurrenabaque), ambos en Bolivia.\n\n​Actualmente, integra el casting de Replicant Records (Australia), con participaciones en la serie V/A Light & Shadow (vol. 1 y 2) y el DJ set Replicant & Friends. Sus sets fusionan grooves hipnóticos, atmósferas psicodélicas y una conexión profunda con la pista de baile',
     },
     {
       id: 2,
       name: 'Uaky',
       genre: 'Dark Prog - Forest',
       image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/uaky.music_3394827090610618914_hm1ojd.webp',
-      bio: 'Su estilo ha mutado desde el Forest hacia vertientes ligadas al Techno y el Progresivo.',
+      bio: 'Diego Barbaguelatta A.K.A. \n\nUaky Con más de una década de recorrido y presencia en las pistas de Chile, Bolivia, Perú y Brasil, Uaky es un artista que domina la narrativa nocturna. Perteneciente a los sellos Andean Tribe Records y Quantum Forest Records, su estilo ha mutado desde el Forest más puro hacia vertientes vanguardistas ligadas al Techno y el Progresivo, garantizando una sesión de alta factura técnica y profundidad psicodélica.'
     },
     {
       id: 3,
       name: 'Factor RH',
       genre: 'Psy Tek - Dark Psy - Forest',
       image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/factorrhfrh_3829105098589371886_csyv9b.jpg',
-      bio: 'Destacado como fiel representante del underground consolidando su identidad.',
+      bio: 'FACTOR RH / FRH, compositor, mc, dj y productor ecuatoriano que a través de su propuesta contundente conjuga frecuencias introspectivas y versatilidad.\n\nExplorando los límites del sonido, traslada esa experiencia musical ganada a lo largo de su carrera desde "South America Hit&Trip" como sello personal a nivel nacional e internacional, ejecutando hábilmente las frecuencias del Techno y Psychedelic, creando experiencias únicas que trascienden las fronteras de la psyche, combinando beats oceánicos con sutiles y profundas ondas sonoras. \n\nSe ha destacado como un fiel representante del underground consolidando su propia identidad y marca.',
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ export const FESTIVAL_INFO = {
       name: 'Naropa',
       genre: 'Full On - Hi-Tech',
       image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775432138/535092847_24876493528623577_2210560228682095712_n_jmctam.jpg',
-      bio: 'DJ y productor de música meditativa, fundador de Psycosmica y New Psychedelic.',
+      bio: 'Naropa descubrió su pasión por el Psytrance en Marcahuasi Festival del 2016. Desde entonces, se ha convertido en un miembro emergente de la escena Psytrance en Lima, colaborando con Trilobites Music, Reviden Psy y promoviendo el género en la ciudad.\n\nComo productor musical, Naropa lanzo su primer EP "Om", que refleja su interés en la música meditativa. Su principal característica es la mezcla de sonidos electrónicos e instrumentos orgánicos, influenciados por sus experiencias con la meditación y enteógenos.\n\nNaropa organizo sesiones de Psytrance en la isla de Cozumel, Mexico bajo el nombre "Psytrance en la Isla" y es fundador de las fiestas Psycosmica y New Psychedelic que se desarrollan en Lima, Peru\n\nEn 2025, fue invitado a participar en el "Amazon Festival" en Rurrenabaque, Bolivia, marcando su segunda participación fuera de Perú.\n\nEsta vez lidera, junto a Eventos Reviden, la cuarta edicion de Chilca Ovni Festival.\n\nNaropa organizo sesiones de Psytrance en la isla de Cozumel, Mexico bajo el nombre "Psytrance en la Isla" y es fundador de las fiestas Psycosmica y New Psychedelic que se desarrollan en Lima, Peru.\n\nEn 2025, fue invitado a participar en el "Amazon Festival" en Rurrenabaque, Bolivia, marcando su segunda participación fuera de Perú.\n\nEsta vez lidera, junto a Eventos Reviden, la cuarta edicion de Chilca Ovni Festival.',
     },
     {
       id: 6,

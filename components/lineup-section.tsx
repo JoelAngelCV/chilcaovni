@@ -1,7 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { FESTIVAL_INFO } from '@/lib/festival-config'
+import { X } from 'lucide-react'
 
 interface Artist {
   id: number
@@ -15,6 +17,40 @@ const artists: Artist[] = FESTIVAL_INFO.artists
 
 export function LineupSection() {
   const [selectedDay, setSelectedDay] = useState<number>(0)
+  const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null)
+  const modalRef = useRef<HTMLDivElement>(null)
+
+  // Cerrar modal cuando se hace clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setSelectedArtist(null)
+      }
+    }
+
+    if (selectedArtist) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }
+  }, [selectedArtist])
+
+  // Cerrar modal con Escape
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedArtist(null)
+      }
+    }
+
+    if (selectedArtist) {
+      document.addEventListener('keydown', handleEscape)
+      return () => {
+        document.removeEventListener('keydown', handleEscape)
+      }
+    }
+  }, [selectedArtist])
 
   return (
     <section id="lineup" className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -41,7 +77,7 @@ export function LineupSection() {
                   : 'border border-primary/50 text-primary hover:bg-primary/10'
               }`}
             >
-              Ver Horario
+              Ver Schedule
             </button>
           ))}
         </div> */}
@@ -51,7 +87,8 @@ export function LineupSection() {
           {artists.map((artist) => (
             <div
               key={artist.id}
-              className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 group overflow-hidden"
+              onClick={() => setSelectedArtist(artist)}
+              className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 group overflow-hidden cursor-pointer"
             >
               <div className="relative h-32 mb-4 rounded-lg overflow-hidden bg-primary/10">
                 <img
@@ -69,7 +106,7 @@ export function LineupSection() {
 
         {/* Schedule timeline */}
         <div className="mt-16">
-          <h3 className="text-3xl font-bold text-primary mb-10 text-center">Timeline del Festival</h3>
+          <h3 className="text-2xl font-bold text-primary mb-8 text-center">Timeline Completo del Festival</h3>
           <div className="space-y-4">
             {FESTIVAL_INFO.schedule.map((item, index) => (
               <div
@@ -99,10 +136,71 @@ export function LineupSection() {
             ¡Más artistas por confirmar! Sigue nuestras redes sociales para actualizaciones.
           </p>
           <p className="text-sm text-foreground/60">
-            El horario está sujeto a cambios. Los horarios son aproximados.
+            El schedule está sujeto a cambios. Los horarios son aproximados.
           </p>
         </div>
       </div>
+
+      {/* Artist Modal */}
+      {selectedArtist && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div
+            ref={modalRef}
+            className="cosmic-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedArtist(null)}
+              className="absolute top-6 right-6 p-2 rounded-lg bg-primary/20 hover:bg-primary/30 transition-colors z-10"
+            >
+              <X className="w-6 h-6 text-primary" />
+            </button>
+
+            {/* Artist Image */}
+            <div className="relative w-full h-96 overflow-hidden rounded-t-2xl">
+              <img
+                src={selectedArtist.image}
+                alt={selectedArtist.name}
+                className="w-full h-full object-cover"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/90"></div>
+            </div>
+
+            {/* Content */}
+            <div className="p-8">
+              <h2 className="text-4xl font-bold text-primary mb-2">
+                {selectedArtist.name}
+              </h2>
+              
+              <p className="text-xl text-secondary font-semibold mb-6">
+                {selectedArtist.genre}
+              </p>
+
+              {/* Divider */}
+              <div className="h-px bg-linear-to-r from-primary/0 via-primary/50 to-primary/0 mb-6"></div>
+
+              {/* Bio */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-foreground">Sobre el artista</h3>
+                <p className="text-foreground/80 leading-relaxed whitespace-pre-wrap">
+                  {selectedArtist.bio}
+                </p>
+              </div>
+
+              {/* Action buttons */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={() => setSelectedArtist(null)}
+                  className="flex-1 px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-primary/50 text-primary hover:bg-primary/10"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
