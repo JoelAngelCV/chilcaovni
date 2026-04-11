@@ -133,7 +133,7 @@ export function ContactSection() {
 
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-primary/20 text-center text-foreground/60">
-          <p>© 2026 Chilca Ovni Festival. Todos los derechos reservados.</p>
+          <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </div>
     </section>

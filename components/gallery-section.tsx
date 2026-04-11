@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import Script from 'next/script';
 
 interface GalleryItem {
   id: number
@@ -49,46 +50,53 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    src: '/gallery-1.jpg',
-    title: 'Main Stage OVNI',
-    description: 'La nave alienígena del escenario principal iluminada con luces cósmicas.',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775881803/replicantboy_3870025704729836178_s2026-4-10-23.6.803_story_aj6wwp.webp',
+    title: 'Ceremonia de apertura',
+    description: 'Uno de los momentos más mágicos del festival.',
     category: 'photo'
   },
   {
     id: 7,
-    src: '/gallery-2.jpg',
-    title: 'Instalación Futurista',
-    description: 'Arte visionary temático OVNI con proyecciones holográficas',
-    category: 'photo'
+    src: 'https://www.instagram.com/reel/DWEpapAETIY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    title: 'Ceremonia de apertura',
+    description: 'Uno de los momentos más mágicos del festival.',
+    category: 'video'
   },
-  {
-    id: 8,
-    src: '/gallery-3.jpg',
-    title: 'Performance DJ',
-    description: 'Artista en acción con efectos visuales de otro mundo',
-    category: 'photo'
-  },
-  {
-    id: 9,
-    src: '/gallery-4.jpg',
-    title: 'Atardecer Cósmico',
-    description: 'La playa de Punta Yaya con iluminación futurista al anochecer',
-    category: 'photo'
-  },
-  {
-    id: 10,
-    src: '/gallery-5.jpg',
-    title: 'Experiencia Inmersiva',
-    description: 'Zona de arte interactivo con efectos de luz hipnotizantes',
-    category: 'photo'
-  },
-  {
-    id: 11,
-    src: '/gallery-6.jpg',
-    title: 'Comunidad Cósmica',
-    description: 'Energía de conexión bajo las estrellas del festival OVNI',
-    category: 'photo'
-  },
+  // {
+  //   id: 7,
+  //   src: '/gallery-2.jpg',
+  //   title: 'Instalación Futurista',
+  //   description: 'Arte visionary temático OVNI con proyecciones holográficas',
+  //   category: 'photo'
+  // },
+  // {
+  //   id: 8,
+  //   src: '/gallery-3.jpg',
+  //   title: 'Performance DJ',
+  //   description: 'Artista en acción con efectos visuales de otro mundo',
+  //   category: 'photo'
+  // },
+  // {
+  //   id: 9,
+  //   src: '/gallery-4.jpg',
+  //   title: 'Atardecer Cósmico',
+  //   description: 'La playa de Punta Yaya con iluminación futurista al anochecer',
+  //   category: 'photo'
+  // },
+  // {
+  //   id: 10,
+  //   src: '/gallery-5.jpg',
+  //   title: 'Experiencia Inmersiva',
+  //   description: 'Zona de arte interactivo con efectos de luz hipnotizantes',
+  //   category: 'photo'
+  // },
+  // {
+  //   id: 11,
+  //   src: '/gallery-6.jpg',
+  //   title: 'Comunidad Cósmica',
+  //   description: 'Energía de conexión bajo las estrellas del festival OVNI',
+  //   category: 'photo'
+  // },
 ]
 
 export function GallerySection() {
@@ -141,7 +149,8 @@ export function GallerySection() {
                 <Image
                   src={item.src}
                   alt={item.title}
-                  fill
+                  width={400}
+                  height={300}
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">

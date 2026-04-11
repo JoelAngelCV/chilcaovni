@@ -33,14 +33,14 @@ export function EventInfo() {
             Sobre el Evento
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Una experiencia transformadora que combina música, visuales, arte visionary y comunidad en una atmosfera psicodélica cósmica única.
+            Reviden Eventos presenta una experiencia transformadora de psytrance, visuales, arte y comunidad en una atmosfera psicodélica cósmica única.
           </p>
         </div>
 
         {/* Main event description */}
         <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
           <div className="cosmic-card p-8 rounded-xl">
-            <h3 className="text-2xl font-bold text-primary mb-4">🛸 Epicentro OVNI</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">🛸 Chilca Ovni Festival</h3>
             <p className="text-foreground/80 mb-4">
               El festival celebra la intersección entre la música electrónica, la espiritualidad y el misterio cósmico. Cada elemento está diseñado para transportarte a otra dimensión.
             </p>

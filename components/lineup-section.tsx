@@ -61,26 +61,9 @@ export function LineupSection() {
             Artistas & Horarios
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Descubre los mejores artistas de psytrance, trance y electrónica que estarán presentes en el Chilca OVNI Festival.
+            DJs y productores de psytrance, trance y techno que estarán presentes en el Chilca OVNI Festival.
           </p>
         </div>
-
-        {/* Day selector */}
-        {/* <div className="flex justify-center gap-4 mb-12 flex-wrap">
-          {FESTIVAL_INFO.schedule.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setSelectedDay(idx)}
-              className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                selectedDay === idx
-                  ? 'neon-button'
-                  : 'border border-primary/50 text-primary hover:bg-primary/10'
-              }`}
-            >
-              Ver Schedule
-            </button>
-          ))}
-        </div> */}
 
         {/* Artists grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -136,7 +119,7 @@ export function LineupSection() {
             ¡Más artistas por confirmar! Sigue nuestras redes sociales para actualizaciones.
           </p>
           <p className="text-sm text-foreground/60">
-            El schedule está sujeto a cambios. Los horarios son aproximados.
+            El horario está sujeto a cambios. Los horarios son aproximados.
           </p>
         </div>
       </div>
