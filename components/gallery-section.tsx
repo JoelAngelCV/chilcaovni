@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import Script from 'next/script';
+import InstagramVideo from './InstagramVideo'
 
 interface GalleryItem {
   id: number
@@ -55,13 +55,13 @@ const galleryItems: GalleryItem[] = [
     description: 'Uno de los momentos más mágicos del festival.',
     category: 'photo'
   },
-  {
-    id: 7,
-    src: 'https://www.instagram.com/reel/DWEpapAETIY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-    title: 'Ceremonia de apertura',
-    description: 'Uno de los momentos más mágicos del festival.',
-    category: 'video'
-  },
+  // {
+  //   id: 7,
+  //   src: 'https://www.instagram.com/reel/DWEpapAETIY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+  //   title: 'Ceremonia de apertura',
+  //   description: 'Uno de los momentos más mágicos del festival.',
+  //   category: 'video'
+  // },
   // {
   //   id: 7,
   //   src: '/gallery-2.jpg',
@@ -167,6 +167,8 @@ export function GallerySection() {
           ))}
         </div>
 
+        
+        
         {/* Lightbox modal */}
         {selectedItem && (
           <div
@@ -203,6 +205,18 @@ export function GallerySection() {
             </div>
           </div>
         )}
+        
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <InstagramVideo url="https://www.instagram.com/reel/DVcKAyWAOpL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DVeKh4GkVQs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DV1YrNlEUIE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DVmgHFAkcSO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DVi0nWYjt15/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DV31aaIkTyT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DVood_8kbVa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/reel/DVuR4-9Ef2P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
+          <InstagramVideo url="https://www.instagram.com/p/DVZ4VKcDby6/?utm_source=ig_web_copy_link" />
+        </div>
 
         {/* Info box */}
         <div className="cosmic-card p-8 rounded-lg text-center">

@@ -18,7 +18,7 @@ export function HeroSection() {
       
       {/* Animated background image */}
       
-      <div className="absolute inset-0 animate-[zoomInOut_9s_ease-in-out_infinite]">
+      <div className="absolute inset-0 animate-[zoomInOut_5s_ease-in-out_infinite]">
         <Image
           src={fondoNave}
           alt="bg"
