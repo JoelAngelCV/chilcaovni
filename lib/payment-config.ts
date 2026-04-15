@@ -14,8 +14,8 @@ export const TICKETS: TicketType[] = [
     id: 'early-bird',
     name: 'Early Bird',
     description: 'Acceso general + descuento temprano',
-    price: 25,
-    pricePEN: 80,
+    price: 35,
+    pricePEN: 120,
     currency: 'USD',
     features: [
       'Acceso 3 días',
@@ -29,8 +29,8 @@ export const TICKETS: TicketType[] = [
     id: 'general',
     name: 'Entrada General',
     description: 'Acceso completo al festival',
-    price: 35,
-    pricePEN: 120,
+    price: 55,
+    pricePEN: 180,
     currency: 'USD',
     features: [
       'Acceso 3 días',
@@ -44,8 +44,8 @@ export const TICKETS: TicketType[] = [
     id: 'vip',
     name: 'VIP',
     description: 'Experiencia premium',
-    price: 60,
-    pricePEN: 200,
+    price: 90,
+    pricePEN: 300,
     currency: 'USD',
     features: [
       'Acceso 3 días',
@@ -64,8 +64,8 @@ export const TICKETS: TicketType[] = [
     id: 'camping',
     name: 'Camping',
     description: 'Incluye tienda de campaña',
-    price: 75,
-    pricePEN: 250,
+    price: 96,
+    pricePEN: 330,
     currency: 'USD',
     features: [
       'Acceso 3 días',
