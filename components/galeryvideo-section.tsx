@@ -10,10 +10,11 @@ export default function GallerySectionVideo() {
     { id: 'rDlgfgDtGVc', type: 'short' },
     { id: 'CNUOZpnnW10', type: 'short' },
     { id: 'jxyvoFcqWD8', type: 'short' },
+    { id: '191BheYX1C4', type: 'horizontal' },
   ];
 
   return (
-    <section className="max-w-7xl mx-auto p-8">
+    <div className="max-w-7xl mx-auto p-8">
       {/* Grid responsivo: ajusta columnas automáticamente */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
         {videos.map((video) => (
@@ -22,6 +23,6 @@ export default function GallerySectionVideo() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

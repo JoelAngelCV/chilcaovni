@@ -1,7 +1,5 @@
 'use client';
 
-import YouTubeCentered from './youtube-centered';
-
 export function EventInfo() {
   const features = [
     {
@@ -38,9 +36,6 @@ export function EventInfo() {
             Reviden Eventos presenta una experiencia transformadora de psytrance, visuales, arte y comunidad en una atmosfera psicodélica cósmica única.
           </p>
         </div>
-
-        {/* Video section */}
-        <YouTubeCentered videoId="191BheYX1C4"/>
 
         {/* Main event description */}
         <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
