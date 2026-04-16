@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import InstagramVideo from './InstagramVideo'
+import GallerySectionVideo from './galeryvideo-section'
 
 interface GalleryItem {
   id: number
@@ -55,48 +55,6 @@ const galleryItems: GalleryItem[] = [
     description: 'Uno de los momentos más mágicos del festival.',
     category: 'photo'
   },
-  // {
-  //   id: 7,
-  //   src: 'https://www.instagram.com/reel/DWEpapAETIY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-  //   title: 'Ceremonia de apertura',
-  //   description: 'Uno de los momentos más mágicos del festival.',
-  //   category: 'video'
-  // },
-  // {
-  //   id: 7,
-  //   src: '/gallery-2.jpg',
-  //   title: 'Instalación Futurista',
-  //   description: 'Arte visionary temático OVNI con proyecciones holográficas',
-  //   category: 'photo'
-  // },
-  // {
-  //   id: 8,
-  //   src: '/gallery-3.jpg',
-  //   title: 'Performance DJ',
-  //   description: 'Artista en acción con efectos visuales de otro mundo',
-  //   category: 'photo'
-  // },
-  // {
-  //   id: 9,
-  //   src: '/gallery-4.jpg',
-  //   title: 'Atardecer Cósmico',
-  //   description: 'La playa de Punta Yaya con iluminación futurista al anochecer',
-  //   category: 'photo'
-  // },
-  // {
-  //   id: 10,
-  //   src: '/gallery-5.jpg',
-  //   title: 'Experiencia Inmersiva',
-  //   description: 'Zona de arte interactivo con efectos de luz hipnotizantes',
-  //   category: 'photo'
-  // },
-  // {
-  //   id: 11,
-  //   src: '/gallery-6.jpg',
-  //   title: 'Comunidad Cósmica',
-  //   description: 'Energía de conexión bajo las estrellas del festival OVNI',
-  //   category: 'photo'
-  // },
 ]
 
 export function GallerySection() {
@@ -205,18 +163,8 @@ export function GallerySection() {
             </div>
           </div>
         )}
-        
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          <InstagramVideo url="https://www.instagram.com/reel/DVcKAyWAOpL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DVeKh4GkVQs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DV1YrNlEUIE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DVmgHFAkcSO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DVi0nWYjt15/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DV31aaIkTyT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DVood_8kbVa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/reel/DVuR4-9Ef2P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" />
-          <InstagramVideo url="https://www.instagram.com/p/DVZ4VKcDby6/?utm_source=ig_web_copy_link" />
-        </div>
+
+        <GallerySectionVideo  />
 
         {/* Info box */}
         <div className="cosmic-card p-8 rounded-lg text-center">

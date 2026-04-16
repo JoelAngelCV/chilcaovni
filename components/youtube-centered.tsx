@@ -26,9 +26,12 @@ export default function YouTubeCentered({ videoId }: Props) {
           mute: 1,           // Obligatorio para autoplay
           playsinline: 1,
           modestbranding: 1,
+          enablejsapi: 1, 
+          origin: typeof window !== 'undefined' ? window.location.origin : '', 
         },
         events: {
           onReady: (event: any) => event.target.playVideo(),
+          
         },
       });
     };
@@ -53,7 +56,7 @@ export default function YouTubeCentered({ videoId }: Props) {
   };
 
   return (
-    <div className="w-full flex justify-center py-10 px-4">
+    <div className="w-full flex justify-center py-14 px-4">
       <div className="relative w-full max-w-300 aspect-video rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(168,85,247,0.4)] bg-black">
         
         {/* Contenedor del video: Escalado para ocultar textos de YouTube */}
@@ -76,3 +79,5 @@ export default function YouTubeCentered({ videoId }: Props) {
     </div>
   );
 }
+
+

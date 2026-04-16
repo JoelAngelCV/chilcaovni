@@ -40,9 +40,6 @@ export function EventInfo() {
         </div>
 
         {/* Video section */}
-        {/* <div className="mb-16">
-          <YouTubeBackgroundPage />
-        </div> */}
         <YouTubeCentered videoId="191BheYX1C4"/>
 
         {/* Main event description */}

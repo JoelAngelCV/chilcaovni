@@ -30,7 +30,7 @@ export function Header() {
     <header className="fixed top-0 w-full z-50 bg-linear-to-b from-background via-background/80 to-transparent backdrop-blur-sm border-b border-primary/20" ref={menuRef}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link href="#" className="text-2xl font-bold glow-text">
-          <Image src={logoMini} alt="Chilca OVNI Festival" width={64} height={64} className="inline-block mr-2" style={{ width: "auto", height: "auto" }}/>
+          <Image src={logoMini} alt="Chilca OVNI Festival" width={64} height={64} className="inline-block mr-2" style={{ width: "auto", height: "auto" }} loading="eager"/>
        </Link>
         
         <button
