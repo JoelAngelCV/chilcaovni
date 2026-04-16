@@ -7,24 +7,35 @@ export default function GalleryVideo({ videoId, type }: { videoId: string, type:
   const containerId = `player-${videoId}`;
 
   useEffect(() => {
-    loadYouTubeAPI(() => {
-      // Evitar doble inicialización
-      if (playerRef.current) return;
+  let isMounted = true;
 
-      playerRef.current = new (window as any).YT.Player(containerId, {
-        videoId: videoId,
-        playerVars: {
-          autoplay: 0,
-          controls: 1,
-          rel: 0,
-          modestbranding: 1,
-          enablejsapi: 1,
-          showinfo: 0, 
-          origin: window.location.origin
-        },
-      });
+  loadYouTubeAPI(() => {
+    // Si el componente se desmontó mientras cargaba la API, no hacemos nada
+    if (!isMounted) return;
+
+    // Si el reproductor ya existe para este ID, no lo duplicamos
+    if (playerRef.current) return;
+
+    playerRef.current = new (window as any).YT.Player(containerId, {
+      videoId: videoId,
+      playerVars: {
+        autoplay: 0,
+        controls: 1,
+        rel: 0,
+        origin: window.location.origin,
+      },
     });
-  }, [videoId, containerId]);
+  });
+
+  return () => {
+    isMounted = false;
+    // Limpieza opcional: destruir el player si el componente desaparece
+    if (playerRef.current && playerRef.current.destroy) {
+      playerRef.current.destroy();
+    }
+  };
+}, [videoId, containerId]);
+
 
   const aspectClass = type === 'short' ? 'aspect-[9/16] max-w-[300px]' : 'aspect-video w-full';
 
