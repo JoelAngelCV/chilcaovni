@@ -6,6 +6,8 @@ export default function GallerySectionVideo() {
     { id: 'CNUOZpnnW10', type: 'short' },
     { id: 'jxyvoFcqWD8', type: 'short' },
     { id: '191BheYX1C4', type: 'horizontal' },
+    { id: '6zFLq_x4SVk', type: 'horizontal' },
+    { id: 'C6Id5sdTCRA', type: 'horizontal' }
   ];
 
   return (
