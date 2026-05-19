@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import logoChilca from '../public/logochilca.png'
+import logoChilca from '../public/logochilca1.png'
 import fondoNave from '../public/fondo-nave1.png'
 
 export function HeroSection() {
@@ -38,7 +38,7 @@ export function HeroSection() {
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Main heading */}
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="text-6xl sm:text-7xl lg:text-8xl font-black mb-6 tracking-tighter">
+          <div className="text-6xl sm:text-7xl lg:text-8xl font-black mb-6 tracking-tighter flex flex-col items-center justify-center">
             {/* <span className="glow-text-pulse block mb-4 animate-pulse-neon">OVNI</span>
             <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/80">
               FESTIVAL
@@ -55,9 +55,9 @@ export function HeroSection() {
         </div>
 
         {/* Subtitle */}
-        <div className={`transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
-          <p className="text-xl sm:text-2xl text-foreground/70 mb-5 font-light">
-            Sumérgete en una experiencia cósmica única
+        <div className={`my-20 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
+          <p className="text-xl sm:text-3xl text-foreground/70 mb-5 font-light">
+            Música, Arte y Espiritualidad
           </p>
         </div>
 

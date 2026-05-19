@@ -88,7 +88,7 @@ export function LineupSection() {
         </div>
 
         {/* Schedule timeline */}
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <h3 className="text-2xl font-bold text-primary mb-8 text-center">Timeline Completo del Festival</h3>
           <div className="space-y-4">
             {FESTIVAL_INFO.schedule.map((item, index) => (
@@ -111,17 +111,17 @@ export function LineupSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Info box */}
-        <div className="mt-12 cosmic-card p-8 rounded-lg text-center">
+        {/* <div className="mt-12 cosmic-card p-8 rounded-lg text-center">
           <p className="text-foreground/80 mb-4">
             ¡Más artistas por confirmar! Sigue nuestras redes sociales para actualizaciones.
           </p>
           <p className="text-sm text-foreground/60">
             El horario está sujeto a cambios. Los horarios son aproximados.
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* Artist Modal */}

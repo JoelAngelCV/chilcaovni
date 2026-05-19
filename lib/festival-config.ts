@@ -172,12 +172,307 @@ export const FESTIVAL_INFO = {
   },
 }
 
+export const COLLABORATORS = [
+  {
+    id: 1,
+    name: 'Carlos Mendoza',
+    role: 'Productor General',
+    contribution: 'Liderazgo en la coordinación general del festival, desde la planificación hasta la ejecución de todas las actividades.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+  },
+  {
+    id: 2,
+    name: 'María Rodríguez',
+    role: 'Directora de Contenido',
+    contribution: 'Diseño y curaduría de todas las actividades espirituales y artísticas del festival.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+  },
+  {
+    id: 3,
+    name: 'Juan Pérez',
+    role: 'Director de Producción',
+    contribution: 'Coordinación técnica de sonido, luces y toda la infraestructura del evento.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
+  },
+  {
+    id: 4,
+    name: 'Laura García',
+    role: 'Coordinadora de Voluntarios',
+    contribution: 'Reclutamiento y capacitación de más de 200 voluntarios que hicieron posible el festival.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+  },
+  {
+    id: 5,
+    name: 'Diego López',
+    role: 'Director de Seguridad',
+    contribution: 'Implementación de protocolos de seguridad y protección para todos los asistentes.',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop',
+  },
+  {
+    id: 6,
+    name: 'Andrea Silva',
+    role: 'Coordinadora de Sostenibilidad',
+    contribution: 'Gestión ambiental y programas de reciclaje para mantener Punta Yaya limpia y protegida.',
+    image: 'https://images.unsplash.com/photo-1517841905240-74f88813b794?w=400&h=400&fit=crop',
+  },
+  {
+    id: 7,
+    name: 'Roberto Castillo',
+    role: 'Maestro de Ceremonias',
+    contribution: 'Conducción y animación de todas las actividades principales y transiciones del festival.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+  },
+  {
+    id: 8,
+    name: 'Sofía Morales',
+    role: 'Coordinadora Médica',
+    contribution: 'Coordinación de servicios de salud y bienestar para asegurar la seguridad de todos.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+  },
+]
+
+export const FESTIVAL_TIMELINE = [
+  {
+    id: 1,
+    date: '2017',
+    title: 'Edición Inaugural',
+    description: 'Nace el Festival OVNI con una visión revolucionaria de unir música electrónica y espiritualidad.',
+    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
+  },
+  {
+    id: 2,
+    date: '2018',
+    title: 'Expansión Cósmica',
+    description: 'El festival se consolida y atrae artistas internacionales de renombre mundial.',
+    image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=400&fit=crop',
+  },
+  {
+    id: 3,
+    date: '2019',
+    title: 'Convergencia Galáctica',
+    description: 'Reunión de más de 15,000 personas en la playa de Punta Yaya para una experiencia única.',
+    image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=400&fit=crop',
+  },
+  {
+    id: 4,
+    date: '2024',
+    title: 'Resurrección Cósmica',
+    description: 'Después de 5 años, el festival retorna con más fuerza que nunca.',
+    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+  },
+  {
+    id: 5,
+    date: '2025',
+    title: 'Dimensión Desconocida',
+    description: 'La edición actual continúa rompiendo barreras y expandiendo consciencias.',
+    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop',
+  },
+  {
+    id: 6,
+    date: '2026',
+    title: 'Futuro Infinito',
+    description: 'Próxima edición con innovaciones nunca antes vistas en festivales de trance.',
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
+  },
+]
+
 export const NAV_LINKS = [
-  { label: 'Inicio', href: '#home' },
-  { label: 'Evento', href: '#event' },
-  { label: 'Artistas', href: '#lineup' },
-  { label: 'Galería', href: '#gallery' },
-  { label: 'Ubicación', href: '#location' },
-  { label: 'Entradas', href: '#tickets' },
-  { label: 'Contacto', href: '#contact' },
+  { label: 'Inicio', href: '/' },
+  { 
+    label: 'Evento', 
+    href: '/#event',
+    submenu: [
+      { label: 'Timeline', href: '/evento/timeline' },
+      { label: 'Actividades', href: '/evento/actividades' },
+      { label: 'Auspiciadores', href: '/evento/auspiciadores' },
+      { label: 'Colaboradores', href: '/evento/colaboradores' },
+      { label: 'Normas de convivencia', href: '/evento/normas-convivencia' },
+      { label: 'Merch', href: '/evento/merch' },
+    ]
+  },
+  { label: 'Artistas', href: '/#lineup' },
+  { 
+    label: 'Galería', 
+    href: '/#gallery',
+    submenu: [
+      { label: '2017', href: '/galeria/2017' },
+      { label: '2018', href: '/galeria/2018' },
+      { label: '2019', href: '/galeria/2019' },
+      { label: '2024', href: '/galeria/2024' },
+      { label: '2025', href: '/galeria/2025' },
+      { label: '2026', href: '/galeria/2026' },
+    ]
+  },
+  { label: 'Ubicación', href: '/#location' },
+  { label: 'Entradas', href: '/#tickets' },
+  { label: 'Contacto', href: '/#contact' },
+]
+
+export const ACTIVITIES = [
+  {
+    id: 1,
+    name: 'Meditación Activa',
+    description: 'Una experiencia transformadora de meditación dinámica en la playa.',
+    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop',
+    fullDescription: 'Únete a nuestras sesiones de meditación activa donde la música, el movimiento y la conciencia se fusionan. Bajo el cielo estrellado de Punta Yaya, experimentarás una transformación profunda de tu ser interior.\n\nEsta práctica combina técnicas ancestrales con energía contemporánea para despertar tu consciencia cósmica.'
+  },
+  {
+    id: 2,
+    name: 'Taller de Geometría Sagrada',
+    description: 'Explora los patrones cósmicos y la geometría del universo.',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&h=500&fit=crop',
+    fullDescription: 'Descubre los misterios de la geometría sagrada y cómo se manifiesta en el universo. Un viaje visual y espiritual a través de patrones fractales, símbolos ancestrales y la geometría del cosmos.\n\nAprenderás a reconocer estas formas en la naturaleza y en ti mismo, conectando con la inteligencia universal.'
+  },
+  {
+    id: 3,
+    name: 'Activación de Movimiento',
+    description: 'Danza libre y movimiento consciente bajo las estrellas.',
+    image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=500&fit=crop',
+    fullDescription: 'Libera tu cuerpo y tu espíritu a través del movimiento consciente. Nuestros facilitadores te guiarán en una experiencia de danza libre donde tu cuerpo es el instrumento y la música el universo.\n\nEsta activación te permitirá expresar tu ser más auténtico sin limitaciones.'
+  },
+  // {
+  //   id: 4,
+  //   name: 'Crónicas del Futuro',
+  //   description: 'Charla visionaria sobre tendencias cósmicas y transformación.',
+  //   image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop',
+  //   fullDescription: 'Escucha a expertos en espiritualidad y visionarios que comparten sus perspectivas sobre la evolución humana y cósmica. Un espacio para explorar ideas revolucionarias y conectar con otros buscadores de verdad.'
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Soundbath Cósmico',
+  //   description: 'Baño sonoro con instrumentos ancestrales y electrónicos.',
+  //   image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop',
+  //   fullDescription: 'Sumérgete en un océano de sonidos que penetran tu ser. Combinamos gongs ancestrales, cuencos tibetanos y sintetizadores electrónicos para crear un viaje sonoro único.\n\nEsta experiencia activa los chakras y regenera tu energía vital.'
+  // },
+]
+
+export const SPONSORS = [
+  {
+    id: 1,
+    name: 'Sponsor 1',
+    logo: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=300&h=100&fit=crop',
+  },
+  {
+    id: 2,
+    name: 'Sponsor 2',
+    logo: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=100&fit=crop',
+  },
+  {
+    id: 3,
+    name: 'Sponsor 3',
+    logo: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=300&h=100&fit=crop',
+  },
+  {
+    id: 4,
+    name: 'Sponsor 4',
+    logo: 'https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=300&h=100&fit=crop',
+  },
+]
+
+export const MERCHANDISE = [
+  {
+    id: 1,
+    name: 'Camiseta OVNI Festival',
+    description: 'Camiseta 100% algodón con diseño exclusivo',
+    price: 45,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop',
+  },
+  {
+    id: 2,
+    name: 'Vaso Cosmic',
+    description: 'Vaso reutilizable con diseño holográfico',
+    price: 25,
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop',
+  },
+  {
+    id: 3,
+    name: 'Stickers OVNI Set',
+    description: 'Pack de 5 stickers holográficos',
+    price: 12,
+    image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500&h=500&fit=crop',
+  },
+  // {
+  //   id: 4,
+  //   name: 'Hoodie Cósmico',
+  //   description: 'Hoodie premium con diseño fluorescente',
+  //   price: 75,
+  //   image: 'https://images.unsplash.com/photo-1556821840-8a63f6ca3086?w=500&h=500&fit=crop',
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Pulsera Energética',
+  //   description: 'Pulsera con cristales y diseño OVNI',
+  //   price: 35,
+  //   image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&h=500&fit=crop',
+  // },
+  // {
+  //   id: 6,
+  //   name: 'Gorra Trucker',
+  //   description: 'Gorra trucker con logo bordado',
+  //   price: 40,
+  //   image: 'https://images.unsplash.com/photo-1606402316001-d41f0f9abb52?w=500&h=500&fit=crop',
+  // },
+]
+
+export const FESTIVAL_YEARS = [
+  {
+    year: 2017,
+    title: 'OVNI Festival - Edición Inaugural',
+    description: 'La primera edición del Festival OVNI en Punta Yaya. Un evento revolucionario que marcó el inicio de una nueva era en la música electrónica y espiritualidad peruana.',
+    images: [
+      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+    ],
+  },
+  {
+    year: 2018,
+    title: 'OVNI Festival 2018 - Expansión Cósmica',
+    description: 'La segunda edición consolidó el festival como referente en Sudamérica, atrayendo artistas internacionales y miles de visitantes.',
+    images: [
+      'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+    ],
+  },
+  {
+    year: 2019,
+    title: 'OVNI Festival 2019 - Convergencia Galáctica',
+    description: 'Una edición épica que reunió a más de 15,000 visitantes en la playa de Punta Yaya para una experiencia nunca antes vista.',
+    images: [
+      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop',
+    ],
+  },
+  {
+    year: 2024,
+    title: 'OVNI Festival 2024 - Resurrección',
+    description: 'Después de una pausa, el festival retorna con más fuerza que nunca, trayendo la experiencia cósmica de vuelta a Punta Yaya.',
+    images: [
+      'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
+    ],
+  },
+  {
+    year: 2025,
+    title: 'OVNI Festival 2025 - Dimensión Desconocida',
+    description: 'La edición actual continúa la tradición de excelencia con innovaciones en producción, arte y experiencia total del asistente.',
+    images: [
+      'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=400&fit=crop',
+    ],
+  },
+  {
+    year: 2026,
+    title: 'OVNI Festival 2026 - Futuro Infinito',
+    description: 'Próxima edición del festival con más artistas, más actividades y más magia en Punta Yaya.',
+    images: [
+      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+      'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=400&fit=crop',
+    ],
+  },
 ]

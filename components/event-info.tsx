@@ -10,7 +10,7 @@ export function EventInfo() {
     {
       icon: '🎨',
       title: 'Arte Visionary',
-      description: 'Instalaciones inmersivas, proyecciones 3D y arte temático OVNI en toda el área del festival.'
+      description: 'Instalaciones inmersivas, proyecciones 3D y arte temático en toda el área del festival.'
     },
     {
       icon: '🌊',
@@ -42,10 +42,10 @@ export function EventInfo() {
           <div className="cosmic-card p-8 rounded-xl">
             <h3 className="text-2xl font-bold text-primary mb-4">🛸 Chilca Ovni Festival</h3>
             <p className="text-foreground/80 mb-4">
-              El festival celebra la intersección entre la música electrónica, la espiritualidad y el misterio cósmico. Cada elemento está diseñado para transportarte a otra dimensión.
+              Un ritual musical y místico frente al mar donde el tiempo se disuelve y el cuerpo danza en trance bajo la luna y las estrellas.
             </p>
             <p className="text-foreground/80">
-              Desde el escenario principal temático de naves alienígenas hasta las instalaciones interactivas, cada rincón del festival cuenta una historia del universo.
+              El festival celebra la intersección entre la música electrónica, la espiritualidad y el misterio cósmico. Cada elemento está diseñado para transportarte a otra dimensión.
             </p>
           </div>
 
