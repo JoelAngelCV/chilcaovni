@@ -280,7 +280,7 @@ export const NAV_LINKS = [
   { label: 'Inicio', href: '/' },
   { 
     label: 'Evento', 
-    href: '/#event',
+    href: '#event',
     submenu: [
       { label: 'Timeline', href: '/evento/timeline' },
       { label: 'Actividades', href: '/evento/actividades' },
@@ -290,7 +290,7 @@ export const NAV_LINKS = [
       { label: 'Merch', href: '/evento/merch' },
     ]
   },
-  { label: 'Artistas', href: '/#lineup' },
+  { label: 'Artistas', href: '/artistas' },
   { 
     label: 'Galería', 
     href: '/#gallery',
@@ -417,12 +417,12 @@ export const MERCHANDISE = [
 export const FESTIVAL_YEARS = [
   {
     year: 2017,
-    title: 'OVNI Festival - Edición Inaugural',
-    description: 'La primera edición del Festival OVNI en Punta Yaya. Un evento revolucionario que marcó el inicio de una nueva era en la música electrónica y espiritualidad peruana.',
+    title: 'CHILCA OVNI FEST 2017',
+    description: 'CHILCA OVNI FEST, FESTIVAL DE ARTE Y MISTERIOS DEL PERU - 02 AL 05 DEL FEBRERO DEL 2017. https://www.facebook.com/events/1101528769925736/ PRODUCIDO POR: OVNI FEST & DROP PERU - TRILOBITE MUSIC. Colaboradores: - SEPHIRA REC - KARTIKEYA MUSIC - DP DECO ART DP - MARKAHUASI FESTIVAL - XENDRA FESTIVAL - PSYFACTOR FESTIVALS - GAYATRI GRAPICS ARTS - LYRIAN MYSTICAL SHOP - MYSTIK MAKE UP - SATIN PULSERAS - SANHA PRODUCTOS NATURALES',
     images: [
-      'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop',
-      'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&h=400&fit=crop',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop',
+      'https://scontent.flim28-2.fna.fbcdn.net/v/t39.30808-6/492972317_3728300790794410_5704735522101215059_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeHyQe-DYTA6FAXXZYGzQiPY1NCHS5U8QbPU0IdLlTxBs-vKokVZuqbOqp_MT4craPAxazUsPvAHkpqGB03yL3ct&_nc_ohc=uuDOWwR8tXQQ7kNvwEtv0nL&_nc_oc=AdqsfsryesBW6Rx588ETw6-a0HoiEiHYN5wiLoqYsqITTwA5QLrcXnYdNRBm4nEBst0&_nc_zt=23&_nc_ht=scontent.flim28-2.fna&_nc_gid=cZwicVnozOyXcRr-PDEG2Q&_nc_ss=7b2a8&oh=00_Af6wRrcccNcXDjkdSMtAtSZ79kVvB-EHd8I0Ji58igBs6w&oe=6A20FD3F',
+      'https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/494268282_3730581877232968_6795827925521536851_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeF45Ev5d9fBkOLY5nsKeKkc19u4A85KcRXX27gDzkpxFbqQGsSXakL-9HP2fusQa_D2MSGm701NeFauGnAnOXMs&_nc_ohc=cg6CAh1Q1JUQ7kNvwEOdpBg&_nc_oc=AdqCK7Jh7TC5tWu0cJGn6jKxW2xpNMMRNNIGV4F4VgQ7gD_E62Gs9mvnNxRWS4c99OE&_nc_zt=23&_nc_ht=scontent.flim38-1.fna&_nc_gid=LMlkEVZ3B8H_WEQwRAQigA&_nc_ss=7b2a8&oh=00_Af4Cb9M8sGpGbv8vUwPJaVVPiNrqWHguJduz9ZG5z-VZrQ&oe=6A20F73B',
+      'https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/493011344_3730583127232843_7863708980689198463_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeHZHdI3valvQGUmRPxaURtBWeKBoqrrRz5Z4oGiqutHPvyuwFHJ-3CXRTJoNhdfKO0k9a60pKseQq88cnmGs5gx&_nc_ohc=VSd-gZ2biKAQ7kNvwEmsqOI&_nc_oc=AdqyJtm4ktJ1gQPKEowLx2sMoLKvlH-gR3sRiX9RQOrm-xXxApJNprwE73FJe-HsATw&_nc_zt=23&_nc_ht=scontent.flim38-1.fna&_nc_gid=Vyphex4wM-PJEcfL1MCylQ&_nc_ss=7b2a8&oh=00_Af5ygoREAehZnRQea4gR6Lf3MlIsYN9UOGEOdpCGydl0RA&oe=6A20FFB3',
     ],
   },
   {
@@ -476,3 +476,88 @@ export const FESTIVAL_YEARS = [
     ],
   },
 ]
+
+export const FESTIVAL_SCHEDULE = [
+  { time: '17:00', name: 'CEREMONIA APERTURA', artist: 'Milagros Guzmán', genre: 'Ambient / Psy Chill', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop' },
+  { time: '18:00', name: 'Néstor Guerrero', artist: 'Néstor Guerrero', genre: 'Ambient / Psy Chill', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop' },
+  { time: '21:00', name: 'Demencia', artist: 'Demencia', genre: 'Techno', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop' },
+  { time: '22:15', name: 'Factor RH', artist: 'Factor RH', genre: 'Psy Tek', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop' },
+  { time: '23:30', name: 'Astral Mind', artist: 'Astral Mind', genre: 'Progressive Psy', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop' },
+  { time: '00:30', name: 'Uaky', artist: 'Uaky', genre: 'Dark Prog', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop' },
+  { time: '02:00', name: 'Aren Aline', artist: 'Aren Aline', genre: 'Psychedelic', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop' },
+  { time: '03:30', name: 'Pepe Jones', artist: 'Pepe Jones', genre: 'Full On Night', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop' },
+  { time: '05:00', name: 'Naropa', artist: 'Naropa', genre: 'Full On Groove', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop' },
+  { time: '05:30', name: 'Alien Diabolic', artist: 'Alien Diabolic', genre: 'Speed Trance', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop' },
+  { time: '07:30', name: 'Intercalactika', artist: 'Intercalactika', genre: 'Hi-Tech', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop' },
+  { time: '08:30', name: 'Carlos Tong', artist: 'Carlos Tong', genre: 'Goa', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop' },
+  { time: '09:30', name: 'Break', artist: 'Break', genre: '', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop' },
+]
+
+export const ARTIST_CATEGORIES = {
+  djs: {
+    title: 'DJs',
+    description: 'Los mejores DJs de psytrance y electrónica del continente',
+    artists: [
+      { name: 'Milagros Guzmán', genre: 'Ambient / Psy Chill', image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop' },
+      { name: 'Néstor Guerrero', genre: 'Ambient / Psy Chill', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop' },
+      { name: 'Demencia', genre: 'Techno', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop' },
+      { name: 'Factor RH', genre: 'Psy Tek', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop' },
+    ]
+  },
+  vjs: {
+    title: 'VJs',
+    description: 'Proyecciones visuales y arte digital inmersivo',
+    artists: [
+      { name: 'Cosmic Visuals', genre: 'Proyecciones 3D', image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop' },
+      { name: 'Neon Dreams', genre: 'Mapping de luz', image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=500&fit=crop' },
+    ]
+  },
+  malabarismo: {
+    title: 'Malabarismo',
+    description: 'Artistas de fuego y malabarismo cósmico',
+    artists: [
+      { name: 'Fire Spinners Crew', genre: 'Fuego y poi', image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=500&fit=crop' },
+      { name: 'Cosmic Jugglers', genre: 'Malabarismo LED', image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&h=500&fit=crop' },
+    ]
+  },
+  flow_arts: {
+    title: 'Artistas de Flow',
+    description: 'Danzantes de contact staff, hula hoop y movimiento cósmico',
+    artists: [
+      { name: 'Flow Masters', genre: 'Staff de contacto', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=500&fit=crop' },
+      { name: 'Hula Cosmic', genre: 'Hula Hoop LED', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=500&fit=crop' },
+    ]
+  },
+  live_painting: {
+    title: 'Pintura en Vivo',
+    description: 'Artistas visuales creando en tiempo real',
+    artists: [
+      { name: 'Abstract Cosmos', genre: 'Pintura acrílica', image: 'https://images.unsplash.com/photo-1549887534-f3eda5f0c50d?w=500&h=500&fit=crop' },
+      { name: 'Mandala Artist', genre: 'Arte sagrado', image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop' },
+    ]
+  },
+  fire_show: {
+    title: 'Show de Fuego',
+    description: 'Espectáculos pirotécnicos y performances con fuego',
+    artists: [
+      { name: 'Fire Breathers', genre: 'Tragafuego', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=500&fit=crop' },
+      { name: 'Pyro Masters', genre: 'Show pirotécnico', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=500&fit=crop' },
+    ]
+  },
+  meditative_music: {
+    title: 'Música Meditativa',
+    description: 'Espacios sonoros para relajación y transformación interior',
+    artists: [
+      { name: 'Soundbath Cosmic', genre: 'Cuencos tibetanos', image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=500&fit=crop' },
+      { name: 'Ambient Healers', genre: 'Meditación sonora', image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=500&fit=crop' },
+    ]
+  },
+  workshops: {
+    title: 'Talleres',
+    description: 'Experiencias educativas y de crecimiento personal',
+    artists: [
+      { name: 'Geometría Sagrada', genre: 'Taller educativo', image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=500&fit=crop' },
+      { name: 'Danza Consciente', genre: 'Movimiento y mindfulness', image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&h=500&fit=crop' },
+    ]
+  }
+}
