@@ -2,7 +2,7 @@
 @import 'tw-animate-css';
 
 @theme inline {
-  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-sans: 'Oxanium', system-ui, 'Geist', sans-serif;
   --font-mono: 'Geist Mono', monospace;
   --color-background: hsl(240 13% 8%);
   --color-foreground: hsl(270 100% 95%);

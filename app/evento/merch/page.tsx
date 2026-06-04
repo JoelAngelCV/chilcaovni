@@ -12,7 +12,7 @@ export default function MerchPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold glow-text mb-4">Merch OVNI</h1>
-            <p className="text-xl text-foreground/70">Lleva la experiencia cósmica contigo con nuestro merchandise exclusivo</p>
+            <p className="text-xl text-foreground/70">Lleva la experiencia cósmica contigo con nuestro merchandise exclusivo.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -42,6 +42,11 @@ export default function MerchPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mb-16">
+            
+            <p className="text-xl text-foreground/70">Para adquirir cualquier producto por favor contacta con nuestro equipo de ventas.</p>
           </div>
 
           <div className="cosmic-card p-8 rounded-lg text-center mb-12">

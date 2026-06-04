@@ -17,14 +17,14 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_114058_isl9si.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg',
     title: 'Main Stage',
-    description: 'Disfrutando al lado del imponente escenario ovni.',
+    description: 'Vista del escenario principal y del dancefloor.',
     category: 'photo'
   },
   {
     id: 2,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260301_013142_dbcrd0.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545732/chilca.ovni.festival_s2026-5-7-22.29.441_story_mzinfh.webp',
     title: 'Noche de Danza Psicodelica',
     description: 'La oscuridad iluminada por luces psicodélicas y la energía de la multitud.',
     category: 'photo'
@@ -38,7 +38,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430946/20260228_194835_xui8ty.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260301_013142_dbcrd0.jpg',
     title: 'Dancefloor Magico',
     description: 'Bailando bajo un cielo estrellado con luces psicodélicas.',
     category: 'photo'
@@ -46,8 +46,8 @@ const galleryItems: GalleryItem[] = [
   {
     id: 5,
     src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_074336_tpqsqb.jpg',
-    title: 'Escena Local',
-    description: 'Djs locales en el gran escenario ovni. La energía de la comunidad se siente en cada beat.',
+    title: 'Escenario Ovni',
+    description: 'La energía de la comunidad se siente en cada beat del escenario OVNI.',
     category: 'photo'
   },
   {
@@ -148,13 +148,16 @@ export function GallerySection() {
                 </svg>
               </button>
 
-              <div className="relative w-full h-96 sm:h-125">
+              <div className="relative w-full h-96 sm:h-[500px]">
                 <Image
+                  key={selectedItem.id}
                   src={selectedItem.src}
                   alt={selectedItem.title}
                   fill
                   className="object-cover"
                   priority
+                  unoptimized
+                  sizes="(max-width: 640px) 100vw, 90vw"
                 />
               </div>
 

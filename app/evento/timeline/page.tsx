@@ -4,8 +4,8 @@ import { Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Timeline - Festival OVNI 2026',
-  description: 'Horario de presentaciones del Festival OVNI 2026 en Punta Yaya',
+  title: 'Timeline - Chilca Ovni Festival 2026',
+  description: 'Horario de presentaciones de Chilca Ovni Festival 2026',
 }
 
 export default function TimelinePage() {
@@ -14,10 +14,10 @@ export default function TimelinePage() {
       <Header />
       <main className="min-h-screen bg-background text-foreground pt-24 pb-16">
         {/* Hero with timeline image */}
-        <div className="relative w-full h-100 sm:h-125 overflow-hidden rounded-xl mx-4 sm:mx-6 lg:mx-8 mb-16">
+        <div className="relative max-w-6xl w-full h-100 sm:h-125 overflow-hidden rounded-xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/timelinechilca2025-7SzwZHhlMpQXEoRD7DczaUBAXVxitq.jpg"
-            alt="Timeline Festival OVNI 2026"
+            src="https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg"
+            alt="Timeline Chilca Ovni Festival 2026"
             className="w-full h-full object-cover rounded-xl"
           />
           <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/80 rounded-xl"></div>
@@ -29,7 +29,7 @@ export default function TimelinePage() {
             <h1 className="text-4xl sm:text-5xl font-bold glow-text mb-4">
               Timeline del Festival
             </h1>
-            <p className="text-foreground/80 text-lg">
+            <p className="text-foreground/80 text-lg blur">
               Viernes 27 a Sábado 28 de Junio - Festival OVNI 2026 en Punta Yaya
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function TimelinePage() {
             {FESTIVAL_SCHEDULE.map((entry, idx) => (
               <div
                 key={idx}
-                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 blur"
               >
                 {/* Time */}
                 <div className="shrink-0 w-full sm:w-auto">

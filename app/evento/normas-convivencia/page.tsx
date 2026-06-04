@@ -18,12 +18,12 @@ const NORMAS = [
   {
     id: 3,
     title: 'Sustancias y Salud',
-    description: 'Aunque es un festival celebratorio, cuidamos la salud de todos. No se permite el consumo de drogas ilegales. El consumo de alcohol es responsabilidad de cada adulto. Cualquier comportamiento peligroso o agresivo resultará en expulsión inmediata.',
+    description: 'Aunque es un festival celebratorio, cuidamos la salud de todos, si experimentas una mala experiencia por sustancias contacta a nuestro equipo de salud. El consumo de sustancias es responsabilidad de cada adulto. Cualquier comportamiento peligroso o agresivo resultará en expulsión inmediata.',
   },
   {
     id: 4,
     title: 'Cuidado del Medio Ambiente',
-    description: 'Punta Yaya es un espacio sagrado. No dejes basura, recicla correctamente y ayuda a mantener la playa limpia. Utiliza los contenedores designados y participa en nuestros programas de limpieza comunitaria.',
+    description: 'La Playa Punta Yaya es un espacio sagrado. No dejes basura, recicla correctamente y ayuda a mantener la playa limpia. Utiliza los contenedores designados y participa en nuestros programas de limpieza comunitaria.',
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ export default function NormasConvivenciaPage() {
             <p className="text-xl text-foreground/80 mb-6">
               Estas normas fueron creadas para asegurar que Chilca Ovni Festival sea un espacio seguro, inclusivo y respetuoso para todos.
             </p>
-            <div className="h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mb-8"></div>
+            <div className="h-1 bg-linear-to-r from-primary via-secondary to-accent rounded-full mb-8"></div>
           </div>
 
           {/* Introduction */}
@@ -97,7 +97,7 @@ export default function NormasConvivenciaPage() {
                 >
                   <h3 className="text-lg font-semibold text-primary text-left">{norma.id}. {norma.title}</h3>
                   <ChevronDown
-                    className={`w-6 h-6 text-secondary transition-transform duration-300 flex-shrink-0 ml-4 ${
+                    className={`w-6 h-6 text-secondary transition-transform duration-300 shrink-0 ml-4 ${
                       expandedId === norma.id ? 'rotate-180' : ''
                     }`}
                   />

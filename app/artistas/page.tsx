@@ -23,7 +23,7 @@ export default function ArtistasPage() {
               Artistas del Festival
             </h1>
             <p className="text-foreground/80 text-lg max-w-2xl mx-auto">
-              Descubre a todos los artistas, performers y creadores que harán posible la experiencia cósmica del Festival OVNI 2026
+              Descubre a todos los artistas, performers y creadores que harán posible la experiencia única de Chilca Ovni Festival.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export default function ArtistasPage() {
                 </div>
 
                 {/* Artists Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 blur">
                   {category.artists.map((artist, idx) => (
                     <ArtistCard key={idx} artist={artist} />
                   ))}
@@ -57,9 +57,9 @@ export default function ArtistasPage() {
 
           {/* Call to action */}
           <div className="mt-20 cosmic-card p-8 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary mb-4">¿Quieres ser parte de OVNI?</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">¿Quieres ser parte de Chilca Ovni Festival?</h2>
             <p className="text-foreground/80 mb-6">
-              Si eres artista y quieres participar en el Festival OVNI 2026, contáctanos a través de nuestras redes sociales o por email.
+              Si eres artista y quieres participar en Chilca Ovni Festival, contáctanos a través de nuestras redes sociales o por email.
             </p>
             <a
               href="#contact"

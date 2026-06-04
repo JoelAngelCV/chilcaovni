@@ -46,6 +46,9 @@ export function EventInfo() {
               <h3 className="text-2xl font-bold text-primary mb-4">Chilca Ovni Festival</h3>
             </div>
             <p className="text-foreground/80 mb-4">
+              Una experiencia sensorial avanzada donde la música electrónica, la tecnología, la conciencia y el misterio convergen en una misma frecuencia. No es solo un festival. Es un punto de encuentro entre lo humano y lo desconocido.
+            </p>
+            <p className="text-foreground/80 mb-4">
               Un ritual musical y místico frente al mar donde el tiempo se disuelve y el cuerpo danza en trance bajo la luna y las estrellas.
             </p>
             <p className="text-foreground/80">

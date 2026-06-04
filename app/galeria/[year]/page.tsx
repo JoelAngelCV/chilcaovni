@@ -14,6 +14,7 @@ interface PageProps {
 export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
   const [year, setYear] = useState<number | null>(null)
   const [festivalData, setFestivalData] = useState<typeof FESTIVAL_YEARS[0] | null>(null)
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
 
   useEffect(() => {
     const resolveParams = async () => {
@@ -22,10 +23,10 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
       setYear(yearNum)
       const data = FESTIVAL_YEARS.find((f) => f.year === yearNum)
       setFestivalData(data || null)
+      setSelectedImageIndex(null)
     }
     resolveParams()
   }, [paramsPromise])
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   if (!year || !festivalData) {
     return (
@@ -54,32 +55,35 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 h-1 mb-16 rounded-full"></div>
+          <div className="bg-linear-to-r from-primary/20 via-secondary/20 to-accent/20 h-1 mb-16 rounded-full"></div>
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-8">Galería</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {festivalData.images.map((image, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => setSelectedImage(image)}
-                  className="cosmic-card rounded-lg overflow-hidden h-80 cursor-pointer group hover:scale-105 transition-all duration-300"
-                >
-                  <img
-                    src={image}
-                    alt={`Galería ${year} - Imagen ${idx + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
-                </div>
-              ))}
+              {festivalData.images.map((image, idx) => {
+                const imageId = `${year}-${idx}`
+                return (
+                  <div
+                    key={imageId}
+                    onClick={() => setSelectedImageIndex(idx)}
+                    className="cosmic-card rounded-lg overflow-hidden h-80 cursor-pointer group hover:scale-105 transition-all duration-300"
+                  >
+                    <img
+                      src={image}
+                      alt={`Galería ${year} - Imagen ${idx + 1}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
           <div className="cosmic-card p-8 rounded-lg text-center">
             <h3 className="text-2xl font-bold text-primary mb-4">Revive los Recuerdos</h3>
             <p className="text-foreground/70 mb-6">
-              Explora la historia del Festival OVNI a través de los años y sé parte de esta tradición cósmica.
+              Explora la historia de Chilca Ovni Festival a través de los años y sé parte de esta tradición cósmica.
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[2017, 2018, 2019, 2024, 2025, 2026].map((y) => (
@@ -99,18 +103,24 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
           </div>
         </div>
 
-        {selectedImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        {selectedImageIndex !== null && festivalData?.images[selectedImageIndex] && (
+          <div 
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedImageIndex(null)}
+          >
             <button
-              onClick={() => setSelectedImage(null)}
+              onClick={() => setSelectedImageIndex(null)}
               className="absolute top-6 right-6 p-2 rounded-lg bg-primary/20 hover:bg-primary/30 transition-colors z-10"
             >
               <X className="w-6 h-6 text-primary" />
             </button>
 
-            <div className="relative max-w-4xl w-full max-h-[90vh]">
+            <div 
+              className="relative max-w-4xl w-full max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <img
-                src={selectedImage}
+                src={festivalData.images[selectedImageIndex]}
                 alt="Galería expandida"
                 className="w-full h-full object-contain"
               />
