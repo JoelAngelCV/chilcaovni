@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Oxanium, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
+const oxanium = Oxanium({ subsets: ["latin"], weight: ['300','400','500','600','700'], variable: '--font-sans' });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className="dark scroll-smooth">
+    <html lang="es" className={`${oxanium.variable} dark scroll-smooth`}>
       <head>
         <meta name="theme-color" content="#0f0a1e" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

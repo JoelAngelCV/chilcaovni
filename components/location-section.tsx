@@ -19,8 +19,7 @@ export function LocationSection() {
             Playa Punta Yaya, Chilca - Lima, Perú
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Ubicado en una de las playas más hermosas del sur de Lima. Un epicentro de avistamientos ovni y paraíso costero perfecto para una
-            experiencia cósmica única.
+            Ubicado en una de las playas más hermosas del sur de Lima. Un epicentro de avistamientos ovni y paraíso costero perfecto para una experiencia única.
           </p>
         </div>
 

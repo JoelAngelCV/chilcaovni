@@ -1,8 +1,10 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 import GallerySectionVideo from './galeryvideo-section'
+import { ArrowRight } from 'lucide-react'
 
 interface GalleryItem {
   id: number
@@ -15,14 +17,14 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_114058_isl9si.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg',
     title: 'Main Stage',
-    description: 'Disfrutando al lado del imponente escenario ovni.',
+    description: 'Vista del escenario principal y del dancefloor.',
     category: 'photo'
   },
   {
     id: 2,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260301_013142_dbcrd0.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545732/chilca.ovni.festival_s2026-5-7-22.29.441_story_mzinfh.webp',
     title: 'Noche de Danza Psicodelica',
     description: 'La oscuridad iluminada por luces psicodélicas y la energía de la multitud.',
     category: 'photo'
@@ -36,7 +38,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430946/20260228_194835_xui8ty.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260301_013142_dbcrd0.jpg',
     title: 'Dancefloor Magico',
     description: 'Bailando bajo un cielo estrellado con luces psicodélicas.',
     category: 'photo'
@@ -44,8 +46,8 @@ const galleryItems: GalleryItem[] = [
   {
     id: 5,
     src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_074336_tpqsqb.jpg',
-    title: 'Escena Local',
-    description: 'Djs locales en el gran escenario ovni. La energía de la comunidad se siente en cada beat.',
+    title: 'Escenario Ovni',
+    description: 'La energía de la comunidad se siente en cada beat del escenario OVNI.',
     category: 'photo'
   },
   {
@@ -74,7 +76,7 @@ export function GallerySection() {
             Galería del Evento
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Revive los momentos mágicos del festival anterior. Imágenes de reels de eventos anteriores
+            Revive los momentos de festivales anteriores a través de esta galería de fotos y videos que capturan la esencia psicodélica y la energía única de Chilca Ovni Festival.
           </p>
         </div>
 
@@ -146,13 +148,16 @@ export function GallerySection() {
                 </svg>
               </button>
 
-              <div className="relative w-full h-96 sm:h-125">
+              <div className="relative w-full h-96 sm:h-[500px]">
                 <Image
+                  key={selectedItem.id}
                   src={selectedItem.src}
                   alt={selectedItem.title}
                   fill
                   className="object-cover"
                   priority
+                  unoptimized
+                  sizes="(max-width: 640px) 100vw, 90vw"
                 />
               </div>
 
@@ -169,11 +174,42 @@ export function GallerySection() {
         {/* Info box */}
         <div className="cosmic-card p-8 rounded-lg text-center">
           <p className="text-foreground/80 mb-2">
-            ✨ Estas imágenes son del evento anterior. ¡Prepárate para vivir una experiencia aún más épica!
+            ✨ Estas imágenes son de eventos anteriores. ¡Prepárate para vivir una experiencia aún más épica en la próxima edición!
           </p>
           <p className="text-sm text-foreground/60">
-            Comparte tus fotos y videos en redes con #OVNIFestival
+            Comparte tus fotos y videos en redes con #chilcaovnifestival
           </p>
+        </div>
+
+        {/* Year galleries invitation */}
+        <div className="border-t border-primary/20 pt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl sm:text-4xl font-bold glow-text mb-4">
+              Galería de Ediciones Anteriores
+            </h3>
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+              Revive la historia de Chilca Ovni Festival a través de los años. Explora galerías de eventos pasados.
+            </p>
+          </div>
+
+          {/* Year cards grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[2017, 2018, 2019, 2024, 2025, 2026].map((year) => (
+              <Link
+                key={year}
+                href={`/galeria/${year}`}
+                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 group cursor-pointer"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-4xl font-bold text-primary">{year}</span>
+                  <ArrowRight className="w-6 h-6 text-secondary group-hover:text-primary transition-colors" />
+                </div>
+                <p className="text-foreground/70 group-hover:text-foreground transition-colors">
+                  Ver galería del año {year}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -3,8 +3,8 @@ import { COLLABORATORS } from '@/lib/festival-config'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Colaboradores - OVNI Festival',
-  description: 'Conoce a las personas que hicieron posible el Festival OVNI',
+  title: 'Colaboradores - Chilca Ovni Festival',
+  description: 'Conoce a las personas que hicieron posible Chilca Ovni Festival.',
 }
 
 export default function CollaboratorsPage() {
@@ -19,7 +19,7 @@ export default function CollaboratorsPage() {
               <span className="glow-text">Nuestros Colaboradores</span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Un sincero agradecimiento a todas las personas que dedicaron su tiempo, energía y pasión para hacer posible esta experiencia cósmica
+              Un sincero agradecimiento a todas las personas que dedicaron su tiempo, energía y pasión para hacer posible esta experiencia.
             </p>
           </div>
 

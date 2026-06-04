@@ -18,7 +18,7 @@ export default function AuspiciadoresPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {SPONSORS.map((sponsor) => (
-              <div key={sponsor.id} className="cosmic-card p-6 rounded-lg flex items-center justify-center min-h-[150px]">
+              <div key={sponsor.id} className="cosmic-card p-6 rounded-lg flex items-center justify-center min-h-37.5">
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
@@ -38,7 +38,7 @@ export default function AuspiciadoresPage() {
               <div className="space-y-4 mb-8">
                 <div className="flex gap-3">
                   <span className="text-accent text-2xl">✦</span>
-                  <p className="text-foreground/70">Acceso a un público de 5000+ asistentes comprometidos</p>
+                  <p className="text-foreground/70">Acceso a un público masivo de asistentes comprometidos</p>
                 </div>
                 <div className="flex gap-3">
                   <span className="text-accent text-2xl">✦</span>

@@ -104,7 +104,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <dt className="font-semibold text-primary text-sm uppercase mb-2">Duración</dt>
-                  <dd className="text-foreground/80">3 días de música, arte y experiencias cósmicas</dd>
+                  <dd className="text-foreground/80">3 días de música, arte y convivencia</dd>
                 </div>
               </dl>
             </div>

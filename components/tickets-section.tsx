@@ -13,7 +13,7 @@ export function TicketsSection() {
     {
       question: '¿Cuándo son las fechas del festival?',
       answer:
-        'Chilca Ovni Festival se llevará a cabo en Punta Yaya, Chilca durante 3 días consecutivos. Las fechas específicas se anunciarán próximamente.',
+        'Chilca Ovni Festival se llevará a cabo en la Playa Punta Yaya, Chilca durante 3 días consecutivos. Las fechas específicas se anunciarán próximamente.',
     },
     {
       question: '¿Puedo cambiar o devolver mi entrada?',
@@ -30,9 +30,9 @@ export function TicketsSection() {
       answer: 'Sí, contáctanos para consultar sobre descuentos especiales para grupos de 10 o más personas.',
     },
     {
-      question: '¿Cómo llego a Playa Punta Yaya?',
+      question: '¿Cómo llego a Punta Yaya?',
       answer:
-        'Punta Yaya se encuentra en Chilca, al sur de Lima, Perú. Está a aproximadamente 60 km del centro de Lima. Proporcionaremos información detallada sobre transporte próximamente.',
+        'Punta Yaya se encuentra en Chilca, al sur de Lima, Perú. Está a aproximadamente 40 km del centro de Lima. Proporcionaremos información detallada sobre transporte próximamente.',
     },
   ]
 
@@ -61,7 +61,7 @@ export function TicketsSection() {
         </div>
 
         {/* Tickets Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16 blur">
           {TICKETS.map((ticket) => (
             <div
               key={ticket.id}
@@ -70,7 +70,7 @@ export function TicketsSection() {
                   ? 'ring-2 ring-primary scale-105'
                   : 'hover:scale-105 hover:ring-1 hover:ring-primary/50'
               }`}
-              onClick={() => setSelectedTicket(ticket.id)}
+              // onClick={() => setSelectedTicket(ticket.id)}
             >
               {/* Featured badge for VIP */}
               {ticket.id === 'vip' && (

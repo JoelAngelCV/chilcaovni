@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import logoChilca from '../public/logochilca1.png'
-import fondoNave from '../public/fondo-nave1.png'
+import fondoUfo from '../public/ufo-bg.jpg'
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -17,32 +17,29 @@ export function HeroSection() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4">
       
       {/* Animated background image */}
-      
-      <div className="absolute inset-0 animate-[zoomInOut_5s_ease-in-out_infinite]">
-        <Image
-          src={fondoNave}
-          alt="bg"
-          fill
-          className="object-cover animate-[zoom-slow]"
-        />
-      </div>
-
-      {/* Animated background elements */}
-
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-primary/20 rounded-full blur-3xl top-10 -left-48 animate-float"></div>
-        <div className="absolute w-96 h-96 bg-secondary/20 rounded-full blur-3xl bottom-10 -right-48 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute w-96 h-96 bg-accent/20 rounded-full blur-3xl top-1/2 left-1/2 animate-pulse" style={{ animationDuration: '8s' }}></div>
-      </div>  
+        <div className="absolute inset-0 hero-bg-layer">
+          <Image
+            src={fondoUfo}
+            alt="bg"
+            fill
+            className="pointer-events-none object-cover brightness-[0.35] contrast-[0.9]"
+            draggable={false}
+          />
+        </div>
+
+        <div className="absolute inset-0 hero-bg-overlay pointer-events-none" />
+        <div className="absolute inset-0 hero-bg-spotlight pointer-events-none" />
+
+        <div className="absolute w-80 h-80 rounded-full bg-primary/20 blur-3xl opacity-70 top-10 -left-32 hero-bg-floating"></div>
+        <div className="absolute w-80 h-80 rounded-full bg-secondary/20 blur-3xl opacity-70 bottom-10 -right-32 hero-bg-floating" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute w-72 h-72 rounded-full bg-accent/20 blur-3xl opacity-70 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hero-bg-pulse" />
+      </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Main heading */}
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-6xl sm:text-7xl lg:text-8xl font-black mb-6 tracking-tighter flex flex-col items-center justify-center">
-            {/* <span className="glow-text-pulse block mb-4 animate-pulse-neon">OVNI</span>
-            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground/80">
-              FESTIVAL
-            </span> */}
             <Image
               src={logoChilca} // Ruta de tu imagen
               alt="Chilca Ovni Festival"
@@ -55,9 +52,12 @@ export function HeroSection() {
         </div>
 
         {/* Subtitle */}
-        <div className={`my-20 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
+        <div className={`my-16 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
           <p className="text-xl sm:text-3xl text-foreground/70 mb-5 font-light">
             Música, Arte y Espiritualidad
+          </p>
+          <p className="text-lg sm:text-xl text-primary mb-8 font-medium">
+             Psytrance en Playa Punta Yaya • Chilca, Lima - Perú
           </p>
         </div>
 
