@@ -56,7 +56,7 @@ export function HeroSection() {
           <p className="text-xl sm:text-3xl text-foreground/70 mb-5 font-light">
             Música, Arte y Espiritualidad
           </p>
-          <p className="text-lg sm:text-xl text-primary mb-8 font-medium">
+          <p className=" sm:text-xl text-primary mb-8 font-medium">
              Psytrance en Playa Punta Yaya • Chilca, Lima - Perú
           </p>
         </div>

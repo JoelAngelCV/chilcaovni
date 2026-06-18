@@ -18,7 +18,7 @@ const NORMAS = [
   {
     id: 3,
     title: 'Sustancias y Salud',
-    description: 'Aunque es un festival celebratorio, cuidamos la salud de todos, si experimentas una mala experiencia por sustancias contacta a nuestro equipo de salud. El consumo de sustancias es responsabilidad de cada adulto. Cualquier comportamiento peligroso o agresivo resultará en expulsión inmediata.',
+    description: 'Aunque es un festival celebratorio, cuidamos la salud de todos, el consumo de sustancias es responsabilidad de cada adulto, pero si experimentas un malestar contacta a nuestro equipo de salud.  Cualquier comportamiento peligroso o agresivo resultará en expulsión inmediata.',
   },
   {
     id: 4,
@@ -150,14 +150,14 @@ export default function NormasConvivenciaPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="p-4 bg-primary/10 rounded-lg">
                 <h3 className="font-semibold text-primary mb-2">Email de Reportes</h3>
-                <a href="mailto:seguridad@ovnifestival.com" className="text-secondary hover:text-primary transition-colors">
-                  seguridad@ovnifestival.com
+                <a href="mailto:seguridad@chilcaovnifestival.com" className="text-secondary hover:text-primary transition-colors">
+                  seguridad@chilcaovnifestival.com
                 </a>
               </div>
               <div className="p-4 bg-primary/10 rounded-lg">
                 <h3 className="font-semibold text-primary mb-2">WhatsApp de Emergencia</h3>
-                <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">
-                  +51 987 654 321
+                <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">
+                  +51 999 999 999
                 </a>
               </div>
             </div>
