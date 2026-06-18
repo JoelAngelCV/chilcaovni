@@ -6,7 +6,7 @@ import { NAV_LINKS } from '@/lib/festival-config'
 import { NavSubmenu } from './nav-submenu'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
-import logoMini from '../public/lgalienufo.png'
+import logoMini from '../public/logo-1.png'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -33,7 +33,7 @@ export function Header() {
     <header className="fixed top-0 w-full z-50 bg-linear-to-b from-background via-background/80 to-transparent backdrop-blur-sm border-b border-primary/20" ref={menuRef}>
       <nav className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold glow-text">
-          <Image src={logoMini} alt="Chilca OVNI Festival" width={32} height={32} className="inline-block -my-2" style={{ width: "35%", height: "35%" }} loading="eager"/>
+          <Image src={logoMini} alt="Chilca OVNI Festival" className="inline-block -my-2" style={{ width: "44%", height: "44%" }} loading="eager"/>
         </Link>
         
         <button

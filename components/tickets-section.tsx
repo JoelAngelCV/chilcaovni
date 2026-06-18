@@ -52,7 +52,7 @@ export function TicketsSection() {
             <span className="text-sm font-semibold text-primary">ENTRADAS DISPONIBLES</span>
           </div>
           <h2 className="glow-text text-4xl sm:text-5xl font-bold mb-4">
-            Elige Tu Experiencia Cósmica
+            Elige Tu Experiencia
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
             Selecciona el tipo de entrada que mejor se adapte a ti

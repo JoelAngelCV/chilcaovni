@@ -62,7 +62,7 @@ export default function ArtistasPage() {
               Si eres artista y quieres participar en Chilca Ovni Festival, contáctanos a través de nuestras redes sociales o por email.
             </p>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-block px-8 py-3 neon-button rounded-lg font-semibold transition-all duration-300 hover:scale-105"
             >
               Contactar
