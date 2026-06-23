@@ -12,6 +12,9 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [expandedSubmenu, setExpandedSubmenu] = useState<string | null>(null)
   const menuRef = useRef<HTMLDivElement>(null)
+  const handleContextMenu = (e: React.MouseEvent<HTMLImageElement>) => {
+    e.preventDefault();
+  };
 
   // Cerrar menú cuando se hace clic fuera
   useEffect(() => {
@@ -33,7 +36,17 @@ export function Header() {
     <header className="fixed top-0 w-full z-50 bg-linear-to-b from-background via-background/80 to-transparent backdrop-blur-sm border-b border-primary/20" ref={menuRef}>
       <nav className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold glow-text">
-          <Image src={logoMini} alt="Chilca OVNI Festival" className="inline-block -my-2" style={{ width: "44%", height: "44%" }} loading="eager"/>
+          <Image 
+            src={logoMini} 
+            alt="Chilca OVNI Festival" 
+            className="inline-block -my-2 pointer-events-none select-none" 
+            style={{ width: "44%", height: "44%" }} 
+            loading="eager"
+            priority
+            draggable="false"
+            onContextMenu={handleContextMenu}
+
+          />
         </Link>
         
         <button
@@ -62,7 +75,7 @@ export function Header() {
         </div>
 
         <Link
-          href="#tickets"
+          href="/#tickets"
           className="hidden sm:block neon-button text-sm"
         >
           Comprar Entradas
@@ -115,7 +128,7 @@ export function Header() {
                 )
               ))}
               <Link
-                href="#tickets"
+                href="/#tickets"
                 className="block px-4 py-2 text-center neon-button text-sm mt-4"
               >
                 Comprar Entradas

@@ -17,11 +17,14 @@ interface PayPalCheckoutProps {
 
 export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutProps) {
   const [error, setError] = useState<string | null>(null)
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+  const [receiptError, setReceiptError] = useState<string | null>(null)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [quantity, setQuantity] = useState(1)
   const [showPayPalButton, setShowPayPalButton] = useState(false)
   const [isRenderingButtons, setIsRenderingButtons] = useState(false)
+  const [isSendingReceipt, setIsSendingReceipt] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Cargar el script de PayPal solo una vez al montar
@@ -102,10 +105,43 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
                 ],
               })
             },
-            onApprove: (data: any, actions: any) => {
-              return actions.order.capture().then((details: any) => {
-                onSuccess?.(details)
-              })
+            onApprove: async (data: any, actions: any) => {
+              const details = await actions.order.capture()
+              setShowPayPalButton(false)
+              setSuccessMessage('Pago exitoso, se le enviarán detalles al email registrado.')
+              setReceiptError(null)
+              setIsSendingReceipt(true)
+
+              try {
+                const response = await fetch('/api/brevo/email', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    name,
+                    email,
+                    ticketName: ticket.name,
+                    quantity,
+                    totalAmount,
+                    orderId: data.orderID,
+                    transactionId: details.id || '',
+                    purchaseDate: new Date().toISOString(),
+                  }),
+                })
+
+                if (!response.ok) {
+                  const body = await response.json().catch(() => null)
+                  throw new Error(body?.error || 'La solicitud al servidor falló.')
+                }
+              } catch (err) {
+                console.error('Error enviando comprobante por correo:', err)
+                setReceiptError('Pago completado, pero no se pudo enviar el comprobante por email.')
+              } finally {
+                setIsSendingReceipt(false)
+              }
+
+              onSuccess?.(details)
             },
             onError: (err: any) => {
               setError('Hubo un error procesando el pago. Intenta nuevamente.')
@@ -137,19 +173,29 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
       <div className="cosmic-card p-6 rounded-lg border border-red-500/50 bg-red-500/10">
         <p className="text-red-400 text-center">{error}</p>
         <p className="text-sm text-foreground/60 mt-2 text-center">
-          Por favor, contacta con soporte o usa la opción de WhatsApp
+          Por favor, intenta nuevamente o usa la opción de WhatsApp
         </p>
       </div>
     )
   }
 
-  if (error) {
+  if (successMessage) {
     return (
-      <div className="cosmic-card p-6 rounded-lg border border-red-500/50 bg-red-500/10">
-        <p className="text-red-400 text-center">{error}</p>
-        <p className="text-sm text-foreground/60 mt-2 text-center">
-          Por favor, intenta nuevamente o usa la opción de WhatsApp
+      <div className="cosmic-card p-6 rounded-lg border border-emerald-500/50 bg-emerald-500/10 space-y-3">
+        <p className="text-emerald-500 text-center font-semibold">{successMessage}</p>
+        <p className="text-sm text-foreground/70 text-center">
+          Si no encuentra el mensaje por favor revise la carpeta de Spam.
         </p>
+        {isSendingReceipt && (
+          <p className="text-sm text-foreground/70 text-center">
+            Enviando comprobante al correo...
+          </p>
+        )}
+        {receiptError && (
+          <p className="text-sm text-yellow-400 text-center">
+            {receiptError}
+          </p>
+        )}
       </div>
     )
   }

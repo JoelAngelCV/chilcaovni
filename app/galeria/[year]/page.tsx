@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { FESTIVAL_YEARS } from '@/lib/festival-config'
 import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
+import GalleryVideo from '@/components/gallery-video'
 
 interface PageProps {
   params: Promise<{
@@ -73,10 +74,23 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
                       alt={`Galería ${year} - Imagen ${idx + 1}`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
+                    
                   </div>
+                    
+                  
                 )
               })}
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 justify-center">
+              {festivalData.videos?.map((video, idx) => {
+                const videoId = `${year}-video-${idx}`
+                return (
+                  <div key={video.videoId} className="flex justify-center">
+                    <GalleryVideo videoId={video.videoId} type={video.type as any} key={videoId} />            
+                  </div>
+                                    
+                )
+              } )}
             </div>
           </div>
 

@@ -1,5 +1,9 @@
+'use client'
+
 import { Mail, MapPin, MessageCircle, Instagram, Facebook } from 'lucide-react'
 import { WHATSAPP_CONFIG } from '@/lib/payment-config'
+import TikTok from './tiktok'
+import { NewsletterForm } from './newsletter-form'
 
 export function ContactSection() {
   return (
@@ -85,6 +89,13 @@ export function ContactSection() {
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
+                <a
+                  href="https://www.tiktok.com/@eventos.reviden?lang=es"
+                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center text-primary transition-all hover:scale-110"
+                  target="_blank"
+                >
+                  <TikTok className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
@@ -110,23 +121,12 @@ export function ContactSection() {
             </div>
 
             <div className="cosmic-card p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Newsletter</h3>
-              <p className="text-foreground/70 mb-4">
-                Suscríbete para recibir actualizaciones sobre el festival.
-              </p>
-              <form className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Tu email"
-                  className="w-full px-4 py-2 bg-card border border-primary/30 rounded-lg text-foreground placeholder-foreground/40 focus:outline-none focus:border-primary"
-                />
-                <button
-                  type="submit"
-                  className="w-full neon-button text-center"
-                >
-                  Suscribirse
-                </button>
-              </form>
+              <NewsletterForm
+                source="contact-section"
+                title="Newsletter"
+                description="Suscríbete para recibir actualizaciones sobre el festival."
+                buttonLabel="Suscribirse"
+              />
             </div>
           </div>
         </div>

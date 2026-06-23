@@ -18,7 +18,7 @@ export default function AuspiciadoresPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {SPONSORS.map((sponsor) => (
-              <div key={sponsor.id} className="cosmic-card p-6 rounded-lg flex items-center justify-center min-h-37.5">
+              <div key={sponsor.id} className="cosmic-card p-6 rounded-lg flex items-center justify-center min-h-37.5 blur">
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}

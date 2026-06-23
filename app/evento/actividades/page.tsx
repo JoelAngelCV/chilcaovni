@@ -25,7 +25,7 @@ export default function ActividadesPage() {
                 onClick={() => setSelectedActivity(activity)}
                 className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer group"
               >
-                <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-primary/10">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-primary/10 blur">
                   <img
                     src={activity.image}
                     alt={activity.name}

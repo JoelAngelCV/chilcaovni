@@ -2,7 +2,7 @@
 
 import { Header } from '@/components/header'
 import { MERCHANDISE } from '@/lib/festival-config'
-import { ShoppingCart } from 'lucide-react'
+import { NewsletterForm } from '@/components/newsletter-form'
 
 export default function MerchPage() {
   return (
@@ -11,8 +11,8 @@ export default function MerchPage() {
       <main className="min-h-screen bg-background text-foreground pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold glow-text mb-4">Merch OVNI</h1>
-            <p className="text-xl text-foreground/70">Lleva la experiencia cósmica contigo con nuestro merchandise exclusivo.</p>
+            <h1 className="text-5xl font-bold glow-text mb-4">Merch Ovni</h1>
+            <p className="text-xl text-foreground/70">Lleva la experiencia Chilca Ovni contigo con nuestro merchandise exclusivo.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -35,10 +35,10 @@ export default function MerchPage() {
                     <span className="text-xs text-foreground/60">USD</span>
                   </div>
 
-                  <button className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg neon-button">
+                  {/* <button className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg neon-button">
                     <ShoppingCart className="w-5 h-5" />
                     Agregar al Carrito
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
@@ -46,20 +46,18 @@ export default function MerchPage() {
 
           <div className="text-center mb-16">
             
-            <p className="text-xl text-foreground/70">Para adquirir cualquier producto por favor contacta con nuestro equipo de ventas.</p>
+            <p className="text-xl text-foreground/70">Para adquirir cualquier producto por favor <a href="/#contact" className="text-primary hover:underline">
+              contacta
+            </a> con nuestro equipo de ventas.</p>
           </div>
 
           <div className="cosmic-card p-8 rounded-lg text-center mb-12">
-            <h2 className="text-2xl font-bold text-primary mb-4">Próximos Diseños</h2>
-            <p className="text-foreground/70 mb-6">Estamos diseñando nuevos productos exclusivos. Suscríbete a nuestro newsletter para ser el primero en enterarte.</p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Tu email"
-                className="flex-1 px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button className="px-6 py-3 rounded-lg neon-button">Suscribir</button>
-            </div>
+            <NewsletterForm
+              source="merch-page"
+              title="Próximos Diseños"
+              description="Estamos diseñando nuevos productos exclusivos. Suscríbete a nuestro newsletter para ser el primero en enterarte."
+              buttonLabel="Suscribir"
+            />
           </div>
 
           <div className="cosmic-card p-8 rounded-lg">
@@ -71,7 +69,7 @@ export default function MerchPage() {
               </li>
               <li className="flex gap-2">
                 <span className="text-accent">✓</span>
-                <span>Disponible en Perú y Latinoamérica</span>
+                <span>Disponible en Perú</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-accent">✓</span>

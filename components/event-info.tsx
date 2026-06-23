@@ -42,17 +42,14 @@ export function EventInfo() {
         <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
           <div className="cosmic-card p-8 rounded-xl">
             <div className="flex items-center">
-              <img className="mb-4 mr-2" src="/icons8-ovni-48.png" alt="Ovni" width={25}/>
+              <img className="mb-4 mr-2" src="/icons8-ovni-48.png" alt="Ovni" width={35}/>
               <h3 className="text-2xl font-bold text-primary mb-4">Chilca Ovni Festival</h3>
             </div>
             <p className="text-foreground/80 mb-4">
               Un acontecimiento sensorial avanzado donde la música electrónica, la tecnología, la conciencia y el misterio convergen en una misma frecuencia. No es solo un festival. Es un punto de encuentro entre lo humano y lo desconocido.
             </p>
             <p className="text-foreground/80 mb-4">
-              Un ritual musical y místico frente al mar donde el tiempo se disuelve y el cuerpo danza en trance bajo la luna y las estrellas.
-            </p>
-            <p className="text-foreground/80">
-              El festival celebra la intersección entre la música, la espiritualidad y el misterio cósmico. Cada elemento está diseñado para transportarte a otra dimensión.
+              Un ritual musical y místico frente al mar donde el tiempo se disuelve y el cuerpo danza en trance bajo la luna y las estrellas. Cada elemento está diseñado para transportarte a otra dimensión.
             </p>
           </div>
 
@@ -73,7 +70,7 @@ export function EventInfo() {
                 <div>
                   <h4 className="font-bold text-primary mb-1">Fechas</h4>
                   <p className="text-foreground/80">Febrero 2027</p>
-                  <p className="text-sm text-foreground/60">36 horas de música electrónica psicodélica</p>
+                  <p className="text-sm text-foreground/60">36 horas de música electrónica</p>
                 </div>
               </div>
             </div>
@@ -97,7 +94,7 @@ export function EventInfo() {
               <img
                   src={feature.icon}
                   alt={feature.title}
-                  width={32}
+                  width={48}
                   className="mb-2"
                 />              
               <h4 className="text-lg font-bold text-primary mb-2">{feature.title}</h4>

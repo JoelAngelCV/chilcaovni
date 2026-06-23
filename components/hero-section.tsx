@@ -52,11 +52,11 @@ export function HeroSection() {
         </div>
 
         {/* Subtitle */}
-        <div className={`my-16 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
+        <div className={`my-10 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
           <p className="text-xl sm:text-3xl text-foreground/70 mb-5 font-light">
             Música, Arte y Espiritualidad
           </p>
-          <p className=" sm:text-xl text-primary mb-8 font-medium">
+          <p className="sm:text-xl text-primary font-bold">
              Psytrance en Playa Punta Yaya • Chilca, Lima - Perú
           </p>
         </div>
@@ -72,11 +72,11 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className={`transition-all duration-1000 delay-400 flex flex-col sm:flex-row gap-4 justify-center ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <Link href="#tickets" className="neon-button-glow hover:animate-bounce">
+          <Link href="/#tickets" className="neon-button-glow hover:animate-bounce">
             Comprar Entradas
           </Link>
           <Link 
-            href="#event"
+            href="/#event"
             className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-primary/50 text-primary hover:bg-primary/10 hover:animate-pulse-neon"
           >
             Descubre más
