@@ -32,16 +32,16 @@ export default function CollaboratorsPage() {
                   <img
                     src={collaborator.image}
                     alt={collaborator.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 blur"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-background/80 to-transparent"></div>
                 </div>
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-1">{collaborator.name}</h3>
+                  <h3 className="text-xl font-bold text-primary mb-1 blur">{collaborator.name}</h3>
                   <p className="text-sm text-secondary font-semibold mb-3">{collaborator.role}</p>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{collaborator.contribution}</p>
+                  <p className="text-sm text-foreground/70 leading-relaxed blur">{collaborator.contribution}</p>
                 </div>
               </div>
             ))}

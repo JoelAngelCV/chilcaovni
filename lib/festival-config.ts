@@ -176,59 +176,66 @@ export const COLLABORATORS = [
   {
     id: 1,
     name: 'Carlos Mendoza',
-    role: 'Productor General',
+    role: 'Producción General',
     contribution: 'Liderazgo en la coordinación general del festival, desde la planificación hasta la ejecución de todas las actividades.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
   },
   {
     id: 2,
     name: 'María Rodríguez',
-    role: 'Directora de Contenido',
+    role: 'Decoración y Arte',
     contribution: 'Diseño y curaduría de todas las actividades espirituales y artísticas del festival.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
   },
   {
     id: 3,
     name: 'Juan Pérez',
-    role: 'Director de Producción',
+    role: 'Luces y Sonido',
     contribution: 'Coordinación técnica de sonido, luces y toda la infraestructura del evento.',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
   },
   {
     id: 4,
     name: 'Laura García',
-    role: 'Coordinadora de Voluntarios',
+    role: 'Ceremonia de apertura',
     contribution: 'Reclutamiento y capacitación de más de 200 voluntarios que hicieron posible el festival.',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
   },
   {
     id: 5,
     name: 'Diego López',
-    role: 'Director de Seguridad',
+    role: 'Danza de Fuego',
     contribution: 'Implementación de protocolos de seguridad y protección para todos los asistentes.',
     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop',
   },
   {
     id: 6,
     name: 'Andrea Silva',
-    role: 'Coordinadora de Sostenibilidad',
+    role: 'Malabares',
     contribution: 'Gestión ambiental y programas de reciclaje para mantener Punta Yaya limpia y protegida.',
     image: 'https://images.unsplash.com/photo-1517841905240-74f88813b794?w=400&h=400&fit=crop',
   },
   {
     id: 7,
     name: 'Roberto Castillo',
-    role: 'Maestro de Ceremonias',
+    role: 'Desarrollo web',
     contribution: 'Conducción y animación de todas las actividades principales y transiciones del festival.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
   },
   {
     id: 8,
     name: 'Sofía Morales',
-    role: 'Coordinadora Médica',
+    role: 'Voluntario',
     contribution: 'Coordinación de servicios de salud y bienestar para asegurar la seguridad de todos.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
   },
+  {
+    id: 9,
+    name: 'Miguel Torres',
+    role: 'Voluntario',
+    contribution: 'Diseño y ejecución de la escenografía y ambientación de todas las áreas del festival.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
+  }
 ]
 
 export const FESTIVAL_TIMELINE = [
@@ -372,24 +379,24 @@ export const SPONSORS = [
 export const MERCHANDISE = [
   {
     id: 1,
-    name: 'Camiseta Chilca OVNI Festival',
+    name: 'Camiseta Chilca Ovni Festival',
     description: 'Camiseta 100% algodón con diseño exclusivo',
     price: 60,
-    image: 'https://scontent.flim2-6.fna.fbcdn.net/v/t51.82787-15/671192444_17896357449438799_1988454534264300371_n.webp?stp=dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHTA7ejj7abI4iWSL5jsaOl4DYUvl93zQngNhS-X3fNCR6bylp7fySZSuZIaWIY4ImzFRG_BqBBf8g0qWhR_LfZ&_nc_ohc=NgRqW5EXupcQ7kNvwH03K8S&_nc_oc=Adoit6pWKSY8KG_M65F5iTF8fycQ0PkGCFPXNOxcizwif9UzE5zJQWq7aO8blzfDkZjIjEZF9i9UgZXbL0LvuOl9&_nc_zt=23&_nc_ht=scontent.flim2-6.fna&_nc_gid=ZrFvOwCoEpDNCAUgU5HA8A&_nc_ss=7b2a8&oh=00_Af_Pii7kraweyjwjyDwdB3QVHYdtP_kHpc6JPDD378GJlA&oe=6A26E6F8',
+    image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782101236/image_314f9e162_wdulhf.png',
   },
   {
     id: 2,
-    name: 'Vaso Cosmic',
+    name: 'Vaso Ovni Holográfico',
     description: 'Vaso reutilizable con diseño holográfico',
     price: 25,
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop',
+    image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782101236/image_aaba242_i7zadm.png',
   },
   {
     id: 3,
-    name: 'Stickers OVNI Set',
+    name: 'Stickers Ovni Set',
     description: 'Pack de 5 stickers holográficos',
-    price: 12,
-    image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500&h=500&fit=crop',
+    price: 15,
+    image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782101240/image_c9205b222_bzmllb.png',
   },
   // {
   //   id: 4,
@@ -433,6 +440,13 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184779/494232855_3730582880566201_2128023154337203591_n_hwpopr.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184780/494397613_3730582980566191_8482426013882736403_n_sn99ti.jpg',
     ],
+    videos: [
+      {
+        videoId: 'Vcnp8ZpkpoA',
+        title: 'Chilca OVNI Festival 2019 - Aftermovie',
+        type: 'horizontal',
+      }
+    ],
   },
   {
     year: 2018,
@@ -452,6 +466,13 @@ export const FESTIVAL_YEARS = [
       'https://scontent.flim2-6.fna.fbcdn.net/v/t1.6435-9/38802586_1973161752974998_413168659804979200_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGMKwRmp7zLBlDeRQPFkvucHUGK70M06s4dQYrvQzTqzjday0y-GOKWmpJVemEsJrHUflNr7dE_CNyNX_Mh7BQE&_nc_ohc=usPKzjaDTFIQ7kNvwGZtOZQ&_nc_oc=AdrBy68PY05bA2GWRuJW5RJGAVSQb_WcgF-StqiWRnQvSfj46TtakUu_2w4-eimXXyMHb1w_f947izRr0N8llKkc&_nc_zt=23&_nc_ht=scontent.flim2-6.fna&_nc_gid=S0AGZKChliCeqpiBdAVpYQ&_nc_ss=7b2a8&oh=00_Af_m9a4BFyu7Fg0lU3rRTIfXHumEL5aHQ9jzwuz6GfP2Vw&oe=6A48474A',
       'https://scontent.flim2-5.fna.fbcdn.net/v/t1.6435-9/38847471_1973162139641626_2966526816061227008_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGDCrMoUelmPYyuB8RlT5NUsZdgURRlqpGxl2BRFGWqkVZAbzf2o6HO1VYlgR-MJjKF60dlCkr221u8uuVbpdNf&_nc_ohc=kfq6p6eedb0Q7kNvwFs65eL&_nc_oc=Adq4Otex2VWc-ay9VVU4wmDo0eZtFnJkbGMehEhMQOyQGKyLXte6IsaeNaTM3jVjrJbJF_3__kfFnbomZeGnoeOk&_nc_zt=23&_nc_ht=scontent.flim2-5.fna&_nc_gid=qim8M6MftniJ_89X_7HRvA&_nc_ss=7b2a8&oh=00_Af-wm48xi4LJBtA_889MxTnt5I2kUeimFzNT0ZgzeMWMvw&oe=6A4842C0',
     ],
+    videos: [
+      {
+        videoId: 'ncP_MLq_s6g',
+        title: 'Chilca OVNI Festival 2019 - Aftermovie',
+        type: 'horizontal',
+      }
+    ],
   },
   {
     year: 2019,
@@ -461,7 +482,19 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184776/36929112_1943060055985168_4984731742293196800_n_jx5wx1.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184783/495358733_3735881523369670_4197565618394092206_n_chvjgr.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781457281/201917536_n_jtoblp.jpg',
-    ]
+    ],
+      videos: [
+        {
+          videoId: 'Wgo9MmWXKJ8',
+          title: 'Chilca OVNI Festival 2019 - Aftermovie',
+          type: 'horizontal',
+        },
+        {
+          videoId: '16UmUms_abc',
+          title: 'Chilca OVNI Festival 2019 - Aftermovie',
+          type: 'horizontal',
+        }
+      ],
   },
   {
     year: 2024,
@@ -471,6 +504,24 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184777/480882766_1055702916600420_3886740375525878676_n_ujqzrf.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781458151/202447382177_n_mwj1ct.jpg',
     ],
+    videos: [
+      {
+        videoId: 'VZN4X-Njg20',
+        title: 'Chilca OVNI Festival 2024 - Aftermovie',
+        type: 'horizontal',
+      },
+      {
+        videoId: 'qiJaxQuKR9g',
+        title: 'Chilca OVNI Festival 2024 - Aftermovie',
+        type: 'horizontal',
+      },
+      {
+        videoId: 'jIy4utegD8U',
+        title: 'Chilca OVNI Festival 2024 - Aftermovie',
+        type: 'horizontal',
+      }
+    ]
+
   },
   {
     year: 2025,
@@ -480,10 +531,17 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781458153/20254655832_b8syww.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184776/485881724_1073333368170708_7090447895610459931_n_njr2mg.jpg',
     ],
+    videos: [
+      {
+        videoId: '6zFLq_x4SVk',
+        title: 'Chilca OVNI Festival 2019 - Aftermovie',
+        type: 'horizontal',
+      }
+    ],
   },
   {
     year: 2026,
-    title: '🛸 CHILCA OVNI FESTIVAL 2026 🛸',
+    title: 'Chilca Ovni Festival 2026',
     description: 'En un lugar donde el desierto observa al cielo y el tiempo deja de comportarse como debería, la señal vuelve a activarse. Chilca Ovni Festival 2026 abre el portal. 🔹 Sonidos futuristas y psicodélicos 🔹 Visuales inmersivos y arquitectura lumínica 🔹 Ritual colectivo bajo cielos activos 🔹 Comunidad, exploración y expansión 📡 Coordenadas del evento 📍 Playa Punta Yaya – Las Salinas, Chilca, Perú 📅 27, 28 de febrero y 1 de marzo 2026 ⏰ Transmisión continua desde las 5pm 👁️ Advertencia: Una vez que entras en la señal, algo cambia. No prometemos respuestas. Prometemos experiencia. CHILCA OVNI FESTIVAL 2026 No mires el cielo esperando permiso.',
     images: [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184784/506860702_1136014311902613_7813509344103617472_n_lgocw7.jpg',
@@ -496,7 +554,35 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_074336_tpqsqb.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260227_194048_k9iteb.jpg',
-      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260301_013142_dbcrd0.jpg'
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781905522/nochechof26_pn61r4.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430946/20260228_194835_xui8ty.jpg'
+    ],
+    videos: [
+      {
+        videoId: 'CNUOZpnnW10',
+        title: 'Chilca OVNI Festival 2026 - Aftermovie',
+        type: 'short',
+      },
+      {
+        videoId: 'rDlgfgDtGVc',
+        title: 'Chilca OVNI Festival 2026 - Aftermovie',
+        type: 'short',
+      },
+      {
+        videoId: 'FNkJVjcn2ks',
+        title: 'Chilca OVNI Festival 2026 - Aftermovie',
+        type: 'short',
+      },
+      {
+        videoId: '191BheYX1C4',
+        title: 'Chilca OVNI Festival 2026 - Aftermovie',
+        type: 'horizontal',
+      },
+      {
+        videoId: 'suwsX_VN4wk',
+        title: 'Chilca OVNI Festival 2026 - Aftermovie',
+        type: 'horizontal',
+      }
     ],
   },
 ]

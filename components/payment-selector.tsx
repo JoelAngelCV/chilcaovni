@@ -63,7 +63,7 @@ export function PaymentSelector({ ticket }: PaymentSelectorProps) {
           <div className="flex items-center justify-center gap-2">
             <span className="text-2xl">🌍</span>
             <div className="text-left">
-              <p className="font-semibold text-foreground">PayPal</p>
+              <p className="font-semibold text-foreground">PayPal o Tarjeta</p>
               <p className="text-xs text-foreground/60">
                 {PAYPAL_CONFIG.isConfigured ? 'Internacional - USD' : 'No configurado'}
               </p>
@@ -82,7 +82,7 @@ export function PaymentSelector({ ticket }: PaymentSelectorProps) {
           <div className="flex items-center justify-center gap-2">
             <span className="text-2xl">💬</span>
             <div className="text-left">
-              <p className="font-semibold text-foreground">WhatsApp</p>
+              <p className="font-semibold text-foreground">WhatsApp o Billetera Digital</p>
               <p className="text-xs text-foreground/60">Perú - PEN</p>
             </div>
           </div>

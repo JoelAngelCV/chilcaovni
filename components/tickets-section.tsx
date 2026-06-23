@@ -32,7 +32,7 @@ export function TicketsSection() {
     {
       question: '¿Cómo llego a Punta Yaya?',
       answer:
-        'Punta Yaya se encuentra en Chilca, al sur de Lima, Perú. Está a aproximadamente 40 km del centro de Lima. Proporcionaremos información detallada sobre transporte próximamente.',
+        'Punta Yaya se encuentra en Chilca, al sur de Lima, Perú. Está a aproximadamente 60 km del centro de Lima. Proporcionaremos información detallada sobre transporte próximamente.',
     },
   ]
 
@@ -56,12 +56,12 @@ export function TicketsSection() {
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
             Selecciona el tipo de entrada que mejor se adapte a ti
-            y asegura tu lugar en Chilca Ovni Festival.
+            y asegura tu lugar en Chilca Ovni Festival
           </p>
         </div>
 
         {/* Tickets Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16 blur">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           {TICKETS.map((ticket) => (
             <div
               key={ticket.id}
@@ -70,7 +70,7 @@ export function TicketsSection() {
                   ? 'ring-2 ring-primary scale-105'
                   : 'hover:scale-105 hover:ring-1 hover:ring-primary/50'
               }`}
-              // onClick={() => setSelectedTicket(ticket.id)}
+              onClick={() => setSelectedTicket(ticket.id)}
             >
               {/* Featured badge for VIP */}
               {ticket.id === 'vip' && (

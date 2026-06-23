@@ -18,43 +18,43 @@ const galleryItems: GalleryItem[] = [
   {
     id: 1,
     src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg',
-    title: 'Main Stage',
-    description: 'Vista del escenario principal y del dancefloor.',
+    title: 'Chilca Ovni Festival 2026',
+    description: 'Noches de mucho psytrance.',
     category: 'photo'
   },
   {
     id: 2,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545732/chilca.ovni.festival_s2026-5-7-22.29.441_story_mzinfh.webp',
-    title: 'Noche de Danza Psicodelica',
-    description: 'La oscuridad iluminada por luces psicodélicas y la energía de la multitud.',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184777/493690365_3730583217232834_1329389117890993979_n_imu9lg.jpg',
+    title: 'Chilca Ovni Fest 2017',
+    description: 'El dancefloor encendido bajo el sol.',
     category: 'photo'
   },
   {
     id: 3,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260227_194048_k9iteb.jpg',
-    title: 'Ceremonia de Apertura',
-    description: 'Asistiendo a la ceremonia de apertura con rituales sanadores para el espiritu.',
+    src: 'https://scontent.flim2-5.fna.fbcdn.net/v/t1.6435-9/38847471_1973162139641626_2966526816061227008_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGDCrMoUelmPYyuB8RlT5NUsZdgURRlqpGxl2BRFGWqkVZAbzf2o6HO1VYlgR-MJjKF60dlCkr221u8uuVbpdNf&_nc_ohc=kfq6p6eedb0Q7kNvwFs65eL&_nc_oc=Adq4Otex2VWc-ay9VVU4wmDo0eZtFnJkbGMehEhMQOyQGKyLXte6IsaeNaTM3jVjrJbJF_3__kfFnbomZeGnoeOk&_nc_zt=23&_nc_ht=scontent.flim2-5.fna&_nc_gid=qim8M6MftniJ_89X_7HRvA&_nc_ss=7b2a8&oh=00_Af-wm48xi4LJBtA_889MxTnt5I2kUeimFzNT0ZgzeMWMvw&oe=6A4842C0',
+    title: 'Chilca Ovni Festival 2018',
+    description: 'Vibrando juntos en una misma frecuencia.',
     category: 'photo'
   },
   {
     id: 4,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260301_013142_dbcrd0.jpg',
-    title: 'Dancefloor Magico',
-    description: 'Bailando bajo un cielo estrellado con luces psicodélicas.',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184777/494114485_3730582867232869_85733598352756017_n_zzh1ek.jpg',
+    title: 'Chilca Ovni Fest 2017',
+    description: 'La danza psicodélica toma el control.',
     category: 'photo'
   },
   {
     id: 5,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_074336_tpqsqb.jpg',
-    title: 'Escenario Ovni',
-    description: 'La energía de la comunidad se siente en cada beat del escenario OVNI.',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184776/485881724_1073333368170708_7090447895610459931_n_njr2mg.jpg',
+    title: 'Psychedelic Alienigenación 2.0',
+    description: 'El teaser antes del regreso del festival.',
     category: 'photo'
   },
   {
     id: 6,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775881803/replicantboy_3870025704729836178_s2026-4-10-23.6.803_story_aj6wwp.webp',
-    title: 'Ceremonia de apertura',
-    description: 'Uno de los momentos más mágicos del festival.',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781905522/nochechof26_pn61r4.jpg',
+    title: 'Chilca Ovni Festival 2026',
+    description: 'Pepe Jones piloteando la nave en la segunda noche.',
     category: 'photo'
   },
 ]
@@ -109,13 +109,13 @@ export function GallerySection() {
                 <Image
                   src={item.src}
                   alt={item.title}
-                  width={400}
-                  height={300}
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  width={500}
+                  height={500}
+                  className="object-cover group-hover:scale-110 transition-transform duration-500 w-full h-full"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
-                  <p className="text-sm text-foreground/80">{item.description}</p>
+                  {/* <p className="text-sm text-foreground/80">{item.description}</p> */}
                 </div>
                 {item.category === 'video' && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all">
@@ -148,7 +148,7 @@ export function GallerySection() {
                 </svg>
               </button>
 
-              <div className="relative w-full h-96 sm:h-[500px]">
+              <div className="relative w-full h-96 sm:h-125">
                 <Image
                   key={selectedItem.id}
                   src={selectedItem.src}
