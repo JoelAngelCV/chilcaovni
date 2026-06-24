@@ -107,7 +107,11 @@ async function readNewsletterContacts(): Promise<NewsletterContact[]> {
 }
 
 async function writeNewsletterContacts(contacts: NewsletterContact[]) {
-  await fs.writeFile(newsletterContactsPath, JSON.stringify(contacts, null, 2), 'utf-8')
+  try {
+    await fs.writeFile(newsletterContactsPath, JSON.stringify(contacts, null, 2), 'utf-8')
+  } catch (error) {
+    console.log('Nota: no se pudo guardar contactos locales (expected en producción):', error instanceof Error ? error.message : String(error))
+  }
 }
 
 export async function saveNewsletterContact(email: string, source = 'newsletter') {
@@ -116,24 +120,29 @@ export async function saveNewsletterContact(email: string, source = 'newsletter'
     throw new Error('Email inválido para guardar el contacto.')
   }
 
-  const existingContacts = await readNewsletterContacts()
-  const timestamp = new Date().toISOString()
-  const existingContact = existingContacts.find((contact) => contact.email === normalizedEmail)
+  try {
+    const existingContacts = await readNewsletterContacts()
+    const timestamp = new Date().toISOString()
+    const existingContact = existingContacts.find((contact) => contact.email === normalizedEmail)
 
-  if (existingContact) {
-    existingContact.source = source
-    existingContact.updatedAt = timestamp
-  } else {
-    existingContacts.push({
-      email: normalizedEmail,
-      source,
-      createdAt: timestamp,
-      updatedAt: timestamp,
-    })
+    if (existingContact) {
+      existingContact.source = source
+      existingContact.updatedAt = timestamp
+    } else {
+      existingContacts.push({
+        email: normalizedEmail,
+        source,
+        createdAt: timestamp,
+        updatedAt: timestamp,
+      })
+    }
+
+    await writeNewsletterContacts(existingContacts)
+    return existingContacts
+  } catch (error) {
+    console.log('No se pudo guardar el contacto localmente, pero se procesó en Brevo:', error instanceof Error ? error.message : String(error))
+    return []
   }
-
-  await writeNewsletterContacts(existingContacts)
-  return existingContacts
 }
 
 export async function subscribeToNewsletter(email: string, source = 'newsletter') {

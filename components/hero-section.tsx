@@ -23,7 +23,7 @@ export function HeroSection() {
             src={fondoUfo}
             alt="bg"
             fill
-            className="pointer-events-none object-cover brightness-[0.35] contrast-[0.9]"
+            className="pointer-events-none object-cover brightness-[0.50] contrast-[1]"
             draggable={false}
           />
         </div>

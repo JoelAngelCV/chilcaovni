@@ -26,7 +26,7 @@ export function EventInfo() {
   ]
 
   return (
-    <section id="event" className="py-20 mt-5 px-4 sm:px-6 lg:px-8 relative">
+    <section id="event" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
