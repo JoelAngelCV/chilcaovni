@@ -41,7 +41,9 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
     }
 
     const script = document.createElement('script')
-    script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=${PAYPAL_CONFIG.currency}`
+    const isSandbox = clientId.includes('Sandbox') || process.env.NEXT_PUBLIC_PAYPAL_SANDBOX === 'true'
+    const domain = isSandbox ? 'sandbox.paypal.com' : 'www.paypal.com'
+    script.src = `https://${domain}/sdk/js?client-id=${clientId}&currency=${PAYPAL_CONFIG.currency}`
     script.async = true
     
     script.onerror = () => {
