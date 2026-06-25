@@ -28,7 +28,7 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
 
   // 3. Mapea el scroll a la posición vertical del fondo (de 0% a 50%)
   // Ajusta el "50%" a un valor mayor (ej. 80%) si tu imagen es extremadamente larga
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["70%", "100%"])
 
   useEffect(() => {
     const resolveParams = async () => {
@@ -64,7 +64,7 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
           ref={contenedorRef}
           className="w-full bg-center bg-no-repeat bg-cover bg-fixed"
           style={{ 
-            backgroundImage: "url('/fondopages.jpeg')",
+            backgroundImage: "url('/fondopages.jpeg') ",            
             backgroundPositionY: backgroundY // Vincula el movimiento vertical al scroll
           }}
         >

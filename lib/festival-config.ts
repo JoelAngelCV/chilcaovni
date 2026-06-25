@@ -493,6 +493,11 @@ export const FESTIVAL_YEARS = [
           videoId: '16UmUms_abc',
           title: 'Chilca OVNI Festival 2019 - Aftermovie',
           type: 'horizontal',
+        },
+        {
+          videoId: 'vGP3L3-sli0',
+          title: 'Chilca OVNI Festival 2019 - Aftermovie',
+          type: 'horizontal',
         }
       ],
   },
@@ -536,6 +541,11 @@ export const FESTIVAL_YEARS = [
         videoId: '6zFLq_x4SVk',
         title: 'Chilca OVNI Festival 2019 - Aftermovie',
         type: 'horizontal',
+      },
+      {
+        videoId: '4sKKtMBU3a4',
+        title: 'Chilca OVNI Festival 2019 - Aftermovie',
+        type: 'horizontal',
       }
     ],
   },
@@ -547,6 +557,10 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184784/506860702_1136014311902613_7813509344103617472_n_lgocw7.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781458491/2026626159627_orqdfa.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781458491/2026640932087_qrw0mf.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.53_PM_1_rwz4wh.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.51_PM_s7ugdk.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.53_PM_dsm4td.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.52_PM_hi2yb7.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545739/replicantboy_s2026-5-7-22.40.159_story_f0rdkh.webp',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545732/chilca.ovni.festival_s2026-5-7-22.29.441_story_mzinfh.webp',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545722/chilca.ovni.festival_s2026-5-7-22.29.52_story_qwirse.webp',
@@ -555,7 +569,6 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_074336_tpqsqb.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260227_194048_k9iteb.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781905522/nochechof26_pn61r4.jpg',
-      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430946/20260228_194835_xui8ty.jpg'
     ],
     videos: [
       {
