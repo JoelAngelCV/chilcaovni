@@ -93,29 +93,52 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
 
         window.paypal
           .Buttons({
-            createOrder: (data: any, actions: any) => {
-              return actions.order.create({
-                purchase_units: [
-                  {
-                    amount: {
-                      value: totalAmount,
-                      currency_code: PAYPAL_CONFIG.currency,
-                    },
-                    description: `${quantity}x ${ticket.name} - OVNI Festival 2024`,
-                    custom_id: `name:${name}|email:${email}|quantity:${quantity}`,
-                  },
-                ],
+            createOrder: async () => {
+              const response = await fetch('/api/paypal/create-order', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  ticketName: ticket.name,
+                  quantity,
+                  unitPrice: ticket.price,
+                  currency: PAYPAL_CONFIG.currency,
+                  name,
+                  email,
+                }),
               })
+
+              if (!response.ok) {
+                const body = await response.json().catch(() => null)
+                throw new Error(body?.error || 'No se pudo crear la orden de PayPal.')
+              }
+
+              const data = await response.json()
+              return data.orderId
             },
-            onApprove: async (data: any, actions: any) => {
-              const details = await actions.order.capture()
+            onApprove: async (data: any) => {
+              const response = await fetch('/api/paypal/capture-order', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ orderId: data.orderID }),
+              })
+
+              if (!response.ok) {
+                const body = await response.json().catch(() => null)
+                throw new Error(body?.error || 'No se pudo capturar la orden de PayPal.')
+              }
+
+              const details = await response.json()
               setShowPayPalButton(false)
               setSuccessMessage('Pago exitoso, se le enviarán detalles al email registrado.')
               setReceiptError(null)
               setIsSendingReceipt(true)
 
               try {
-                const response = await fetch('/api/brevo/email', {
+                const receiptResponse = await fetch('/api/brevo/email', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
@@ -127,13 +150,13 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
                     quantity,
                     totalAmount,
                     orderId: data.orderID,
-                    transactionId: details.id || '',
+                    transactionId: details?.purchase_units?.[0]?.payments?.captures?.[0]?.id || '',
                     purchaseDate: new Date().toISOString(),
                   }),
                 })
 
-                if (!response.ok) {
-                  const body = await response.json().catch(() => null)
+                if (!receiptResponse.ok) {
+                  const body = await receiptResponse.json().catch(() => null)
                   throw new Error(body?.error || 'La solicitud al servidor falló.')
                 }
               } catch (err) {
@@ -146,7 +169,8 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
               onSuccess?.(details)
             },
             onError: (err: any) => {
-              setError('Hubo un error procesando el pago. Intenta nuevamente.')
+              const message = err?.message || 'Hubo un error procesando el pago. Intenta nuevamente.'
+              setError(message)
               onError?.(err)
             },
           })
