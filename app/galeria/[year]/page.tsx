@@ -28,7 +28,7 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
 
   // 3. Mapea el scroll a la posición vertical del fondo (de 0% a 50%)
   // Ajusta el "50%" a un valor mayor (ej. 80%) si tu imagen es extremadamente larga
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["70%", "100%"])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["70%", "80%"])
 
   useEffect(() => {
     const resolveParams = async () => {
@@ -62,13 +62,14 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
       <main className="min-h-screen bg-background text-foreground pt-24">
         <motion.div 
           ref={contenedorRef}
-          className="w-full bg-center bg-no-repeat bg-cover bg-fixed"
+          className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed"
           style={{ 
             backgroundImage: "url('/fondopages.jpeg') ",            
             backgroundPositionY: backgroundY // Vincula el movimiento vertical al scroll
           }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 -mt-4">
+          <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 -mt-4">
             
             <div className="text-center mb-12">
               <h1 className="text-5xl font-bold glow-text mb-4">{festivalData.title}</h1>

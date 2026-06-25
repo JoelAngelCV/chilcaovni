@@ -30,13 +30,14 @@ export default function ArtistasPage() {
       <main className="min-h-screen bg-background text-foreground pt-24 pb-16">
         <motion.div 
           ref={contenedorRef}
-          className="w-full bg-center bg-no-repeat bg-cover bg-fixed"
+          className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed"
           style={{ 
             backgroundImage: "url('/fondopage.jpeg') ",            
             backgroundPositionY: backgroundY // Vincula el movimiento vertical al scroll
           }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl sm:text-5xl font-bold glow-text mb-4">

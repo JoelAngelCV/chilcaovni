@@ -27,18 +27,21 @@ const Content = () => {
     <div className="w-full">
         <motion.div 
         ref={contenedorRef}
-        className="w-full bg-center bg-no-repeat bg-cover bg-fixed"
+        className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed"
         style={{ 
           backgroundImage: "url('/fondopage.jpeg')",
           backgroundPositionY: backgroundY // Vincula el movimiento vertical al scroll
         }}
       >
+          <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+          <div className="relative">
             <EventInfo />
             <LineupSection />
             <GallerySection />
             <LocationSection />
             <TicketsSection />
             <ContactSection />
+          </div>
         </motion.div>
     </div>
   )
