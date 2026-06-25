@@ -95,9 +95,9 @@ export const PAYMENT_METHODS = {
 } as const
 
 export const WHATSAPP_CONFIG = {
-  phoneNumber: '51925610070', // Número de WhatsApp en formato internacional sin +
+  phoneNumber: '51986487619', // Número de WhatsApp en formato internacional sin +
   countryCode: '+51',
-  formattedNumber: '+51 925 610 070',
+  formattedNumber: '+51 986 487 619',
 }
 
 export const PAYPAL_CONFIG = {
