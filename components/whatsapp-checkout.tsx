@@ -3,16 +3,19 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { TicketType, WHATSAPP_CONFIG } from '@/lib/payment-config'
+import Image from 'next/image'
 
 interface WhatsAppCheckoutProps {
   ticket: TicketType
   buyerName?: string
   buyerEmail?: string
+  buyerDni?: number
 }
 
-export function WhatsAppCheckout({ ticket, buyerName = '', buyerEmail = '' }: WhatsAppCheckoutProps) {
+export function WhatsAppCheckout({ ticket, buyerName = '', buyerEmail = '', buyerDni = undefined }: WhatsAppCheckoutProps) {
   const [name, setName] = useState(buyerName)
   const [email, setEmail] = useState(buyerEmail)
+  const [dni, setDni] = useState(buyerDni?.toString() || '')
   const [quantity, setQuantity] = useState(1)
 
   const createWhatsAppMessage = () => {
@@ -27,15 +30,17 @@ Detalles:
 Mi información:
 - Nombre: ${name || 'No especificado'}
 - Email: ${email || 'No especificado'}
+- DNI: ${dni || 'No especificado'}
 
-¿Cuál es el siguiente paso para completar la compra?`
+A continuación enviaré mi boucher de pago para la confirmación.`
+
 
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${encodedMessage}`
     return whatsappUrl
   }
 
-  const isFormValid = name.trim().length > 0 && email.trim().length > 0
+  const isFormValid = name.trim().length > 0 && email.trim().length > 0 && dni.trim().length > 0
 
   return (
     <div className="cosmic-card p-6 rounded-lg space-y-6">
@@ -57,6 +62,18 @@ Mi información:
             onChange={(e) => setName(e.target.value)}
             placeholder="Juan Pérez"
             className="w-full px-4 py-2 rounded-lg bg-input border border-border text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-foreground mb-2">
+            Tu DNI
+          </label>
+          <input
+            type="number"
+            value={dni}
+            onChange={(e) => setDni(e.target.value)}
+            placeholder="12345678"
+            className="w-full px-4 py-2 rounded-lg bg-input border border-border text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
         </div>
 
@@ -96,11 +113,23 @@ Mi información:
             >
               +
             </button>
-            <span className="ml-4 text-foreground/70 text-sm">
+            <span className="ml-4 text-foreground text-lg">
               Total: S/. {(ticket.pricePEN * quantity).toLocaleString('es-PE')}
             </span>
           </div>
         </div>
+      </div>
+
+      <Image
+        src={'../qrfalso.jpg'} 
+        alt="QR Code for WhatsApp Checkout"
+        width={120}
+        height={120}
+        className="mx-auto my-4 rounded-md"
+      />
+
+      <div className="text-md text-foreground/70 text-center mb-4">
+        <p>Paga escaneando el código QR con Yape o Plin, luego haz click en el siguiente botón y adjunta tu boucher en el chat.</p>
       </div>
 
       <Link

@@ -65,7 +65,7 @@ export function HeroSection() {
         <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-4 px-6 py-3 rounded-lg glow-border mb-8">
             <span className="text-sm sm:text-base">
-              <span className="text-accent font-bold">Febrero - 2027</span>
+              <span className="text-accent font-bold">05, 06 y 07 Febrero - 2027</span>
             </span>
           </div>
         </div>
@@ -77,7 +77,7 @@ export function HeroSection() {
           </Link>
           <Link 
             href="/#event"
-            className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-primary/50 text-primary hover:bg-primary/10 hover:animate-pulse-neon"
+            className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-primary text-secondary/70 hover:bg-primary/10 hover:animate-pulse-neon"
           >
             Descubre más
           </Link>

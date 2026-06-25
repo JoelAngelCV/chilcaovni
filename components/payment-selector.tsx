@@ -99,7 +99,7 @@ export function PaymentSelector({ ticket }: PaymentSelectorProps) {
         <p className="text-sm text-foreground/80">
           {selectedPayment === PAYMENT_METHODS.PAYPAL
             ? '💳 Pago seguro con PayPal. Acepta tarjetas de crédito, débito y monederos digitales internacionales.'
-            : '💬 Envía tu información por WhatsApp y nuestro equipo te contactará para confirmar tu compra. Aceptamos depósitos bancarios y transferencias.'}
+            : '💬 Envía tu información por WhatsApp y nuestro equipo te responderá para confirmar tu compra. Para depósitos bancarios y transferencias contáctanos.'}
         </p>
       </div>
     </div>

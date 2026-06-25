@@ -41,7 +41,7 @@ export function LocationSection() {
           {/* Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">¿Cómo Llegar?</h3>
+              <h3 className="text-2xl font-bold text-foreground/70 mb-4">¿Cómo Llegar?</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mt-1">
@@ -49,7 +49,7 @@ export function LocationSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Desde Lima Centro</h4>
-                    <p className="text-foreground/70">
+                    <p className="text-foreground/70 hover:text-accent-foreground transition-colors">
                       Aproximadamente 60 km al sur de Lima. Toma la Panamericana Sur hacia Chilca.
                     </p>
                   </div>
@@ -61,7 +61,7 @@ export function LocationSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">En Vehículo</h4>
-                    <p className="text-foreground/70">
+                    <p className="text-foreground/70 hover:text-accent-foreground transition-colors">
                       Estacionamiento disponible en el sitio. Proporcionaremos información detallada a
                       asistentes.
                     </p>
@@ -74,7 +74,7 @@ export function LocationSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Transporte Público</h4>
-                    <p className="text-foreground/70">
+                    <p className="text-foreground/70 hover:text-accent-foreground transition-colors">
                       Buses disponibles desde Lima centro. Detalles de rutas se compartirán próximamente.
                     </p>
                   </div>

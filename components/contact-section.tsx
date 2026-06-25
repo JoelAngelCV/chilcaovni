@@ -44,8 +44,8 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
                   <p className="text-foreground/70">
-                    <a href="mailto:info@ovnifestival.com" className="hover:text-primary transition-colors">
-                      info@chilcaovnifestival.com
+                    <a href="mailto:contacto@chilcaovnifestival.com" className="hover:text-primary transition-colors">
+                      contacto@chilcaovnifestival.com
                     </a>
                   </p>
                 </div>
@@ -107,7 +107,7 @@ export function ContactSection() {
               <dl className="space-y-4">
                 <div>
                   <dt className="font-semibold text-primary text-sm uppercase mb-2">Fechas</dt>
-                  <dd className="text-foreground/80">Por anunciar - Próximamente</dd>
+                  <dd className="text-foreground/80">05, 06 y 07 de Febrero 2027</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-primary text-sm uppercase mb-2">Ubicación</dt>

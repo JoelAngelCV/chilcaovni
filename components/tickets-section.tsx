@@ -13,7 +13,7 @@ export function TicketsSection() {
     {
       question: '¿Cuándo son las fechas del festival?',
       answer:
-        'Chilca Ovni Festival se llevará a cabo en la Playa Punta Yaya, Chilca durante 3 días consecutivos. Las fechas específicas se anunciarán próximamente.',
+        'Chilca Ovni Festival se llevará a cabo durante 3 días consecutivos el 05, 06 y 07 de febrero 2027 en Playa Punta Yaya Chilca, Lima Perú.',
     },
     {
       question: '¿Puedo cambiar o devolver mi entrada?',
