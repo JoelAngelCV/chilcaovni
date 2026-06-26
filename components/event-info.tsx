@@ -69,7 +69,7 @@ export function EventInfo() {
                 <CalendarDays className="text-secondary/90"/>
                 <div>
                   <h4 className="font-bold text-primary mb-1">Fechas</h4>
-                  <p className="text-foreground/80">Febrero 2027</p>
+                  <p className="text-foreground/80">05, 06 y 07 Febrero - 2027</p>
                   <p className="text-sm text-foreground/60">36 horas de música electrónica</p>
                 </div>
               </div>
