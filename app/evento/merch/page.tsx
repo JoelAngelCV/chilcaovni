@@ -31,8 +31,8 @@ export default function MerchPage() {
                   <p className="text-foreground/70 text-sm mb-4">{product.description}</p>
                   
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-accent">${product.price}</span>
-                    <span className="text-xs text-foreground/60">USD</span>
+                    <span className="text-2xl font-bold text-accent">S/.{product.price}</span>
+                    <span className="text-xs text-foreground/60">Nuevos Soles</span>
                   </div>
 
                   {/* <button className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg neon-button">
@@ -65,7 +65,7 @@ export default function MerchPage() {
             <ul className="space-y-3 text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-accent">✓</span>
-                <span>Envío gratuito para órdenes mayores a $100 USD</span>
+                <span>Envío gratuito para órdenes mayores a S/.100</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-accent">✓</span>

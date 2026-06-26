@@ -174,7 +174,7 @@ export function GallerySection() {
         {/* Info box */}
         <div className="cosmic-card p-8 rounded-lg text-center">
           <p className="text-foreground/80 mb-2">
-            ✨ Estas imágenes son de eventos anteriores. ¡Prepárate para vivir una experiencia aún más épica en la próxima edición!
+            Estas imágenes son de eventos anteriores. ¡Prepárate para vivir una experiencia aún más épica en la próxima edición!
           </p>
           <p className="text-sm text-foreground/60">
             Comparte tus fotos y videos en redes con #chilcaovnifestival

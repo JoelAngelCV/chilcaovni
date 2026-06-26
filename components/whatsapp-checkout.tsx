@@ -113,7 +113,7 @@ A continuación enviaré mi boucher de pago para la confirmación.`
             >
               +
             </button>
-            <span className="ml-4 text-foreground text-lg">
+            <span className="ml-4 text-foreground text-md">
               Total: S/. {(ticket.pricePEN * quantity).toLocaleString('es-PE')}
             </span>
           </div>
@@ -121,10 +121,10 @@ A continuación enviaré mi boucher de pago para la confirmación.`
       </div>
 
       <Image
-        src={'../qrfalso.jpg'} 
+        src={'../qryape.png'} 
         alt="QR Code for WhatsApp Checkout"
-        width={120}
-        height={120}
+        width={200}
+        height={200}
         className="mx-auto my-4 rounded-md"
       />
 
