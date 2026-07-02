@@ -4,7 +4,7 @@ import { Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Timeline - Chilca Ovni Festival 2026',
+  title: 'Timeline',
   description: 'Horario de presentaciones de Chilca Ovni Festival 2026',
 }
 
@@ -29,8 +29,8 @@ export default function TimelinePage() {
             <h1 className="text-4xl sm:text-5xl font-bold glow-text mb-4">
               Timeline del Festival
             </h1>
-            <p className="text-foreground/80 text-lg blur">
-              Viernes 27 a Sábado 28 de Junio - Festival OVNI 2026 en Punta Yaya
+            <p className="text-foreground/80 text-lg">
+              Viernes 05 a Domingo 07 de Febrero - Chilca Ovni Festival 2027 en Playa Punta Yaya
             </p>
           </div>
 

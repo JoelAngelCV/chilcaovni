@@ -6,10 +6,10 @@ import { Header } from '@/components/header'
 import { ARTIST_CATEGORIES } from '@/lib/festival-config'
 import { useState } from 'react'
 
-// export const metadata = {
-//   title: 'Artistas - Festival OVNI 2026',
-//   description: 'Conoce a todos los artistas que participan en el Festival OVNI 2026',
-// }
+// // export const metadata = {
+// //   title: 'Artistas - Festival OVNI 2026',
+// //   description: 'Conoce a todos los artistas que participan en el Festival OVNI 2026',
+// // }
 
 export default function ArtistasPage() {
   const categories = Object.entries(ARTIST_CATEGORIES)

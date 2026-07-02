@@ -120,12 +120,19 @@ A continuación enviaré mi boucher de pago para la confirmación.`
         </div>
       </div>
 
-      <Image
+      {/* <Image
         src={'../qryape.png'} 
         alt="QR Code for WhatsApp Checkout"
         width={200}
         height={200}
         className="mx-auto my-4 rounded-md"
+      /> */}
+
+      <img 
+        src="../qryape.png" 
+        style={{ width: '200px', height: 'auto' }} 
+        alt="QR Code for WhatsApp Checkout" 
+        className='mx-auto my-4 rounded-md'
       />
 
       <div className="text-md text-foreground/70 text-center mb-4">
