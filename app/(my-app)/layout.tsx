@@ -38,6 +38,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#0f0a1e" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="google-site-verification" content="vSKT8kgELNC9NrQm1JJrUEUKPTLheqOp_wDqJpHAbSs" />
       </head>
       <body className="font-sans antialiased">
         {children}
