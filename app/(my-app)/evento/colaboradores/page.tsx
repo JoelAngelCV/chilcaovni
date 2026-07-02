@@ -3,7 +3,7 @@ import { COLLABORATORS } from '@/lib/festival-config'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Colaboradores - Chilca Ovni Festival',
+  title: 'Colaboradores',
   description: 'Conoce a las personas que hicieron posible Chilca Ovni Festival.',
 }
 

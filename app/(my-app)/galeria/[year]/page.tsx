@@ -94,7 +94,7 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
                     >
                       <img
                         src={image}
-                        alt={`Galería ${year} - Imagen ${idx + 1}`}
+                        alt={`Galería ${year} - Chilca Ovni Festival Psytrance`}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                       

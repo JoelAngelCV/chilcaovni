@@ -25,6 +25,7 @@ export function HeroSection() {
             fill
             className="pointer-events-none object-cover brightness-[0.50] contrast-[1]"
             draggable={false}
+            loading="eager"
           />
         </div>
 

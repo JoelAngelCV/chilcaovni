@@ -1,3 +1,5 @@
+import { withPayload } from '@payloadcms/next/withPayload'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
@@ -6,6 +8,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  transpilePackages: ['@payloadcms/ui'],
+  serverExternalPackages: ['payload', '@payloadcms/db-postgres', '@payloadcms/db-mongodb'],
 }
 
-export default nextConfig
+export default withPayload(nextConfig)

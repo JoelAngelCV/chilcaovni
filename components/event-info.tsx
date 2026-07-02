@@ -5,7 +5,7 @@ import { CalendarDays, MapPin, Users } from "lucide-react";
 export function EventInfo() {
   const features = [
     {
-      icon: './icons8-música-64.png',
+      icon: './iconmsic.png',
       title: 'Psychedelic Trance',
       description: 'Artistas internacionales en múltiples estilos como Full-On, Goa Trance, Darkpsy, Hi-Tech y más.'    },
     {

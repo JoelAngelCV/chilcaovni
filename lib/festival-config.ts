@@ -388,14 +388,14 @@ export const MERCHANDISE = [
     id: 2,
     name: 'Vaso Ovni Holográfico',
     description: 'Vaso reutilizable con diseño holográfico',
-    price: 25,
+    price: 20,
     image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782101236/image_aaba242_i7zadm.png',
   },
   {
     id: 3,
     name: 'Stickers Ovni Set',
     description: 'Pack de 5 stickers holográficos',
-    price: 15,
+    price: 10,
     image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782101240/image_c9205b222_bzmllb.png',
   },
   // {
