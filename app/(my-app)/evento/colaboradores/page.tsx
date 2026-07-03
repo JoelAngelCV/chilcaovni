@@ -11,7 +11,7 @@ export default function CollaboratorsPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background text-foreground pt-24 pb-16">
+      <main className="min-h-screen bg-background text-foreground pt-24 pb-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
@@ -84,6 +84,10 @@ export default function CollaboratorsPage() {
               Contáctanos por WhatsApp
             </a>
           </div>
+        </div>
+        {/* Footer */}
+        <div className="pt-10 pb-0 border-t border-primary/20 text-center text-foreground/60">
+          <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>
     </>

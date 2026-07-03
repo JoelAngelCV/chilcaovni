@@ -27,10 +27,10 @@ export default function ArtistasPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background text-foreground pt-24 pb-16">
+      <main className="min-h-screen bg-background text-foreground ">
         <motion.div 
           ref={contenedorRef}
-          className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed"
+          className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed pt-24 pb-12"
           style={{ 
             backgroundImage: "url('/fondopage.jpeg') ",            
             backgroundPositionY: backgroundY // Vincula el movimiento vertical al scroll
@@ -62,7 +62,7 @@ export default function ArtistasPage() {
                   </div>
 
                   {/* Artists Grid */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 blur">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {category.artists.map((artist, idx) => (
                       <ArtistCard key={idx} artist={artist} />
                     ))}
@@ -90,6 +90,10 @@ export default function ArtistasPage() {
               </a>
             </div>
           </div>
+          {/* Footer */}
+          <div className="mt-16 pt-8 border-t border-primary/20 text-center text-foreground/60">
+            <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
+          </div>
         </motion.div>
       </main>
     </>
@@ -109,11 +113,11 @@ function ArtistCard({ artist }: { artist: { name: string; genre: string; image: 
           <img
             src={artist.image}
             alt={artist.name}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 blur"
           />
         </div>
-        <h3 className="text-lg font-bold text-primary mb-2">{artist.name}</h3>
-        <p className="text-sm text-secondary mb-3 font-medium">{artist.genre}</p>
+        <h3 className="text-lg font-bold text-primary mb-2 blur">{artist.name}</h3>
+        <p className="text-sm text-secondary mb-3 font-medium blur">{artist.genre}</p>
         <p className="text-xs text-foreground/60 cursor-pointer hover:text-primary transition-colors">
           Ver más →
         </p>
@@ -138,18 +142,18 @@ function ArtistCard({ artist }: { artist: { name: string; genre: string; image: 
               <img
                 src={selectedArtist.image}
                 alt={selectedArtist.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover blur"
               />
               <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/90"></div>
             </div>
 
             {/* Content */}
             <div className="p-8">
-              <h2 className="text-4xl font-bold text-primary mb-2">
+              <h2 className="text-4xl font-bold text-primary mb-2 blur">
                 {selectedArtist.name}
               </h2>
               
-              <p className="text-xl text-secondary font-semibold mb-6">
+              <p className="text-xl text-secondary font-semibold mb-6 blur">
                 {selectedArtist.genre}
               </p>
 
@@ -159,7 +163,7 @@ function ArtistCard({ artist }: { artist: { name: string; genre: string; image: 
               {/* About */}
               <div className="space-y-4 mb-8">
                 <h3 className="text-lg font-semibold text-foreground">Sobre el artista</h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="text-foreground/80 leading-relaxed blur">
                   {selectedArtist.name} es uno de los artistas más destacados del Festival OVNI, trayendo su energía y talento para crear una experiencia inolvidable.
                 </p>
               </div>

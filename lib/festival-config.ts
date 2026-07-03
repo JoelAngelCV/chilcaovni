@@ -546,7 +546,7 @@ export const FESTIVAL_YEARS = [
         videoId: '4sKKtMBU3a4',
         title: 'Chilca OVNI Festival 2019 - Aftermovie',
         type: 'horizontal',
-      }
+      },
     ],
   },
   {
@@ -561,10 +561,11 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.51_PM_s7ugdk.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.53_PM_dsm4td.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.52_PM_hi2yb7.jpg',
-      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545739/replicantboy_s2026-5-7-22.40.159_story_f0rdkh.webp',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783104307/chof-wii_lcex3z.png',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545732/chilca.ovni.festival_s2026-5-7-22.29.441_story_mzinfh.webp',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545722/chilca.ovni.festival_s2026-5-7-22.29.52_story_qwirse.webp',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546036/replicantboy_s2026-5-7-22.35.963_story_eqsxhq.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780545739/replicantboy_s2026-5-7-22.40.159_story_f0rdkh.webp',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430948/20260301_074336_tpqsqb.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775430947/20260227_194048_k9iteb.jpg',

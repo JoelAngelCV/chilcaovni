@@ -8,17 +8,17 @@ const NORMAS = [
   {
     id: 1,
     title: 'Respeto Mutuo',
-    description: 'Todos los asistentes deben tratar a otros participantes con respeto, independientemente de su origen, género, orientación sexual o identidad. La discriminación, el acoso y la violencia no serán tolerados bajo ninguna circunstancia.',
+    description: 'Todos los asistentes valoramos a los demás participantes con respeto, independientemente de su origen, género, orientación sexual, religión o identidad. La discriminación, el acoso y la violencia no están permitidos en esta comunidad. Este es un festival libre de prejuicios. Si vez algún acto de abuso, machismo, racismo, homofobia u otro comportamiento inapropiado, avisa a nuestro staff inmediatamente. Respeta los límites físicos y emocionales de otros. No toques, fotografíes o grabes a personas sin su consentimiento previo. Si alguien te pide que te detengas, respeta esa petición inmediatamente.',
   },
   {
     id: 2,
-    title: 'Consentimiento y Límites Personales',
-    description: 'El consentimiento es fundamental. Respeta los límites físicos y emocionales de otros. No toques, fotografíes o grabes a personas sin su consentimiento previo. Si alguien te pide que te detengas, respeta esa petición inmediatamente.',
+    title: 'Higiene y Convivencia',
+    description: 'Somos cuidadosos con el uso de baños y normas de higiene. Usamos las duchas conscientemente evitando desperdicio del agua, mantenemos limpia la zona de camping y el dancefloor. No esta permitido el ingreso ni uso de armas, vidrio u objetos peligrosos. Trae tu carpa ropa cómoda y fresca para el día, abrigo para la noche, protector solar, sombrero y linterna.',
   },
   {
     id: 3,
-    title: 'Sustancias y Salud',
-    description: 'Aunque es un festival celebratorio, cuidamos la salud de todos, el consumo de sustancias es responsabilidad de cada adulto, pero si experimentas un malestar contacta a nuestro equipo de salud.  Cualquier comportamiento peligroso o agresivo resultará en expulsión inmediata.',
+    title: 'Consumos y Salud',
+    description: 'Aunque es un festival celebratorio, cuidamos la salud de todos, no mezcles sustancias ni presiones a nadie a consumirlas, todos somos libres de decidir. Si experimentas un malestar contacta a nuestro staff, cualquier comportamiento peligroso o agresivo resultará en expulsión inmediata. No esta permitido el ingreso de bebidas alcoholicas ni sustancias prohibidas.',
   },
   {
     id: 4,
@@ -32,8 +32,8 @@ const NORMAS = [
   },
   {
     id: 6,
-    title: 'Respeto por los Artistas y Equipo',
-    description: 'Los artistas y personal del festival merecen respeto. No interrumpas las presentaciones, mantén el ruido controlado en áreas de descanso y sigue las indicaciones del personal de seguridad y logística.',
+    title: 'Respeto por los Artistas y las Áreas Específicas',
+    description: 'Los artistas y personal del festival merecen respeto. No interrumpas las presentaciones, mantén el ruido controlado en áreas de descanso y sigue las indicaciones del personal de staff.',
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export default function NormasConvivenciaPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background text-foreground pt-24 pb-12">
+      <main className="min-h-screen bg-background text-foreground pt-24 pb-4">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-12">
@@ -162,6 +162,10 @@ export default function NormasConvivenciaPage() {
               </div>
             </div>
           </div>
+        </div>
+        {/* Footer */}
+        <div className="pt-16 pb-0 border-t border-primary/20 text-center text-foreground/60">
+          <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>
     </>
