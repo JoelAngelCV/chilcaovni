@@ -24,7 +24,7 @@ export function LineupSection() {
             Lineup
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Descubre a algunos de los mejores artistas que estarán en Chilca Ovni Festival 2027 y prepárate para una experiencia inolvidable.
+            Artistas confirmados que estarán en Chilca Ovni Festival 2027
           </p>
         </div>
 

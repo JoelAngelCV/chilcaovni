@@ -84,7 +84,12 @@ export default function AuspiciadoresPage() {
             <p className="text-foreground/70">Contáctanos para conocer las opciones de patrocinio y personalizar tu participación</p>
           </div>
         </div>
+        {/* Footer */}
+        <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60">
+          <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
+        </div>
       </main>
+      
     </>
   )
 }

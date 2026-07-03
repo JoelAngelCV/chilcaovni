@@ -12,7 +12,7 @@ export default function TimelinePage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background text-foreground pt-24 pb-16">
+      <main className="min-h-screen bg-background text-foreground pt-24 pb-4">
         {/* Hero with timeline image */}
         <div className="relative max-w-6xl w-full h-100 sm:h-125 overflow-hidden rounded-xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <img
@@ -86,6 +86,10 @@ export default function TimelinePage() {
               Esperamos que disfrutes de una experiencia única en Punta Yaya con los mejores artistas de psytrance de Sudamérica.
             </p>
           </div>
+        </div>
+        {/* Footer */}
+        <div className="pt-16 pb-0 border-t border-primary/20 text-center text-foreground/60">
+          <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>
     </>

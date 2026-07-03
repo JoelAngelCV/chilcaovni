@@ -82,6 +82,10 @@ export default function MerchPage() {
             </ul>
           </div>
         </div>
+        {/* Footer */}
+        <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60">
+          <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
+        </div>
       </main>
     </>
   )

@@ -17,7 +17,7 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780546031/replicantboy_s2026-5-7-22.36.624_story_pbkluf.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.53_PM_1_rwz4wh.jpg',
     title: 'Chilca Ovni Festival 2026',
     description: 'Noches de mucho psytrance.',
     category: 'photo'
@@ -52,7 +52,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1781905522/nochechof26_pn61r4.jpg',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1782333055/WhatsApp_Image_2026-06-24_at_1.36.53_PM_dsm4td.jpg',
     title: 'Chilca Ovni Festival 2026',
     description: 'Pepe Jones piloteando la nave en la segunda noche.',
     category: 'photo'

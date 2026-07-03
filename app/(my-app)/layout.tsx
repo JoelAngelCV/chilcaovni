@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${oxanium.variable} dark scroll-smooth`}>
+    <html lang="es" className={`${oxanium.variable} dark data-scroll-behavior="smooth"`}>
       <GoogleTagManager gtmId="GTM-M5ZHGHJW"/>
       <GoogleAnalytics gaId="G-E6ZL376Z5W" />
       <head>

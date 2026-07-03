@@ -46,10 +46,13 @@ export function EventInfo() {
               <h3 className="text-2xl font-bold text-primary mb-4">Chilca Ovni Festival</h3>
             </div>
             <p className="text-foreground/80 mb-4">
-              Un acontecimiento sensorial avanzado donde la música electrónica, la tecnología, la conciencia y el misterio convergen en una misma frecuencia. No es solo un festival. Es un punto de encuentro entre lo humano y lo desconocido.
+              Una experiencia sensorial donde la música electrónica, el arte y la espiritualidad convergen en una misma frecuencia.
             </p>
             <p className="text-foreground/80 mb-4">
-              Un ritual musical y místico frente al mar donde el tiempo se disuelve y el cuerpo danza en trance bajo la luna y las estrellas. Cada elemento está diseñado para transportarte a otra dimensión.
+               Un ritual musical y místico frente al mar donde el tiempo se disuelve y el cuerpo danza en trance bajo las estrellas en unidad paz y respeto.
+            </p>
+            <p className="text-foreground/80 mb-4">
+               No es solo un festival. Es un punto de encuentro entre lo humano y lo desconocido.
             </p>
           </div>
 
@@ -70,7 +73,7 @@ export function EventInfo() {
                 <div>
                   <h4 className="font-bold text-primary mb-1">Fechas</h4>
                   <p className="text-foreground/80">05, 06 y 07 Febrero - 2027</p>
-                  <p className="text-sm text-foreground/60">36 horas de música electrónica</p>
+                  <p className="text-sm text-foreground/60">3 días de música electrónica</p>
                 </div>
               </div>
             </div>
@@ -79,7 +82,7 @@ export function EventInfo() {
                 <Users className="text-secondary/90"/>
                 <div>
                   <h4 className="font-bold text-primary mb-1">Capacidad</h4>
-                  <p className="text-foreground/80">5,000 personas</p>
+                  <p className="text-foreground/80">500 personas</p>
                   <p className="text-sm text-foreground/60">Para una experiencia íntima y controlada</p>
                 </div>
               </div>
