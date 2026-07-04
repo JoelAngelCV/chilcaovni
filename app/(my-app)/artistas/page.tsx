@@ -30,13 +30,13 @@ export default function ArtistasPage() {
       <main className="min-h-screen bg-background text-foreground ">
         <motion.div 
           ref={contenedorRef}
-          className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed pt-24 pb-12"
+          className="relative w-full bg-center bg-no-repeat bg-cover bg-fixed pt-24 pb-8"
           style={{ 
             backgroundImage: "url('/fondopage.jpeg') ",            
             backgroundPositionY: backgroundY // Vincula el movimiento vertical al scroll
           }}
         >
-          <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+          <div className="absolute inset-0 bg-black/40 pointer-events-none" aria-hidden="true" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-16">
@@ -93,6 +93,7 @@ export default function ArtistasPage() {
           {/* Footer */}
           <div className="mt-16 pt-8 border-t border-primary/20 text-center text-foreground/60">
             <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
+            <p className='text-xs mt-2'>Desarrollado por <a href="https://www.joelangeldev.site" target="_blank" className="text-primary hover:underline">joelangeldev</a></p>
           </div>
         </motion.div>
       </main>

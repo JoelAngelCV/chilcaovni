@@ -150,14 +150,14 @@ export default function NormasConvivenciaPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="p-4 bg-primary/10 rounded-lg">
                 <h3 className="font-semibold text-primary mb-2">Email de Reportes</h3>
-                <a href="mailto:seguridad@chilcaovnifestival.com" className="text-secondary hover:text-primary transition-colors">
-                  seguridad@chilcaovnifestival.com
+                <a href="mailto:contacto@chilcaovnifestival.com" className="text-secondary hover:text-primary transition-colors">
+                  contacto@chilcaovnifestival.com
                 </a>
               </div>
               <div className="p-4 bg-primary/10 rounded-lg">
                 <h3 className="font-semibold text-primary mb-2">WhatsApp de Emergencia</h3>
-                <a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">
-                  +51 999 999 999
+                <a href="https://wa.me/51986487619" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">
+                  +51 986 487 619
                 </a>
               </div>
             </div>

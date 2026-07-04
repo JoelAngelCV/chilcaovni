@@ -31,7 +31,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    src: 'https://scontent.flim2-5.fna.fbcdn.net/v/t1.6435-9/38847471_1973162139641626_2966526816061227008_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGDCrMoUelmPYyuB8RlT5NUsZdgURRlqpGxl2BRFGWqkVZAbzf2o6HO1VYlgR-MJjKF60dlCkr221u8uuVbpdNf&_nc_ohc=kfq6p6eedb0Q7kNvwFs65eL&_nc_oc=Adq4Otex2VWc-ay9VVU4wmDo0eZtFnJkbGMehEhMQOyQGKyLXte6IsaeNaTM3jVjrJbJF_3__kfFnbomZeGnoeOk&_nc_zt=23&_nc_ht=scontent.flim2-5.fna&_nc_gid=qim8M6MftniJ_89X_7HRvA&_nc_ss=7b2a8&oh=00_Af-wm48xi4LJBtA_889MxTnt5I2kUeimFzNT0ZgzeMWMvw&oe=6A4842C0',
+    src: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783198709/38847008_n_si5mgk.jpg',
     title: 'Chilca Ovni Festival 2018',
     description: 'Vibrando juntos en una misma frecuencia.',
     category: 'photo'

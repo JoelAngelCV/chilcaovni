@@ -69,7 +69,7 @@ export default function AuspiciadoresPage() {
                   Contactar por WhatsApp
                 </a>
                 <a
-                  href="mailto:sponsors@ovnifestival.com"
+                  href="mailto:contacto@ovnifestival.com"
                   className="flex items-center justify-center gap-2 flex-1 px-6 py-4 rounded-lg border border-primary/50 text-primary hover:bg-primary/10 transition-colors"
                 >
                   <Mail className="w-5 h-5" />

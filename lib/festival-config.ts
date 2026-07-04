@@ -1,6 +1,8 @@
 // Festival OVNI Configuration
 // Centralizado para fácil actualización
 
+import { flattenAllFields } from "payload"
+
 export const FESTIVAL_INFO = {
   name: 'Chilca Ovni Festival',
   tagline: 'Experiencia Cósmica en Playa Punta Yaya',
@@ -33,32 +35,51 @@ export const FESTIVAL_INFO = {
   artists: [
     {
       id: 1,
-      name: 'Pepe Jones',
-      genre: 'Full-On',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/replicantboy_3753648540154229483_s2026-3-31-23.15.399_story_fsdlbd.jpg',
+      name: 'Huantar Project',
+      genre: 'Goa Psychedelic',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783195464/huantarproject_dx8pqi.png',
+      flag: '/francia.svg',
       bio: 'Natural de Poços de Caldas (MG, Brasil), Pepe Jones actúa en la escena psytrance desde 2002 y debutó como DJ en 2006. Desde entonces, ha construido una trayectoria sólida, marcada por la dedicación, la evolución y una presencia constante en la escena nacional e internacional.\n\n Residente de la reconocida fiesta Mandallah, se ha presentado en los festivales más importantes de Brasil, como Universo Paralello (303 Stage), Soulvision, Mundo de Oz, Samsara Festival, Festival Alternativo do Kranti, Puma Punku Festival y Resistência Main Floor, además de diversos eventos independientes por todo el país. En el exterior, llevó su sonido a pistas de España, Portugal, Perú, Chile, Uruguay y Bolivia, destacando festivales como Arkana (Perú), Inchala (Uruguay), MonteMapu (Chile), Amazon Andes Festival (Isla del Sol) y Amazon Festival (Rurrenabaque), ambos en Bolivia.\n\n​Actualmente, integra el casting de Replicant Records (Australia), con participaciones en la serie V/A Light & Shadow (vol. 1 y 2) y el DJ set Replicant & Friends. Sus sets fusionan grooves hipnóticos, atmósferas psicodélicas y una conexión profunda con la pista de baile',
     },
     {
       id: 2,
-      name: 'Uaky',
-      genre: 'Dark Prog - Forest',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/uaky.music_3394827090610618914_hm1ojd.webp',
+      name: 'Diazzi',
+      genre: 'Psytrance Progressivo',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783195464/ig_santaconexao_DXZ24nVkTZ5_001_image_x42k25.webp',
+      flag: '/1f1e7-1f1f7.svg',
       bio: 'Diego Barbaguelatta A.K.A. \n\nUaky Con más de una década de recorrido y presencia en las pistas de Chile, Bolivia, Perú y Brasil, Uaky es un artista que domina la narrativa nocturna. Perteneciente a los sellos Andean Tribe Records y Quantum Forest Records, su estilo ha mutado desde el Forest más puro hacia vertientes vanguardistas ligadas al Techno y el Progresivo, garantizando una sesión de alta factura técnica y profundidad psicodélica.'
     },
     {
       id: 3,
-      name: 'Factor RH',
-      genre: 'Psy Tek - Dark Psy - Forest',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/factorrhfrh_3829105098589371886_csyv9b.jpg',
-      bio: 'FACTOR RH / FRH, compositor, mc, dj y productor ecuatoriano que a través de su propuesta contundente conjuga frecuencias introspectivas y versatilidad.\n\nExplorando los límites del sonido, traslada esa experiencia musical ganada a lo largo de su carrera desde "South America Hit&Trip" como sello personal a nivel nacional e internacional, ejecutando hábilmente las frecuencias del Techno y Psychedelic, creando experiencias únicas que trascienden las fronteras de la psyche, combinando beats oceánicos con sutiles y profundas ondas sonoras. \n\nSe ha destacado como un fiel representante del underground consolidando su propia identidad y marca.',
+      name: 'Naropa',
+      genre: 'Full On - Hi-Tech',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775432138/535092847_24876493528623577_2210560228682095712_n_jmctam.jpg',
+      flag: '/1f1f5-1f1ea.svg',
+      bio: 'Naropa descubrió su pasión por el Psytrance en Marcahuasi Festival del 2016. Desde entonces, se ha convertido en un miembro emergente de la escena Psytrance en Lima, colaborando con Trilobites Music, Reviden Psy y promoviendo el género en la ciudad.\n\nComo productor musical, Naropa lanzo su primer EP "Om", que refleja su interés en la música meditativa. Su principal característica es la mezcla de sonidos electrónicos e instrumentos orgánicos, influenciados por sus experiencias con la meditación y enteógenos.\n\nNaropa organizo sesiones de Psytrance en la isla de Cozumel, Mexico bajo el nombre "Psytrance en la Isla" y es fundador de las fiestas Psycosmica y New Psychedelic que se desarrollan en Lima, Peru\n\nEn 2025, fue invitado a participar en el "Amazon Festival" en Rurrenabaque, Bolivia, marcando su segunda participación fuera de Perú.\n\nEsta vez lidera, junto a Eventos Reviden, la cuarta edicion de Chilca Ovni Festival.',
     },
     {
       id: 4,
-      name: 'Adren Aline',
+      name: 'Underside',
       genre: 'Psychedelic Trance - Goa',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775869961/adrenaline_xfefmp.jpg',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783199306/ig_burningminas_DU_wv1Rjul9_001_image_ozpdmq.webp',
+      flag: '/1f1e7-1f1f7.svg',
       bio: 'Alexander Bakunin DJ, Natural de Moscu Rusia ha sabido integrar la atmosfera pscodelica de su tierra con la mistica de las montanas del valle sagrado. Adren Aline ha sido pionero de las jornadas psicodelicas en Lima desde el 2010 junto a los ex Trilobite Music.\n\nActualmente viviendo aislado en las profundas montanas del Valle Sagrado de los Incas, tiende ese puente de amor y amistad con intensos sets en cada una de sus presentaciones.\n\nDesde Rusia hasta Chilca, Adren Aline nos transportará con su fina selección hacia un viaje mistico.',
     },
+    {
+      id: 5,
+      name: 'DJ Nestor Guerrero',
+      genre: 'Ambient - Psychill - Techno',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/djnestorguerrero_3842418949782840091_iclb1z.webp',
+      flag: '/1f1f5-1f1ea.svg',
+      bio: 'Naropa descubrió su pasión por el Psytrance en Marcahuasi Festival del 2016. Desde entonces, se ha convertido en un miembro emergente de la escena Psytrance en Lima, colaborando con Trilobites Music, Reviden Psy y promoviendo el género en la ciudad.\n\nComo productor musical, Naropa lanzo su primer EP "Om", que refleja su interés en la música meditativa. Su principal característica es la mezcla de sonidos electrónicos e instrumentos orgánicos, influenciados por sus experiencias con la meditación y enteógenos.\n\nNaropa organizo sesiones de Psytrance en la isla de Cozumel, Mexico bajo el nombre "Psytrance en la Isla" y es fundador de las fiestas Psycosmica y New Psychedelic que se desarrollan en Lima, Peru\n\nEn 2025, fue invitado a participar en el "Amazon Festival" en Rurrenabaque, Bolivia, marcando su segunda participación fuera de Perú.\n\nEsta vez lidera, junto a Eventos Reviden, la cuarta edicion de Chilca Ovni Festival.',
+    },
+    // {
+    //   id: 5,
+    //   name: 'Underside',
+    //   genre: 'Psychedelic Trance - Goa',
+    //   image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783199306/ig_burningminas_DU_wv1Rjul9_001_image_ozpdmq.webp',
+    //   bio: 'Alexander Bakunin DJ, Natural de Moscu Rusia ha sabido integrar la atmosfera pscodelica de su tierra con la mistica de las montanas del valle sagrado. Adren Aline ha sido pionero de las jornadas psicodelicas en Lima desde el 2010 junto a los ex Trilobite Music.\n\nActualmente viviendo aislado en las profundas montanas del Valle Sagrado de los Incas, tiende ese puente de amor y amistad con intensos sets en cada una de sus presentaciones.\n\nDesde Rusia hasta Chilca, Adren Aline nos transportará con su fina selección hacia un viaje mistico.',
+    // },
     // {
     //   id: 5,
     //   name: 'Naropa',
@@ -460,11 +481,8 @@ export const FESTIVAL_YEARS = [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184781/494523215_3735103276780828_4080075332463040733_n_ta6ghi.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184778/494180514_3735104580114031_1387557799286373345_n_xxxsgv.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184784/495171803_3735107396780416_5720135692135384176_n_unr8qv.jpg',
-      'https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/38840314_1973152652975908_5781897330496110592_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeG465Q7Ze5D1OApQgJzc0RWIblEtWk9vlAhuUS1aT2-UK0hNQcmxoC6zAh5jcH68u0T3r1W28UowT_1f5o_aHqT&_nc_ohc=r_vmZonzAWMQ7kNvwHlyLD5&_nc_oc=AdrV9Tk_MilQpb1AH41kJTACRYBUUHOpXcB0B86lZxuhLU080X_gnIF9qVO2j0szzcTTDcHB4pdQ1sEnAByLW5HX&_nc_zt=23&_nc_ht=scontent.flim2-2.fna&_nc_gid=sQ7Xvks17_Be2O18VBWg9w&_nc_ss=7b2a8&oh=00_Af9OzT64e29P6fg_Cs-4fwDlOwxfgVow5b0stylJtNKbbg&oe=6A4732F0',
-      'https://scontent.flim2-2.fna.fbcdn.net/v/t1.6435-9/38914361_1973152489642591_6616331565402161152_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGAOzlZEm9yTCgZeICMntNcBjJF4V6GOkoGMkXhXoY6SpCgwjYr82UCxF5xoYcNbyGhPgL7DUZ7YQYoqdAt_ZXG&_nc_ohc=AynNUBX5vP8Q7kNvwFWfEsC&_nc_oc=Adq9ZNI4crYz5sWx2VKtl1pPXUW8-7zZB6fUdLbh7RFNPCG7iuHcLkRX_rWT35LgOvWLYACnEkIeJEQDxaEUvNdA&_nc_zt=23&_nc_ht=scontent.flim2-2.fna&_nc_gid=nIoJmvbVL_5t5LJffHlQlQ&_nc_ss=7b2a8&oh=00_Af8cZKYklgV62f1r1MOPGuoX1yPua0uNsYqJQIq5VIm8tA&oe=6A472C46',
-      'https://scontent.flim2-6.fna.fbcdn.net/v/t1.6435-9/38782891_1973152882975885_1997769437477863424_n.jpg?stp=c426.0.1092.1092a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=969c58&_nc_eui2=AeHlinKZZhmNMqDYZCy6pnXCEamG4OLcEVsRqYbg4twRW3sBcylVD0Q2TH5bPDemaTi4hg7Z4qKKUeMkYko2jdTs&_nc_ohc=wua-uB4XsKoQ7kNvwFYOexp&_nc_oc=AdrZDscIRd94DCy271L-eyJ_PNx8AJGz1UTxCuQ_K5dlQjtMOUV-txeV6zu_C_Z1qUXSYA85aKOhQJXnSJgg3lQU&_nc_zt=23&_nc_ht=scontent.flim2-6.fna&_nc_gid=UIKqfYN1nO1j8p2ZydOQrg&_nc_ss=7b2a8&oh=00_Af9_bNLJ7Yzne5eXkfLNDk-v7Fx5LNdGdpeY30NMt84_hA&oe=6A484BAB',
-      'https://scontent.flim2-6.fna.fbcdn.net/v/t1.6435-9/38802586_1973161752974998_413168659804979200_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGMKwRmp7zLBlDeRQPFkvucHUGK70M06s4dQYrvQzTqzjday0y-GOKWmpJVemEsJrHUflNr7dE_CNyNX_Mh7BQE&_nc_ohc=usPKzjaDTFIQ7kNvwGZtOZQ&_nc_oc=AdrBy68PY05bA2GWRuJW5RJGAVSQb_WcgF-StqiWRnQvSfj46TtakUu_2w4-eimXXyMHb1w_f947izRr0N8llKkc&_nc_zt=23&_nc_ht=scontent.flim2-6.fna&_nc_gid=S0AGZKChliCeqpiBdAVpYQ&_nc_ss=7b2a8&oh=00_Af_m9a4BFyu7Fg0lU3rRTIfXHumEL5aHQ9jzwuz6GfP2Vw&oe=6A48474A',
-      'https://scontent.flim2-5.fna.fbcdn.net/v/t1.6435-9/38847471_1973162139641626_2966526816061227008_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeGDCrMoUelmPYyuB8RlT5NUsZdgURRlqpGxl2BRFGWqkVZAbzf2o6HO1VYlgR-MJjKF60dlCkr221u8uuVbpdNf&_nc_ohc=kfq6p6eedb0Q7kNvwFs65eL&_nc_oc=Adq4Otex2VWc-ay9VVU4wmDo0eZtFnJkbGMehEhMQOyQGKyLXte6IsaeNaTM3jVjrJbJF_3__kfFnbomZeGnoeOk&_nc_zt=23&_nc_ht=scontent.flim2-5.fna&_nc_gid=qim8M6MftniJ_89X_7HRvA&_nc_ss=7b2a8&oh=00_Af-wm48xi4LJBtA_889MxTnt5I2kUeimFzNT0ZgzeMWMvw&oe=6A4842C0',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783198709/38847008_n_si5mgk.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783198907/387352_n_j4neht.jpg',
     ],
     videos: [
       {
