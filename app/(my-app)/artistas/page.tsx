@@ -93,7 +93,7 @@ export default function ArtistasPage() {
           {/* Footer */}
           <div className="mt-16 pt-8 border-t border-primary/20 text-center text-foreground/60">
             <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
-            <p className='text-xs mt-2'>Desarrollado por <a href="https://www.joelangeldev.site" target="_blank" className="text-primary hover:underline">joelangeldev</a></p>
+            <p className='text-[8px] mt-4 md:text-xs'>Desarrollado por <a href="https://www.joelangeldev.site" target="_blank" className="text-primary hover:underline">joelangeldev</a></p>
           </div>
         </motion.div>
       </main>
