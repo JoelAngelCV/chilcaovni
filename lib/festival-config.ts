@@ -60,7 +60,7 @@ export const FESTIVAL_INFO = {
     {
       id: 4,
       name: 'Underside',
-      genre: 'Psychedelic Trance - Goa',
+      genre: 'Progressive Trance',
       image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783199306/ig_burningminas_DU_wv1Rjul9_001_image_ozpdmq.webp',
       flag: '/1f1e7-1f1f7.svg',
       bio: 'Alexander Bakunin DJ, Natural de Moscu Rusia ha sabido integrar la atmosfera pscodelica de su tierra con la mistica de las montanas del valle sagrado. Adren Aline ha sido pionero de las jornadas psicodelicas en Lima desde el 2010 junto a los ex Trilobite Music.\n\nActualmente viviendo aislado en las profundas montanas del Valle Sagrado de los Incas, tiende ese puente de amor y amistad con intensos sets en cada una de sus presentaciones.\n\nDesde Rusia hasta Chilca, Adren Aline nos transportará con su fina selección hacia un viaje mistico.',
