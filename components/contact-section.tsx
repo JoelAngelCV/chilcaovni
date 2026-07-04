@@ -7,7 +7,7 @@ import { NewsletterForm } from './newsletter-form'
 
 export function ContactSection() {
   return (
-    <section id="contact" className="relative py-32 px-4 sm:px-6 lg:px-8 border-t border-primary/20">
+    <section id="contact" className="relative pt-24 pb-6 px-4 sm:px-6 lg:px-8 border-t border-primary/20">
       {/* Background glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
@@ -77,21 +77,21 @@ export function ContactSection() {
               <div className="flex gap-4">
                 <a
                   href="https://instagram.com/chilca.ovni.festival"
-                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center text-primary transition-all hover:scale-110"
+                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center md:text-primary text-purple-400 transition-all hover:scale-110"
                   target="_blank"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a
                   href="https://www.facebook.com/p/Chilca-OVNI-Festival-2026-100064821636017/"
-                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center text-primary transition-all hover:scale-110"
+                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center md:text-primary text-purple-400 transition-all hover:scale-110"
                   target="_blank"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
                   href="https://www.tiktok.com/@eventos.reviden?lang=es"
-                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center text-primary transition-all hover:scale-110"
+                  className="w-12 h-12 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center md:text-primary text-purple-400 transition-all hover:scale-110"
                   target="_blank"
                 >
                   <TikTok className="w-5 h-5" />
@@ -132,8 +132,9 @@ export function ContactSection() {
         </div>
 
         {/* Footer */}
-        <div className="mt-16 pt-8 border-t border-primary/20 text-center text-foreground/60">
+        <div className="mt-24 pt-8 border-t border-primary/20 text-center text-foreground/60">
           <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
+          <p className='text-xs mt-4'>Desarrollado por <a href="https://www.joelangeldev.site" target="_blank" className="text-primary hover:underline">joelangeldev</a></p>
         </div>
       </div>
     </section>

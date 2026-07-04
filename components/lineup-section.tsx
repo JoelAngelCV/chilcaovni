@@ -8,6 +8,7 @@ interface Artist {
   genre: string
   image: string
   bio: string
+  flag: string
 }
 
 const artists: Artist[] = FESTIVAL_INFO.artists
@@ -35,15 +36,24 @@ export function LineupSection() {
               key={artist.id}
               className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 group overflow-hidden"
             >
-              <div className="relative h-32 mb-4 rounded-lg overflow-hidden bg-primary/10">
+              <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-primary/10">
                 <img
-                  src="./lg-pronto-lg.jpg"
+                  src={artist.image}
                   alt={artist.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2 blur">{artist.name}</h3>
-              <p className="text-sm text-secondary mb-3 font-medium blur">{artist.genre}</p>
+              <div className='flex'>
+                <h3 className="text-lg font-bold text-primary mb-2">{artist.name}</h3>
+                {artist.flag && (
+                  <img
+                    src={artist.flag}
+                    alt="Country flag"
+                    className="w-5 h-5 ml-2 object-cover"
+                  />
+                )}
+              </div>
+              <p className="text-sm text-secondary mb-3 font-medium">{artist.genre}</p>
             </div>
           ))}
         </div>

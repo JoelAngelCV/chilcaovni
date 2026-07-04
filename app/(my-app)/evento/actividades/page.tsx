@@ -57,7 +57,7 @@ export default function ActividadesPage() {
                 <X className="w-6 h-6 text-primary" />
               </button>
 
-              <div className="relative w-full h-96 overflow-hidden rounded-t-2xl">
+              <div className="relative w-full h-96 overflow-hidden rounded-t-2xl blur">
                 <img
                   src={selectedActivity.image}
                   alt={selectedActivity.name}
