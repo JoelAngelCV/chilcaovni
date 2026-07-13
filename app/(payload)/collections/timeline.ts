@@ -6,6 +6,10 @@ export const Timeline: CollectionConfig = {
     useAsTitle: 'name', // Título que se muestra en el panel de control
     defaultColumns: ['time', 'name', 'artist', 'genre', 'image'], // Columnas que se muestran por defecto
   },
+  // 1. Activa las versiones y borradores para habilitar el campo _status
+  versions: {
+    drafts: true,
+  },
   access: {
     read: () => true, // Cualquiera puede leer los artículos
     create: ({ req }) => !!req.user, // Solo usuarios logueados pueden crear

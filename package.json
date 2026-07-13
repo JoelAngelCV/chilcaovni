@@ -2,11 +2,16 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate:types": "payload generate:types",
+    "payload:dev": "payload dev -c ./app/payload.config.ts",
+    "payload:start": "payload serve -c ./app/payload.config.ts",
+    "payload:types": "payload generate:types"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -73,10 +78,11 @@
     "@types/node": "^22",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
+    "cross-env": "^10.1.0",
     "postcss": "^8.5",
     "tailwindcss": "^4.2.0",
     "tw-animate-css": "1.3.3",
     "typescript": "5.7.3"
   },
-  "packageManager": "pnpm@11.9.0+sha256.2b567aa66026238078ac2e0a33bec3febd60e962987aac697456f3180819b287"
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

@@ -96,10 +96,35 @@ export const WHATSAPP_CONFIG = {
   formattedNumber: '+51 986 487 619',
 }
 
+const toBoolean = (value?: string) => ['1', 'true', 'yes', 'on'].includes((value || '').toLowerCase())
+
+export function getPayPalEnvironment(): 'sandbox' | 'live' {
+  const explicitMode = process.env.NEXT_PUBLIC_PAYPAL_MODE || process.env.PAYPAL_MODE
+  if (explicitMode) {
+    const normalizedMode = explicitMode.toLowerCase()
+    if (normalizedMode === 'sandbox' || normalizedMode === 'live') {
+      return normalizedMode
+    }
+  }
+
+  const sandboxFlag = process.env.NEXT_PUBLIC_PAYPAL_SANDBOX || process.env.PAYPAL_SANDBOX
+  if (sandboxFlag !== undefined) {
+    return toBoolean(sandboxFlag) ? 'sandbox' : 'live'
+  }
+
+  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || process.env.PAYPAL_CLIENT_ID || ''
+  if (clientId.toLowerCase().includes('sandbox')) {
+    return 'sandbox'
+  }
+
+  return 'live'
+}
+
 export const PAYPAL_CONFIG = {
   clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || '',
   currency: 'USD',
   isConfigured: !!process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
+  mode: getPayPalEnvironment(),
 }
 
 export function isPeruvianNumber(phoneOrCode?: string): boolean {

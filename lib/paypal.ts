@@ -1,3 +1,5 @@
+import { getPayPalEnvironment } from '@/lib/payment-config'
+
 export type PayPalCreateOrderRequest = {
   ticketName: string
   quantity: number
@@ -16,9 +18,7 @@ const getPayPalClientSecret = () => {
 }
 
 const useSandbox = () => {
-  const sandboxEnv = process.env.NEXT_PUBLIC_PAYPAL_SANDBOX
-  const clientId = getPayPalClientId()
-  return sandboxEnv === 'true' || clientId.toLowerCase().includes('sandbox')
+  return getPayPalEnvironment() === 'sandbox'
 }
 
 const getPayPalApiUrl = () => {

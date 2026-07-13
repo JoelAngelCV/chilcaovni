@@ -165,6 +165,29 @@ Todos los derechos reservados © 2024 Festival OVNI
 
 El sitio puede desplegarse en cualquier plataforma que soporte Next.js (AWS, Netlify, etc.)
 
+## ⚙️ Payload CMS
+
+Este repo usa Payload CMS para gestionar colecciones. Pasos rápidos para ejecutar Payload localmente:
+
+1. Copia `.env.example` a `.env.local` y rellena `PAYLOAD_SECRET` y `DATABASE_URI`.
+
+2. Genera tipos de Payload (útil para TypeScript):
+```bash
+pnpm run generate:types
+```
+
+3. Ejecuta Payload en modo desarrollo:
+```bash
+pnpm run payload:dev
+```
+
+4. Para arrancar el servidor de Payload en producción:
+```bash
+pnpm run payload:start
+```
+
+Los archivos de configuración de Payload están en `app/payload.config.ts`.
+
 ---
 
 **Creado con Next.js, Tailwind CSS y mucho ✨ cósmico**
