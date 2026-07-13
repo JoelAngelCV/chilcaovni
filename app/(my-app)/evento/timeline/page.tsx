@@ -3,12 +3,29 @@ import { FESTIVAL_SCHEDULE } from '@/lib/festival-config'
 import { Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
+import { getPayload } from 'payload';
+import config from '@payload-config';
+import type { Timeline } from '@/payload-types';
+
 export const metadata: Metadata = {
   title: 'Timeline',
   description: 'Horario de presentaciones de Chilca Ovni Festival 2026',
 }
 
-export default function TimelinePage() {
+export default async function TimelinePage() {
+  // 2. Inicializar la instancia de Payload usando tu configuración
+  const payload = await getPayload({ config });
+
+  // 3. Consultar los datos usando la API Local
+  // Este es el método nativo (Type-safe) para acceder a la base de datos
+  const data = await payload.find({
+    collection: 'timeline', // Reemplaza con el nombre de tu colección
+    where: {
+      _status: {
+        equals: 'published', // Asegura traer solo el contenido publicado
+      },
+    },
+  });
   return (
     <>
       <Header />
@@ -35,39 +52,39 @@ export default function TimelinePage() {
           </div>
 
           {/* Timeline cards */}
-          <div className="space-y-4">
-            {FESTIVAL_SCHEDULE.map((entry, idx) => (
+          <div className="space-y-4 blur">
+            {data.docs.map((timeline: Timeline) => (
               <div
-                key={idx}
-                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 blur"
+                key={timeline.id}
+                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
               >
                 {/* Time */}
                 <div className="shrink-0 w-full sm:w-auto">
                   <div className="flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-lg w-fit">
                     <Clock className="w-5 h-5 text-primary" />
-                    <span className="text-xl font-bold text-primary">{entry.time}</span>
+                    <span className="text-xl font-bold text-primary">{timeline.time}</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="grow w-full sm:w-auto">
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1">
-                    {entry.name}
+                    {timeline.name}
                   </h3>
                   <p className="text-secondary font-semibold text-base sm:text-lg mb-1">
-                    {entry.genre}
+                    {timeline.genre}
                   </p>
                   <p className="text-foreground/60 text-sm">
-                    {entry.artist}
+                    {timeline.artist}
                   </p>
                 </div>
 
                 {/* Artist image */}
-                {entry.image && (
+                {timeline.image && (
                   <div className="shrink-0 hidden sm:block">
                     <img
-                      src={entry.image}
-                      alt={entry.name}
+                      src={timeline.image}
+                      alt={timeline.name}
                       className="w-20 h-20 rounded-lg object-cover border border-primary/30"
                     />
                   </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
-import { TicketType, PAYPAL_CONFIG } from '@/lib/payment-config'
+import { TicketType, PAYPAL_CONFIG, getPayPalEnvironment } from '@/lib/payment-config'
 
 declare global {
   interface Window {
@@ -41,8 +41,8 @@ export function PayPalCheckout({ ticket, onSuccess, onError }: PayPalCheckoutPro
     }
 
     const script = document.createElement('script')
-    const isSandbox = clientId.includes('Sandbox') || process.env.NEXT_PUBLIC_PAYPAL_SANDBOX === 'true'
-    const domain = isSandbox ? 'sandbox.paypal.com' : 'www.paypal.com'
+    const paypalEnvironment = getPayPalEnvironment()
+    const domain = paypalEnvironment === 'sandbox' ? 'sandbox.paypal.com' : 'www.paypal.com'
     script.src = `https://${domain}/sdk/js?client-id=${clientId}&currency=${PAYPAL_CONFIG.currency}`
     script.async = true
     

@@ -3,3 +3,6 @@ allowBuilds:
   sharp: true
 onlyBuiltDependencies:
   - sharp
+packages:
+  - "apps/*"
+  - "packages/*"
