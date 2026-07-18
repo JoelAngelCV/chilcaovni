@@ -2,12 +2,12 @@ import GalleryVideo from './gallery-video';
 
 export default function GallerySectionVideo() {
   const videos = [
+    { id: 'hzNWCGwP0wo', type: 'horizontal'},
+    { id: '1ybm4CswRJc', type: 'horizontal' },
+    { id: '191BheYX1C4', type: 'horizontal' },
     { id: 'I06eWqtSBA8', type: 'short' },
     { id: 'CNUOZpnnW10', type: 'short' },
-    { id: 'jxyvoFcqWD8', type: 'short' },
-    { id: '191BheYX1C4', type: 'horizontal' },
-    { id: '6zFLq_x4SVk', type: 'horizontal' },
-    { id: '1ybm4CswRJc', type: 'horizontal' }
+    { id: 'jxyvoFcqWD8', type: 'short' },    
   ];
 
   return (

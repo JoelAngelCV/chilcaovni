@@ -3,8 +3,8 @@ import type { CollectionConfig } from 'payload'
 export const Timeline: CollectionConfig = {
   slug: 'timeline',
   admin: {
-    useAsTitle: 'name', // Título que se muestra en el panel de control
-    defaultColumns: ['time', 'name', 'artist', 'genre', 'image'], // Columnas que se muestran por defecto
+    useAsTitle: 'artist', // Título que se muestra en el panel de control
+    defaultColumns: ['time', 'artist', 'genre'], // Columnas que se muestran por defecto
   },
   // 1. Activa las versiones y borradores para habilitar el campo _status
   versions: {
@@ -21,11 +21,6 @@ export const Timeline: CollectionConfig = {
       required: true,
     },
     {
-      name: 'name',
-      type: 'text',
-      required: true,
-    },
-    {
       name: 'artist',
       type: 'text',
       required: true,
@@ -37,8 +32,9 @@ export const Timeline: CollectionConfig = {
     },
     {
       name: 'image',
-      type: 'text',
-      required: true,
+      type: 'upload',
+      relationTo: 'media',
+      label: 'Foto',
     },
     // {
     //   name: 'author',

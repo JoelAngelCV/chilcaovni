@@ -25,7 +25,7 @@ export async function sendPurchaseReceiptEmail(payload: PurchaseReceiptPayload) 
     throw new Error('BREVO_API_KEY no está configurado en el servidor.')
   }
 
-  const senderEmail = process.env.BREVO_SENDER_EMAIL || 'contacto@joelangeldev.site'
+  const senderEmail = process.env.BREVO_SENDER_EMAIL || 'contacto@chilcaovnifestival'
   const senderName = process.env.BREVO_SENDER_NAME || 'Chilca Ovni Festival'
 
   const subject = `Comprobante de compra - ${payload.ticketName}`

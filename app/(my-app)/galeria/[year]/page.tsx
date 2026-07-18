@@ -140,8 +140,14 @@ export default function YearGalleryPage({ params: paramsPromise }: PageProps) {
             </div>
           </div>
           {/* Footer */}
-          <div className="pt-0 pb-2 border-t border-primary/20 text-center text-foreground/60">
+          <div className="pt-2 pb-2 border-t border-primary/20 text-center text-foreground/60 bg-accent-foreground/60">
             <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
+            <p className="text-[8px] mt-4 md:text-xs">
+              Desarrollado por{' '}
+              <a href="https://www.joelangeldev.site" target="_blank" className="text-primary hover:underline">
+                joelangeldev
+              </a>
+            </p>
           </div>
         </motion.div>
 
