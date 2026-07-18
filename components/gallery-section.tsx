@@ -163,7 +163,7 @@ export function GallerySection() {
 
               <div className="p-8">
                 <h3 className="text-3xl font-bold text-primary mb-4">{selectedItem.title}</h3>
-                <p className="text-lg text-foreground/80">{selectedItem.description}</p>
+                
               </div>
             </div>
           </div>

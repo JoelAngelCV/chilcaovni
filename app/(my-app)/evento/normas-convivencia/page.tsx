@@ -164,7 +164,7 @@ export default function NormasConvivenciaPage() {
           </div>
         </div>
         {/* Footer */}
-        <div className="pt-16 pb-0 border-t border-primary/20 text-center text-foreground/60">
+        <div className="pt-16 pb-0 border-t border-primary/20 text-center text-foreground/60 text-sm">
           <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>

@@ -45,8 +45,8 @@ export default function MerchPage() {
           </div>
 
           <div className="text-center mb-16">
-            
-            <p className="text-xl text-foreground/70">Para adquirir cualquier producto por favor <a href="/#contact" className="text-primary hover:underline">
+            <p className="text-md text-foreground/70 mb-3">Las imágenes son referenciales.</p>
+            <p className="text-md text-foreground/70">Para adquirir cualquier producto por favor <a href="/#contact" className="text-primary hover:underline">
               contacta
             </a> con nuestro equipo de ventas.</p>
           </div>
@@ -83,7 +83,7 @@ export default function MerchPage() {
           </div>
         </div>
         {/* Footer */}
-        <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60">
+        <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60 text-sm">
           <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>

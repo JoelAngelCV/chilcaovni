@@ -25,7 +25,7 @@ export default function ActividadesPage() {
                 onClick={() => setSelectedActivity(activity)}
                 className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer group"
               >
-                <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-primary/10 blur">
+                <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-primary/10">
                   <img
                     src={activity.image}
                     alt={activity.name}
@@ -48,7 +48,7 @@ export default function ActividadesPage() {
         </div>
 
         {selectedActivity && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60">
             <div className="cosmic-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setSelectedActivity(null)}
@@ -57,18 +57,18 @@ export default function ActividadesPage() {
                 <X className="w-6 h-6 text-primary" />
               </button>
 
-              <div className="relative w-full h-96 overflow-hidden rounded-t-2xl blur">
+              <div className="relative w-full h-96 overflow-hidden rounded-t-2xl">
                 <img
                   src={selectedActivity.image}
                   alt={selectedActivity.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/90"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/90"></div>
               </div>
 
               <div className="p-8">
                 <h2 className="text-4xl font-bold text-primary mb-4">{selectedActivity.name}</h2>
-                <div className="h-px bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 mb-6"></div>
+                <div className="h-px bg-linear-to-r from-primary/0 via-primary/50 to-primary/0 mb-6"></div>
                 <p className="text-foreground/80 leading-relaxed whitespace-pre-wrap mb-8">
                   {selectedActivity.fullDescription}
                 </p>
@@ -84,7 +84,7 @@ export default function ActividadesPage() {
           </div>
         )}
         {/* Footer */}
-          <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60">
+          <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60 text-sm">
             <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
           </div>
       </main>

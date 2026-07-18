@@ -37,7 +37,7 @@ export const FESTIVAL_INFO = {
       id: 1,
       name: 'Huantar Project',
       genre: 'Goa Psychedelic',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783195464/huantarproject_dx8pqi.png',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784411843/huantarproject.png',
       flag: '/francia.svg',
       bio: 'Natural de Poços de Caldas (MG, Brasil), Pepe Jones actúa en la escena psytrance desde 2002 y debutó como DJ en 2006. Desde entonces, ha construido una trayectoria sólida, marcada por la dedicación, la evolución y una presencia constante en la escena nacional e internacional.\n\n Residente de la reconocida fiesta Mandallah, se ha presentado en los festivales más importantes de Brasil, como Universo Paralello (303 Stage), Soulvision, Mundo de Oz, Samsara Festival, Festival Alternativo do Kranti, Puma Punku Festival y Resistência Main Floor, además de diversos eventos independientes por todo el país. En el exterior, llevó su sonido a pistas de España, Portugal, Perú, Chile, Uruguay y Bolivia, destacando festivales como Arkana (Perú), Inchala (Uruguay), MonteMapu (Chile), Amazon Andes Festival (Isla del Sol) y Amazon Festival (Rurrenabaque), ambos en Bolivia.\n\n​Actualmente, integra el casting de Replicant Records (Australia), con participaciones en la serie V/A Light & Shadow (vol. 1 y 2) y el DJ set Replicant & Friends. Sus sets fusionan grooves hipnóticos, atmósferas psicodélicas y una conexión profunda con la pista de baile',
     },
@@ -45,32 +45,32 @@ export const FESTIVAL_INFO = {
       id: 2,
       name: 'Diazzi',
       genre: 'Psytrance Progressivo',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783195464/ig_santaconexao_DXZ24nVkTZ5_001_image_x42k25.webp',
-      flag: '/1f1e7-1f1f7.svg',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784411963/diazzi.webp',
+      flag: 'brasil.svg',
       bio: 'Diego Barbaguelatta A.K.A. \n\nUaky Con más de una década de recorrido y presencia en las pistas de Chile, Bolivia, Perú y Brasil, Uaky es un artista que domina la narrativa nocturna. Perteneciente a los sellos Andean Tribe Records y Quantum Forest Records, su estilo ha mutado desde el Forest más puro hacia vertientes vanguardistas ligadas al Techno y el Progresivo, garantizando una sesión de alta factura técnica y profundidad psicodélica.'
     },
     {
       id: 3,
       name: 'Naropa',
       genre: 'Full On - Hi-Tech',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775432138/535092847_24876493528623577_2210560228682095712_n_jmctam.jpg',
-      flag: '/1f1f5-1f1ea.svg',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784412351/naropa.jpg',
+      flag: '/peru.svg',
       bio: 'Naropa descubrió su pasión por el Psytrance en Marcahuasi Festival del 2016. Desde entonces, se ha convertido en un miembro emergente de la escena Psytrance en Lima, colaborando con Trilobites Music, Reviden Psy y promoviendo el género en la ciudad.\n\nComo productor musical, Naropa lanzo su primer EP "Om", que refleja su interés en la música meditativa. Su principal característica es la mezcla de sonidos electrónicos e instrumentos orgánicos, influenciados por sus experiencias con la meditación y enteógenos.\n\nNaropa organizo sesiones de Psytrance en la isla de Cozumel, Mexico bajo el nombre "Psytrance en la Isla" y es fundador de las fiestas Psycosmica y New Psychedelic que se desarrollan en Lima, Peru\n\nEn 2025, fue invitado a participar en el "Amazon Festival" en Rurrenabaque, Bolivia, marcando su segunda participación fuera de Perú.\n\nEsta vez lidera, junto a Eventos Reviden, la cuarta edicion de Chilca Ovni Festival.',
     },
+    // {
+    //   id: 4,
+    //   name: 'Underside',
+    //   genre: 'Progressive Trance',
+    //   image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783199306/ig_burningminas_DU_wv1Rjul9_001_image_ozpdmq.webp',
+    //   flag: '/brasil.svg',
+    //   bio: 'Alexander Bakunin DJ, Natural de Moscu Rusia ha sabido integrar la atmosfera pscodelica de su tierra con la mistica de las montanas del valle sagrado. Adren Aline ha sido pionero de las jornadas psicodelicas en Lima desde el 2010 junto a los ex Trilobite Music.\n\nActualmente viviendo aislado en las profundas montanas del Valle Sagrado de los Incas, tiende ese puente de amor y amistad con intensos sets en cada una de sus presentaciones.\n\nDesde Rusia hasta Chilca, Adren Aline nos transportará con su fina selección hacia un viaje mistico.',
+    // },
     {
       id: 4,
-      name: 'Underside',
-      genre: 'Progressive Trance',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1783199306/ig_burningminas_DU_wv1Rjul9_001_image_ozpdmq.webp',
-      flag: '/1f1e7-1f1f7.svg',
-      bio: 'Alexander Bakunin DJ, Natural de Moscu Rusia ha sabido integrar la atmosfera pscodelica de su tierra con la mistica de las montanas del valle sagrado. Adren Aline ha sido pionero de las jornadas psicodelicas en Lima desde el 2010 junto a los ex Trilobite Music.\n\nActualmente viviendo aislado en las profundas montanas del Valle Sagrado de los Incas, tiende ese puente de amor y amistad con intensos sets en cada una de sus presentaciones.\n\nDesde Rusia hasta Chilca, Adren Aline nos transportará con su fina selección hacia un viaje mistico.',
-    },
-    {
-      id: 5,
       name: 'DJ Nestor Guerrero',
       genre: 'Ambient - Psychill - Techno',
-      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1775019507/djnestorguerrero_3842418949782840091_iclb1z.webp',
-      flag: '/1f1f5-1f1ea.svg',
+      image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784412661/djnestorguerrero.webp',
+      flag: '/peru.svg',
       bio: 'Naropa descubrió su pasión por el Psytrance en Marcahuasi Festival del 2016. Desde entonces, se ha convertido en un miembro emergente de la escena Psytrance en Lima, colaborando con Trilobites Music, Reviden Psy y promoviendo el género en la ciudad.\n\nComo productor musical, Naropa lanzo su primer EP "Om", que refleja su interés en la música meditativa. Su principal característica es la mezcla de sonidos electrónicos e instrumentos orgánicos, influenciados por sus experiencias con la meditación y enteógenos.\n\nNaropa organizo sesiones de Psytrance en la isla de Cozumel, Mexico bajo el nombre "Psytrance en la Isla" y es fundador de las fiestas Psycosmica y New Psychedelic que se desarrollan en Lima, Peru\n\nEn 2025, fue invitado a participar en el "Amazon Festival" en Rurrenabaque, Bolivia, marcando su segunda participación fuera de Perú.\n\nEsta vez lidera, junto a Eventos Reviden, la cuarta edicion de Chilca Ovni Festival.',
     },
     // {
@@ -341,21 +341,21 @@ export const ACTIVITIES = [
     id: 1,
     name: 'Meditación Activa',
     description: 'Una experiencia transformadora de meditación dinámica en la playa.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop',
-    fullDescription: 'Únete a nuestras sesiones de meditación activa donde la música, el movimiento y la conciencia se fusionan. Bajo el cielo estrellado de Punta Yaya, experimentarás una transformación profunda de tu ser interior.\n\nEsta práctica combina técnicas ancestrales con energía contemporánea para despertar tu consciencia.'
+    image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784305622/tmac_akqc34.jpg',
+    fullDescription: 'Únete a nuestras sesiones de meditación activa donde la música, el movimiento y la conciencia se fusionan, experimentarás una transformación profunda de tu ser interior.\n\nEsta práctica combina técnicas ancestrales con energía contemporánea para despertar tu consciencia.'
   },
   {
     id: 2,
     name: 'Taller de Geometría Sagrada',
     description: 'Explora los patrones cósmicos y la geometría del universo.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&h=500&fit=crop',
+    image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784305620/tgs_on2o20.jpg',
     fullDescription: 'Descubre los misterios de la geometría sagrada y cómo se manifiesta en el universo. Un viaje visual y espiritual a través de patrones fractales, símbolos ancestrales y la geometría del cosmos.\n\nAprenderás a reconocer estas formas en la naturaleza y en ti mismo, conectando con la inteligencia universal.'
   },
   {
     id: 3,
     name: 'Activación de Movimiento',
     description: 'Danza libre y movimiento consciente bajo las estrellas.',
-    image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=500&fit=crop',
+    image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784305621/tam1_a1ftri.jpg',
     fullDescription: 'Libera tu cuerpo y tu espíritu a través del movimiento consciente. Nuestros facilitadores te guiarán en una experiencia de danza libre donde tu cuerpo es el instrumento y la música el universo.\n\nEsta activación te permitirá expresar tu ser más auténtico sin limitaciones.'
   },
   // {
@@ -450,6 +450,7 @@ export const FESTIVAL_YEARS = [
     images: [
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184776/492972317_3728300790794410_5704735522101215059_n_1_og9d0e.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184779/494268282_3730581877232968_6795827925521536851_n_per2o8.jpg',
+      'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784303475/flyer2017_kfcyn6.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184777/494001793_3730582877232868_6824121004130314037_n_yivv6f.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184777/493900874_3730583050566184_8094001779553639472_n_qhhuvn.jpg',
       'https://res.cloudinary.com/da6s9ujgm/image/upload/v1780184777/493011344_3730583127232843_7863708980689198463_n_a5uvlr.jpg',
@@ -608,6 +609,11 @@ export const FESTIVAL_YEARS = [
       {
         videoId: '191BheYX1C4',
         title: 'Chilca OVNI Festival 2026 - Aftermovie',
+        type: 'horizontal',
+      },
+      {
+        videoId: 'hzNWCGwP0wo',
+        title: 'Chilca OVNI Festival 2026 - Entrevistas',
         type: 'horizontal',
       },
       {

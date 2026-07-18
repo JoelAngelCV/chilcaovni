@@ -1,11 +1,28 @@
-'use client'
-
 import { Header } from '@/components/header'
 import { SPONSORS } from '@/lib/festival-config'
 import { WHATSAPP_CONFIG } from '@/lib/payment-config'
 import { Mail, MessageCircle } from 'lucide-react'
 
-export default function AuspiciadoresPage() {
+import { getPayload } from 'payload';
+import config from '@payload-config';
+import type { Sponsor, Media } from '@/payload-types';
+
+export default async function AuspiciadoresPage() {
+  // 2. Inicializar la instancia de Payload usando tu configuración
+  const payload = await getPayload({ config });
+
+  // 3. Consultar los datos usando la API Local
+  // Este es el método nativo (Type-safe) para acceder a la base de datos
+  const data = await payload.find({
+    collection: 'sponsors', // Reemplaza con el nombre de tu colección
+    depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
+    sort: 'createdAt',
+    where: {
+      _status: {
+        equals: 'published', // Asegura traer solo el contenido publicado
+      },
+    },
+  });
   return (
     <>
       <Header />
@@ -17,10 +34,10 @@ export default function AuspiciadoresPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {SPONSORS.map((sponsor) => (
-              <div key={sponsor.id} className="cosmic-card p-6 rounded-lg flex items-center justify-center min-h-37.5 blur">
+            {data.docs.map((sponsor: Sponsor) => (
+              <div key={sponsor.id} className="cosmic-card p-6 rounded-lg flex items-center justify-center min-h-37.5">
                 <img
-                  src={sponsor.logo}
+                  src={(sponsor.image as Media).url ?? ""}
                   alt={sponsor.name}
                   className="w-full h-full object-contain"
                 />
@@ -85,11 +102,10 @@ export default function AuspiciadoresPage() {
           </div>
         </div>
         {/* Footer */}
-        <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60">
+        <div className="pt-0 pb-0 border-t border-primary/20 text-center text-foreground/60 text-sm">
           <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
-      </main>
-      
+      </main>     
     </>
   )
 }

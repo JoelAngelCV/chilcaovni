@@ -1,13 +1,31 @@
 import { Header } from '@/components/header'
-import { COLLABORATORS } from '@/lib/festival-config'
 import { Metadata } from 'next'
+
+import { getPayload } from 'payload';
+import config from '@payload-config';
+import type { Collaborator, Media } from '@/payload-types';
 
 export const metadata: Metadata = {
   title: 'Colaboradores',
   description: 'Conoce a las personas que hicieron posible Chilca Ovni Festival.',
 }
 
-export default function CollaboratorsPage() {
+export default async function CollaboratorsPage() {
+  // 2. Inicializar la instancia de Payload usando tu configuración
+  const payload = await getPayload({ config });
+
+  // 3. Consultar los datos usando la API Local
+  // Este es el método nativo (Type-safe) para acceder a la base de datos
+  const data = await payload.find({
+    collection: 'collaborators', // Reemplaza con el nombre de tu colección
+    depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
+    sort: 'createdAt', 
+    where: {
+      _status: {
+        equals: 'published', // Asegura traer solo el contenido publicado
+      },
+    },
+  });
   return (
     <>
       <Header />
@@ -25,23 +43,23 @@ export default function CollaboratorsPage() {
 
           {/* Collaborators Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {COLLABORATORS.map((collaborator) => (
+            {data.docs.map((collaborator: Collaborator) => (
               <div key={collaborator.id} className="cosmic-card p-6 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
                 {/* Image */}
                 <div className="relative h-56 mb-4 rounded-lg overflow-hidden">
                   <img
-                    src={collaborator.image}
+                    src={(collaborator.image as Media).url ?? ""}
                     alt={collaborator.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 blur"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-background/80 to-transparent"></div>
                 </div>
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-1 blur">{collaborator.name}</h3>
+                  <h3 className="text-xl font-bold text-primary mb-1">{collaborator.name}</h3>
                   <p className="text-sm text-secondary font-semibold mb-3">{collaborator.role}</p>
-                  <p className="text-sm text-foreground/70 leading-relaxed blur">{collaborator.contribution}</p>
+                  <p className="text-sm text-foreground/70 leading-relaxed">{collaborator.contribution}</p>
                 </div>
               </div>
             ))}
@@ -86,7 +104,7 @@ export default function CollaboratorsPage() {
           </div>
         </div>
         {/* Footer */}
-        <div className="pt-10 pb-0 border-t border-primary/20 text-center text-foreground/60">
+        <div className="pt-10 pb-0 border-t border-primary/20 text-center text-foreground/60 text-sm">
           <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>

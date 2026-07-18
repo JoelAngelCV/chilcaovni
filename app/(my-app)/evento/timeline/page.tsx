@@ -1,11 +1,10 @@
 import { Header } from '@/components/header'
-import { FESTIVAL_SCHEDULE } from '@/lib/festival-config'
 import { Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
 import { getPayload } from 'payload';
 import config from '@payload-config';
-import type { Timeline } from '@/payload-types';
+import type { Timeline, Media } from '@/payload-types';
 
 export const metadata: Metadata = {
   title: 'Timeline',
@@ -20,6 +19,8 @@ export default async function TimelinePage() {
   // Este es el método nativo (Type-safe) para acceder a la base de datos
   const data = await payload.find({
     collection: 'timeline', // Reemplaza con el nombre de tu colección
+    depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
+    sort: 'createdAt',
     where: {
       _status: {
         equals: 'published', // Asegura traer solo el contenido publicado
@@ -43,20 +44,20 @@ export default async function TimelinePage() {
         {/* Schedule Section */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold glow-text mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold glow-text mb-4 text-center">
               Timeline del Festival
             </h1>
-            <p className="text-foreground/80 text-lg">
-              Viernes 05 a Domingo 07 de Febrero - Chilca Ovni Festival 2027 en Playa Punta Yaya
+            <p className="text-foreground/80 text-lg text-center">
+              De Viernes 05 a Domingo 07 de Febrero - Chilca Ovni Festival 2027
             </p>
           </div>
 
           {/* Timeline cards */}
-          <div className="space-y-4 blur">
+          <div className="space-y-4">
             {data.docs.map((timeline: Timeline) => (
               <div
                 key={timeline.id}
-                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+                className="cosmic-card p-6 rounded-lg hover:scale-105 transition-all duration-300 flex flex-col-reverse sm:flex-row justify-between sm:items-center gap-4 sm:gap-6"
               >
                 {/* Time */}
                 <div className="shrink-0 w-full sm:w-auto">
@@ -67,24 +68,21 @@ export default async function TimelinePage() {
                 </div>
 
                 {/* Content */}
-                <div className="grow w-full sm:w-auto">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-1">
-                    {timeline.name}
-                  </h3>
-                  <p className="text-secondary font-semibold text-base sm:text-lg mb-1">
-                    {timeline.genre}
-                  </p>
-                  <p className="text-foreground/60 text-sm">
+                <div className='blur-xs'>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground/90 mb-1">
                     {timeline.artist}
-                  </p>
+                  </h3>
+                  <p className="text-secondary font-semibold text-base text-center sm:text-lg mb-1 right-0">
+                    {timeline.genre}
+                  </p>  
                 </div>
 
                 {/* Artist image */}
-                {timeline.image && (
-                  <div className="shrink-0 hidden sm:block">
+                {timeline.image  && (
+                  <div className="">
                     <img
-                      src={timeline.image}
-                      alt={timeline.name}
+                      src={(timeline.image as Media).url ?? ""}
+                      alt="imagen alt"
                       className="w-20 h-20 rounded-lg object-cover border border-primary/30"
                     />
                   </div>
@@ -105,7 +103,7 @@ export default async function TimelinePage() {
           </div>
         </div>
         {/* Footer */}
-        <div className="pt-16 pb-0 border-t border-primary/20 text-center text-foreground/60">
+        <div className="pt-16 pb-0 border-t border-primary/20 text-center text-foreground/60 text-sm">
           <p>© 2026 Reviden Eventos - Chilca Ovni Festival. Todos los derechos reservados.</p>
         </div>
       </main>
