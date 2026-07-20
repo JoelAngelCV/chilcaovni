@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 
 import { getPayload } from 'payload';
 import config from '@payload-config';
+import configPromise from '@payload-config';
+import { unstable_cache } from 'next/cache';
 import type { Collaborator, Media } from '@/payload-types';
 
 export const metadata: Metadata = {
@@ -10,22 +12,43 @@ export const metadata: Metadata = {
   description: 'Conoce a las personas que hicieron posible Chilca Ovni Festival.',
 }
 
+// Envolvemos la función para que Next.js capture y cachee el resultado
+const getCachedCollaborators = unstable_cache(
+  async () => {
+    const payload = await getPayload({ config: configPromise });
+    const data = await payload.find({
+      collection: 'collaborators', // Reemplaza con el nombre de tu colección
+      depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
+      sort: 'createdAt',
+      where: {
+        _status: {
+          equals: 'published', // Asegura traer solo el contenido publicado
+        },
+      },
+    });
+    return data.docs;
+  },
+  ['collaborators-key'], // Clave interna de la caché
+  { tags: ['collaborators'] } // <-- El tag que utilizaremos para limpiar
+);
+
 export default async function CollaboratorsPage() {
   // 2. Inicializar la instancia de Payload usando tu configuración
-  const payload = await getPayload({ config });
+  //const payload = await getPayload({ config });
 
   // 3. Consultar los datos usando la API Local
   // Este es el método nativo (Type-safe) para acceder a la base de datos
-  const data = await payload.find({
-    collection: 'collaborators', // Reemplaza con el nombre de tu colección
-    depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
-    sort: 'createdAt', 
-    where: {
-      _status: {
-        equals: 'published', // Asegura traer solo el contenido publicado
-      },
-    },
-  });
+  // const data = await payload.find({
+  //   collection: 'collaborators', // Reemplaza con el nombre de tu colección
+  //   depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
+  //   sort: 'createdAt',
+  //   where: {
+  //     _status: {
+  //       equals: 'published', // Asegura traer solo el contenido publicado
+  //     },
+  //   },
+  // });
+  const collaborators = await getCachedCollaborators();
   return (
     <>
       <Header />
@@ -43,7 +66,7 @@ export default async function CollaboratorsPage() {
 
           {/* Collaborators Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {data.docs.map((collaborator: Collaborator) => (
+            {collaborators.map((collaborator: Collaborator) => (
               <div key={collaborator.id} className="cosmic-card p-6 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
                 {/* Image */}
                 <div className="relative h-56 mb-4 rounded-lg overflow-hidden">
