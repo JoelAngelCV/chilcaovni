@@ -1,7 +1,29 @@
 import type { CollectionConfig } from 'payload'
+import { revalidateTag } from 'next/cache';
 
 export const Collaborators: CollectionConfig = {
   slug: 'collaborators',
+  hooks: {
+     // Se ejecuta al crear o editar un post
+    afterChange: [
+      ({ doc }) => {
+        if (doc?.slug) {
+          revalidateTag(`posts-slug-${doc.slug}`, { expire: 0 });
+          revalidateTag('posts-list', { expire: 0 });
+        }
+      },
+    ],
+    // CORREGIDO: afterDelete usa "doc" (que contiene los datos del elemento borrado)
+    afterDelete: [
+      ({ doc }) => {
+        if (doc?.slug) {
+          // Usamos los datos del documento eliminado para saber qué slug limpiar
+          revalidateTag(`posts-slug-${doc.slug}`, { expire: 0 });
+          revalidateTag('posts-list', { expire: 0 });
+        }
+      },
+    ],
+  },
   admin: {
     useAsTitle: 'name', // Título que se muestra en el panel de control
     defaultColumns: ['name', 'artist', 'genre'], // Columnas que se muestran por defecto
