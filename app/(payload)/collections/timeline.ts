@@ -1,7 +1,17 @@
 import type { CollectionConfig } from 'payload'
+import { revalidateTag } from 'next/cache'
+import { TIMELINE_LIST_TAG } from '@/lib/payload-cache'
 
 export const Timeline: CollectionConfig = {
   slug: 'timeline',
+  hooks: {
+    afterChange: [({ doc }) => {
+      revalidateTag(TIMELINE_LIST_TAG, { expire: 0 })
+    }],
+    afterDelete: [({ doc }) => {
+      revalidateTag(TIMELINE_LIST_TAG, { expire: 0 })
+    }],
+  },
   admin: {
     useAsTitle: 'artist', // Título que se muestra en el panel de control
     defaultColumns: ['time', 'artist', 'genre'], // Columnas que se muestran por defecto

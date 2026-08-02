@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { revalidateTag } from 'next/cache';
+import { COLLABORATORS_LIST_TAG, collaboratorSlugTag } from '@/lib/payload-cache';
 
 export const Collaborators: CollectionConfig = {
   slug: 'collaborators',
@@ -8,8 +9,8 @@ export const Collaborators: CollectionConfig = {
     afterChange: [
       ({ doc }) => {
         if (doc?.slug) {
-          revalidateTag(`collaborators-slug-${doc.slug}`, { expire: 0 });
-          revalidateTag('collaborators-list', { expire: 0 });
+          revalidateTag(collaboratorSlugTag(doc.slug), { expire: 0 });
+          revalidateTag(COLLABORATORS_LIST_TAG, { expire: 0 });
         }
       },
     ],
@@ -18,8 +19,8 @@ export const Collaborators: CollectionConfig = {
       ({ doc }) => {
         if (doc?.slug) {
           // Usamos los datos del documento eliminado para saber qué slug limpiar
-          revalidateTag(`collaborators-slug-${doc.slug}`, { expire: 0 });
-          revalidateTag('collaborators-list', { expire: 0 });
+          revalidateTag(collaboratorSlugTag(doc.slug), { expire: 0 });
+          revalidateTag(COLLABORATORS_LIST_TAG, { expire: 0 });
         }
       },
     ],

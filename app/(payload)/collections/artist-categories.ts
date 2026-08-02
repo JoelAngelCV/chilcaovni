@@ -1,7 +1,17 @@
 import type { CollectionConfig } from 'payload'
+import { revalidateTag } from 'next/cache'
+import { ARTIST_CATEGORIES_LIST_TAG } from '@/lib/payload-cache'
 
 export const ArtistCategories: CollectionConfig = {
   slug: 'artist-categories',
+  hooks: {
+    afterChange: [({ doc }) => {
+      revalidateTag(ARTIST_CATEGORIES_LIST_TAG, { expire: 0 })
+    }],
+    afterDelete: [({ doc }) => {
+      revalidateTag(ARTIST_CATEGORIES_LIST_TAG, { expire: 0 })
+    }],
+  },
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'key', 'updatedAt'],

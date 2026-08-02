@@ -1,7 +1,17 @@
 import type { CollectionConfig } from 'payload'
+import { revalidateTag } from 'next/cache'
+import { SPONSORS_LIST_TAG } from '@/lib/payload-cache'
 
 export const Sponsors: CollectionConfig = {
     slug: 'sponsors',
+    hooks: {
+      afterChange: [({ doc }) => {
+        revalidateTag(SPONSORS_LIST_TAG, { expire: 0 })
+      }],
+      afterDelete: [({ doc }) => {
+        revalidateTag(SPONSORS_LIST_TAG, { expire: 0 })
+      }],
+    },
     admin: {
         useAsTitle: 'name', // Título que se muestra en el panel de control
         defaultColumns: ['name', 'image'], // Columnas que se muestran por defecto

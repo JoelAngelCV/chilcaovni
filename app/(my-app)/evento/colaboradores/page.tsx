@@ -5,6 +5,7 @@ import { getPayload } from 'payload';
 import config from '@payload-config';
 import configPromise from '@payload-config';
 import { unstable_cache } from 'next/cache';
+import { COLLABORATORS_LIST_TAG } from '@/lib/payload-cache';
 import type { Collaborator, Media } from '@/payload-types';
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ const getCachedCollaborators = unstable_cache(
     return data.docs;
   },
   ['collaborators-key'], // Clave interna de la caché
-  { tags: ['collaborators'] } // <-- El tag que utilizaremos para limpiar
+  { tags: [COLLABORATORS_LIST_TAG] } // <-- El tag que utilizaremos para limpiar
 );
 
 export default async function CollaboratorsPage() {

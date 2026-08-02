@@ -4,6 +4,8 @@ import { Metadata } from 'next'
 
 import { getPayload } from 'payload';
 import config from '@payload-config';
+import { unstable_cache } from 'next/cache';
+import { TIMELINE_LIST_TAG } from '@/lib/payload-cache';
 import type { Timeline, Media } from '@/payload-types';
 
 export const metadata: Metadata = {
@@ -11,22 +13,30 @@ export const metadata: Metadata = {
   description: 'Horario de presentaciones de Chilca Ovni Festival 2026',
 }
 
+const getCachedTimeline = unstable_cache(
+  async () => {
+    const payload = await getPayload({ config });
+
+    return await payload.find({
+      collection: 'timeline',
+      depth: 1,
+      sort: 'createdAt',
+      where: {
+        _status: {
+          equals: 'published',
+        },
+      },
+    });
+  },
+  ['timeline-key'],
+  { tags: [TIMELINE_LIST_TAG] }
+)
+
 export default async function TimelinePage() {
   // 2. Inicializar la instancia de Payload usando tu configuración
-  const payload = await getPayload({ config });
+  const data = await getCachedTimeline();
 
   // 3. Consultar los datos usando la API Local
-  // Este es el método nativo (Type-safe) para acceder a la base de datos
-  const data = await payload.find({
-    collection: 'timeline', // Reemplaza con el nombre de tu colección
-    depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
-    sort: 'createdAt',
-    where: {
-      _status: {
-        equals: 'published', // Asegura traer solo el contenido publicado
-      },
-    },
-  });
   return (
     <>
       <Header />
