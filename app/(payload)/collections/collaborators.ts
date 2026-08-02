@@ -8,8 +8,8 @@ export const Collaborators: CollectionConfig = {
     afterChange: [
       ({ doc }) => {
         if (doc?.slug) {
-          revalidateTag(`posts-slug-${doc.slug}`, { expire: 0 });
-          revalidateTag('posts-list', { expire: 0 });
+          revalidateTag(`collaborators-slug-${doc.slug}`, { expire: 0 });
+          revalidateTag('collaborators-list', { expire: 0 });
         }
       },
     ],
@@ -18,8 +18,8 @@ export const Collaborators: CollectionConfig = {
       ({ doc }) => {
         if (doc?.slug) {
           // Usamos los datos del documento eliminado para saber qué slug limpiar
-          revalidateTag(`posts-slug-${doc.slug}`, { expire: 0 });
-          revalidateTag('posts-list', { expire: 0 });
+          revalidateTag(`collaborators-slug-${doc.slug}`, { expire: 0 });
+          revalidateTag('collaborators-list', { expire: 0 });
         }
       },
     ],
