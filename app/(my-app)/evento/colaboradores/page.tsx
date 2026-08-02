@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 
 import { getPayload } from 'payload';
 import config from '@payload-config';
-import configPromise from '@payload-config';
 import { unstable_cache } from 'next/cache';
 import { COLLABORATORS_LIST_TAG } from '@/lib/payload-cache';
 import type { Collaborator, Media } from '@/payload-types';
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 // Envolvemos la función para que Next.js capture y cachee el resultado
 const getCachedCollaborators = unstable_cache(
   async () => {
-    const payload = await getPayload({ config: configPromise });
+    const payload = await getPayload({ config });
     const data = await payload.find({
       collection: 'collaborators', // Reemplaza con el nombre de tu colección
       depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
