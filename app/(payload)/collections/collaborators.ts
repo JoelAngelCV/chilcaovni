@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { revalidateTag } from 'next/cache';
-import { COLLABORATORS_LIST_TAG, collaboratorSlugTag } from '@/lib/payload-cache';
+import { COLLABORATORS_LIST_TAG } from '@/lib/payload-cache';
 
 export const Collaborators: CollectionConfig = {
   slug: 'collaborators',
@@ -8,20 +8,18 @@ export const Collaborators: CollectionConfig = {
      // Se ejecuta al crear o editar un post
     afterChange: [
       ({ doc }) => {
-        if (doc?.slug) {
-          revalidateTag(collaboratorSlugTag(doc.slug), { expire: 0 });
+        
+          
           revalidateTag(COLLABORATORS_LIST_TAG, { expire: 0 });
-        }
+        
       },
     ],
     // CORREGIDO: afterDelete usa "doc" (que contiene los datos del elemento borrado)
     afterDelete: [
       ({ doc }) => {
-        if (doc?.slug) {
-          // Usamos los datos del documento eliminado para saber qué slug limpiar
-          revalidateTag(collaboratorSlugTag(doc.slug), { expire: 0 });
+        
           revalidateTag(COLLABORATORS_LIST_TAG, { expire: 0 });
-        }
+        
       },
     ],
   },
