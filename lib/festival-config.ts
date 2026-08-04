@@ -354,7 +354,7 @@ export const ACTIVITIES = [
   {
     id: 3,
     name: 'Activación de Movimiento',
-    description: 'Danza libre y movimiento consciente bajo las estrellas.',
+    description: 'Danza libre y movimiento consciente corporal.',
     image: 'https://res.cloudinary.com/da6s9ujgm/image/upload/v1784305621/tam1_a1ftri.jpg',
     fullDescription: 'Libera tu cuerpo y tu espíritu a través del movimiento consciente. Nuestros facilitadores te guiarán en una experiencia de danza libre donde tu cuerpo es el instrumento y la música el universo.\n\nEsta activación te permitirá expresar tu ser más auténtico sin limitaciones.'
   },
