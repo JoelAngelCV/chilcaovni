@@ -16,7 +16,8 @@ export const metadata: Metadata = {
 const getCachedCollaborators = unstable_cache(
   async () => {
     const payload = await getPayload({ config });
-    const data = await payload.find({
+    
+    return await payload.find({
       collection: 'collaborators', // Reemplaza con el nombre de tu colección
       depth: 1, // Pobla relaciones (ej. `image` → `media`) para acceder a `image.url`
       sort: 'createdAt',
@@ -26,7 +27,6 @@ const getCachedCollaborators = unstable_cache(
         },
       },
     });
-    return data.docs;
   },
   ['collaborators-key'], // Clave interna de la caché
   { tags: [COLLABORATORS_LIST_TAG] } // <-- El tag que utilizaremos para limpiar
@@ -35,6 +35,7 @@ const getCachedCollaborators = unstable_cache(
 export default async function CollaboratorsPage() {
   // 2. Inicializar la instancia de Payload usando tu configuración
   //const payload = await getPayload({ config });
+  const data = await getCachedCollaborators();
 
   // 3. Consultar los datos usando la API Local
   // Este es el método nativo (Type-safe) para acceder a la base de datos
@@ -48,7 +49,7 @@ export default async function CollaboratorsPage() {
   //     },
   //   },
   // });
-  const collaborators = await getCachedCollaborators();
+  
   return (
     <>
       <Header />
@@ -66,7 +67,7 @@ export default async function CollaboratorsPage() {
 
           {/* Collaborators Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {collaborators.map((collaborator: Collaborator) => (
+            {data.docs.map((collaborator: Collaborator) => (
               <div key={collaborator.id} className="cosmic-card p-6 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300">
                 {/* Image */}
                 <div className="relative h-56 mb-4 rounded-lg overflow-hidden">
