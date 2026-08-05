@@ -118,7 +118,7 @@ export default async function CollaboratorsPage() {
               Si te apasiona nuestra visión y deseas ser parte del equipo en próximas ediciones, ponte en contacto con nosotros.
             </p>
             <a
-              href="https://wa.me/51987654321?text=Hola%2C%20me%20gustaría%20colaborar%20en%20el%20Festival%20OVNI"
+              href="https://wa.me/51986487619?text=Hola%2C%20me%20gustaría%20colaborar%20en%20el%20Chilca%20Ovni%20Festival"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block neon-button"

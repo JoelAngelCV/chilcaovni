@@ -23,7 +23,7 @@ export function TicketsSection() {
     {
       question: '¿Qué incluye cada tipo de entrada?',
       answer:
-        'Cada entrada incluye acceso al festival. Las entradas VIP incluyen acceso prioritario y servicios premium. Todos los tipos de entradas incluyen un espacio para acampar en la playa.',
+        'Cada entrada incluye acceso al festival. Todos los tipos de entradas incluyen un espacio para acampar en la playa.',
     },
     {
       question: '¿Hay descuentos para grupos?',
